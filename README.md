@@ -18,13 +18,13 @@
 
 ## TODO
 
-- [] 自定义侧边栏全站音乐播放器
-- [] 读书清单独立页面
-- [] 电影清单独立页面
+- [ ] 自定义侧边栏全站音乐播放器
+- [ ] 读书清单独立页面
+- [ ] 电影清单独立页面
 
 ## 已知问题
 
-- [] 密码保护的文章依然会被显示
+- [ ] 密码保护的文章依然会被显示
 
 ## 贡献
 
@@ -36,12 +36,6 @@
 
 本项目引用了：
 
-* [JQuery](https://github.com/jquery/jquery)
-* [highlight.js](https://highlightjs.org/)
-* [MathJax](https://www.mathjax.org/)
-* [FlowChart](https://flowchart.js.org/)
-* [OwO](https://github.com/DIYgod/OwO)
-* [zoom.js](https://github.com/fat/zoom.js/)
-* [jquery-pjax](https://github.com/defunkt/jquery-pjax)
+[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [FlowChart](https://flowchart.js.org/) | [OwO](https://github.com/DIYgod/OwO) | [zoom.js](https://github.com/fat/zoom.js/) | [jquery-pjax](https://github.com/defunkt/jquery-pjax)
 
 感谢以上项目。
