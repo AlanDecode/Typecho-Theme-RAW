@@ -1,6 +1,8 @@
 # Typecho 主题：RAW
 
-“在互联网上寻找栖息之地”
+**“在互联网上寻找栖息之地”**
+
+![](https://raw.githubusercontent.com/AlanDecode/Typecho-Theme-RAW/master/screenshot.png)
 
 演示站点：[熊猫小A的博客](https://blog.imalan.cn)
 
