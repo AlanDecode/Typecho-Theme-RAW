@@ -1,13 +1,6 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-function _me($var){
-    echo $var;
-}
-function _mt($var){
-    return $var;
-}
-
 require_once("lib/RAW.php");
 require_once("lib/Content.php");
 require_once("lib/Comments.php");

@@ -18,7 +18,7 @@ class Utils {
                 || date('z', $from) + 1 == date('L') + 365 + date('z', $now))) {    // 跨年的情况
             return sprintf('昨天 %s', date('H:i', $from));
         } else if ($between == 0) {
-            return _mt('刚刚');
+            return '刚刚';
         }
         $f = array(
             '31536000' => '%d 年前',
