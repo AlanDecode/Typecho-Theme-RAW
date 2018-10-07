@@ -6,7 +6,7 @@
 
 /* basic */
 html {
-	font-family: 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'Segoe UI Emoji', 'Segoe UI Symbol', Helvetica, Arial, sans-serif;
+	font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'Segoe UI Emoji', 'Segoe UI Symbol', Helvetica, Arial, sans-serif;
     line-height:1.15;
     width: 100%;
 	-ms-text-size-adjust:100%;
@@ -632,7 +632,7 @@ article sup{
     text-indent: 0;
     width: 14px;
     text-align: center;
-    font: 700 8px/14px -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
+    font: 700 8px/14px -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
     border-bottom: 0;
     background-color: rgba(0,0,0,.18);
     border-radius: 14px;
@@ -905,7 +905,7 @@ article .excerpt{
 .comment-info-input input,#textarea,#comment-submit-button{
     font-size: 1em;
     padding: 0.5em;
-    font-family: 'Open Sans','PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei','Segoe UI Emoji','Segoe UI Symbol',Helvetica,Arial,sans-serif;
+    font-family: 'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei','Segoe UI Emoji','Segoe UI Symbol',Helvetica,Arial,sans-serif;
 }
 
 
@@ -1457,10 +1457,6 @@ article .excerpt{
 @font-face{
     font-family:"Consola";
     src:url("../fonts/consola.ttf");
-}
-@font-face{
-    font-family:"Open Sans";
-    src:url("../fonts/opensans400.woff");
 }
 @font-face {
 	font-family:bgmSigmarOne;src:url('../fonts/bgmSigmarOne.woff.ttf');font-weight:strong;
