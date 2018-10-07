@@ -45,7 +45,7 @@
         </div>
     </div>
     <div id="uptime" class="block-item sider-item"></div>
-    <?php if(class_exists('Meting_Plugin')): ?>
+    <?php if(class_exists('Meting_Plugin') && !Utils::isMobile()): ?>
     <div id="music" class="block-item">
         <div class="aplayer no-destroy" data-listmaxheight="250px" data-id="39875562" data-server="netease" data-type="playlist"></div>
     </div>
