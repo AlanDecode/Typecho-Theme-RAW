@@ -74,7 +74,7 @@ var owo = new OwO({
     logo: 'OωO表情',
     container: document.getElementsByClassName('OwO')[0],
     target: document.getElementsByClassName('input-area')[0],
-    api: '/usr/themes/RAW/assets/owo/OwO.json?v=0.2',
+    api: '/usr/themes/RAW/assets/owo/OwO.json?v=0.3',
     position: 'down',
     width: '300px',
     maxHeight: '250px'

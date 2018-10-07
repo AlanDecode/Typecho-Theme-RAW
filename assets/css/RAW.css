@@ -881,7 +881,10 @@ article .excerpt{
 .comment-reply-author{
     margin-right: 0.8em;
 }
-.comment-content img{
+.comment-content *{
+    max-width: 100%;
+}
+.comment-content img.biaoqing{
     display: inline-block;
     height: 1.6em;
     vertical-align: bottom;

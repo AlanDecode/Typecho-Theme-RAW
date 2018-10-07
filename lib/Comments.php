@@ -600,6 +600,6 @@ class Mirages_Widget_Comments_Archive extends Widget_Abstract_Comments
      */
     public function markdown($text)
     {
-        return $text;
+        return Markdown::convert($text);
     }
 }
