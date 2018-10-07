@@ -1,9 +1,16 @@
-<?php 
-/**
- * 头部信息，包括首页大图，博客、文章标题等
- */
-if (!defined('__TYPECHO_ROOT_DIR__')) exit; 
+<?php
+/** 
+* header.php
+* 
+* 站点大图、顶部导航栏、搜索框、站点背景
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
 ?>
+
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <?php 
     $banner=RAW::getRandomBanner($this->options->randombanner);

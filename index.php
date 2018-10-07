@@ -2,9 +2,9 @@
 /**
  * Typecho-Theme-RAW，在互联网上寻找栖息之地
  * 
- * 介绍：<a href="https://blog.imalan.cn/archives/163/" target="_blank">https://blog.imalan.cn/archives/163/</a>
+ * 介绍: <a href="https://blog.imalan.cn/archives/163/" target="_blank">https://blog.imalan.cn/archives/163/</a>
  * 
- * Repo:<a href="https://github.com/AlanDecode/Typecho-Theme-RAW" target="_blank">https://github.com/AlanDecode/Typecho-Theme-RAW</a>
+ * Repo: <a href="https://github.com/AlanDecode/Typecho-Theme-RAW" target="_blank">https://github.com/AlanDecode/Typecho-Theme-RAW</a>
  * 
  * @package Typecho-Theme-RAW 
  * @author 熊猫小A

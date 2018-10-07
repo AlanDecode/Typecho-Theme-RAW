@@ -1,5 +1,16 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php
+/** 
+* post.php
+* 
+* 主题文章页面模板
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
 
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <?php if(Utils::isPJAX()):?>
     <title><?php $this->archiveTitle(array(

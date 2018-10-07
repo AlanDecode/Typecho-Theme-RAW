@@ -1,3 +1,15 @@
+<?php
+/** 
+* footer.php
+* 
+* 主题页脚
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <footer id="footer">

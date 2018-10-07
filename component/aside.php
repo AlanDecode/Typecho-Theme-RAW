@@ -1,3 +1,15 @@
+<?php
+/** 
+* aside.php
+* 
+* 主题左侧边栏
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div id="aside" <?php echo 'class="sider sider-l" data-siderbase="#main-content"'; ?>>
     <div id="aside-close-btn"><a href="javascript:void(0);" onclick="toggleMblNav()"><i class="fa fa-close"></i> 关闭</a></div>

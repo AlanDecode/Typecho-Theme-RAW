@@ -1,5 +1,16 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php
+/** 
+* sider-r.php
+* 
+* 主题右侧边栏
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
 
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <div id="widget-right" class="sider sider-r" data-siderbase="#pjax-container">
     <?php if(class_exists('TePostViews_Plugin')): ?>

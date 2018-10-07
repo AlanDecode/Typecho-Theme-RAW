@@ -1,3 +1,15 @@
+<?php
+/** 
+* page.php
+* 
+* 主题独立页面模板
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <?php if(Utils::isPJAX()):?>

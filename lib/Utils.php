@@ -1,4 +1,16 @@
 <?php
+/** 
+* Utils.php
+* 
+* 时间格式化、PJAX 等
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
+<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 class Utils {

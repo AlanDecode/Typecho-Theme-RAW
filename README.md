@@ -45,3 +45,13 @@
 [JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [FlowChart](https://flowchart.js.org/) | [OwO](https://github.com/DIYgod/OwO) | [zoom.js](https://github.com/fat/zoom.js/) | [jquery-pjax](https://github.com/defunkt/jquery-pjax)
 
 感谢以上项目。
+
+## 其它
+
+本程序遵循 MIT 开源协议。
+
+![](https://raw.githubusercontent.com/AlanDecode/Typecho-Theme-RAW/master/LICENSE.png)
+
+使用本程序导致的任何不可知事件都与原作者无关，原作者不承担任何后果。
+
+如果你能保留页面右下角的作者信息的话我会非常感谢你的。

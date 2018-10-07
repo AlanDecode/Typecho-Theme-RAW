@@ -1,4 +1,16 @@
 <?php
+/** 
+* RAW.php
+* 
+* 主题工具，输出静态文件地址等
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
+<?php
 
 class RAW{
 
@@ -14,6 +26,7 @@ class RAW{
     }
 
     public static function getCDNType($url){
+        // not using
         return -1;
     }
 

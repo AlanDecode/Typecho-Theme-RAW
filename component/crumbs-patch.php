@@ -1,5 +1,16 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;?>
+<?php
+/** 
+* crumbs-patch.php
+* 
+* 主题面包屑导航模块
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
 
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;?>
 
 <div id="crumbs-patch" class="block-item">
     <a href="<?php $this->options->siteUrl(); ?>">首页</a> &raquo;</li>

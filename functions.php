@@ -1,4 +1,16 @@
 <?php
+/** 
+* functions.php
+* 
+* 初始化主题，添加主题设置面板，添加文章自定义字段设置面板
+* 
+* @author      熊猫小A | AlanDecode
+* @version     0.1
+* 
+*/ 
+?>
+
+<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 require_once("lib/RAW.php");

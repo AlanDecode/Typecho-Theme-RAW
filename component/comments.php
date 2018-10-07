@@ -1,9 +1,16 @@
-<?php 
-/**
- * rewrite
- */
-if (!defined('__TYPECHO_ROOT_DIR__')) exit; 
+<?php
+/** 
+* comments.php
+* 
+* 评论列表与评论嵌套
+* 
+* @author      Hran | 熊猫小A
+* @version     0.1
+* 
+*/ 
 ?>
+
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <div id="comments">
         <?php
