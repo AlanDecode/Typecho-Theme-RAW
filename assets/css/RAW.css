@@ -82,6 +82,7 @@ footer{
     position: relative;
     padding: 0 0.5em;
     margin: 0 auto;
+	max-width: 800px;
 }
 .sider{
     flex: 0 0 270px;
