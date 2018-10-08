@@ -557,13 +557,13 @@ article{
 
 
 /* article style */
-article > *{
-    max-width: 100%!important;
+article > p,article > pre,article > .post-meta,
+article > h1,article > h2,article > h3,article > h4,article > h5,article > h6{
     padding-right: 15px;
     padding-left: 15px;
 }
-article .aplayer{
-    padding: 0;
+article > *{
+    max-width: 100%!important;
 }
 article p.img-grid{
     padding-left: 0;
@@ -683,6 +683,9 @@ article blockquote{
     color: #2c3f51;
     border-left: 3px solid #282c34;
     background-color: rgba(102,128,153,0.05);
+}
+article blockquote p:first-child{
+    margin-top: 0;
 }
 article hr{
     display: block;
