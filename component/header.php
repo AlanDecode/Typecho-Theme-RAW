@@ -16,17 +16,19 @@
     $banner=RAW::getRandomBanner($this->options->randombanner);
 ?>
 
-<header id="header" >
+<header id="header" <?php if(!$banner || $banner=='') echo 'style="height:40px"';?>>
     <div id="header-nav" class="header-nav-light <?php if($this->is('index')) echo 'index-nav'?>">
         <div class="header-nav-inner">
         <div class="header-nav-left">
         <a href="<?php echo Helper::options()->siteUrl; ?>"><i class="fa fa-fw fa-home"></i><span> 首页</span></a> 
         <?php 
-            $navs=explode(PHP_EOL,$this->options->sitenav);
-            foreach ($navs as $value) {
-                $value=str_replace("\r",'', $value);
-                $temp=explode(',',$value);
-                echo '<a class="header-nav-name" href="'.$temp[2].'" target="'.$temp[3].'"><i class="fa fa-fw  fa-'.$temp[0].'"></i><span> '.$temp[1].'</span></a>';
+            if($this->options->sitenav&&$this->options->sitenav!=''){
+                $navs=explode(PHP_EOL,$this->options->sitenav);
+                foreach ($navs as $value) {
+                    $value=str_replace("\r",'', $value);
+                    $temp=explode(',',$value);
+                    echo '<a class="header-nav-name" href="'.$temp[2].'" target="'.$temp[3].'"><i class="fa fa-fw  fa-'.$temp[0].'"></i><span> '.$temp[1].'</span></a>';
+                }
             }
         ?>
         <a href="/links.html" target="_self"><i class="fa fa-fw fa-link"></i><span> 友链</span></a>
@@ -38,9 +40,11 @@
         </div>
     </div>
     </div>   
+    <?php if($banner && $banner!=''): ?>
     <div class="banner" style="background-color:#202020">
     <img style="display:none;" class="banner" src="<?php echo $banner; ?>" onload="$(this).fadeIn(600);" />    
     <div class="banner mask" style="background:rgba(0,0,0,0.4)"></div>
+    <?php endif; ?>
     </div>
     <div class="site-title blog-title"><?php echo $this->options->indextitle; ?></div>
 </header>

@@ -13,10 +13,10 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+require_once("lib/Utils.php");
 require_once("lib/RAW.php");
 require_once("lib/Content.php");
 require_once("lib/Comments.php");
-require_once("lib/Utils.php");
 
 function themeInit($archive){
     Helper::options()->commentsAntiSpam = false; 
@@ -47,8 +47,10 @@ function themeConfig($form) {
     $form->addInput($sitenav); 
     $sociallinks=new Typecho_Widget_Helper_Form_Element_Textarea('sociallinks', NULL, NULL, '侧边栏链接', '一行一个，格式：图标,链接,打开位置，例如 twitter,https://twitter.com,_blank');
     $form->addInput($sociallinks);
-    $bg=new Typecho_Widget_Helper_Form_Element_Text('bg', NULL, NULL, '站点背景图', ' 填写链接，背景图将会被加上白色遮罩');
+    $bg=new Typecho_Widget_Helper_Form_Element_Text('bg', NULL, NULL, '站点背景图', '填写链接，背景图将会被加上白色遮罩');
     $form->addInput($bg);
+    $authorbg=new Typecho_Widget_Helper_Form_Element_Text('authorbg', NULL, NULL , '侧边栏作者背景图', '填写链接');
+    $form->addInput($authorbg);
     $headinfo = new Typecho_Widget_Helper_Form_Element_Textarea('headinfo', NULL, NULL, _t('自定义头部，将输出在 head 标签结束前'), _t('这里可以引入 CSS、JS 等'));
     $form->addInput($headinfo); 
     $footerinfo = new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('自定义尾部，将输出在 footer 后'), _t('这里可以引入 CSS、JS 等'));

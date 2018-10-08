@@ -86,4 +86,13 @@ class Utils {
         }
         return $is_mobile;
     }
+
+    // 判断插件是否存在并启用
+    public static function isPluginAvailable($name) {
+        if (class_exists($name.'_Plugin')){
+            $plugins = Typecho_Plugin::export();
+            $plugins = $plugins['activated'];
+            return is_array($plugins) && array_key_exists($name, $plugins);
+        }
+    }
 }

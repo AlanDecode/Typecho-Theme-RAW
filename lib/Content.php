@@ -115,11 +115,11 @@ EOF;
             echo '<author></div><div class="pm-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
             $archive->date('F j, Y');
             echo '</time>';
-            if(class_exists('TePostViews_Plugin')){
+            if(Utils::isPluginAvailable('TePostViews')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
                 $archive->viewsNum();
             }
-            if(class_exists('Like_Plugin')){
+            if(Utils::isPluginAvailable('Like')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
                 Like_Plugin::theLike($link = false,$archive);
             }
@@ -129,12 +129,12 @@ EOF;
             echo '<p class="post-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
             $archive->date('F j, Y');
             echo '</time>';
-            if(class_exists('TePostViews_Plugin')){
+            if(Utils::isPluginAvailable('TePostViews')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
                 $archive->viewsNum();
                 echo ' <span style="display:none">View(s)</span>';
             }
-            if(class_exists('Like_Plugin')){
+            if(Utils::isPluginAvailable('Like')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
                 Like_Plugin::theLike($link = false,$archive);
                 echo '</span> <span style="display:none">Like(s)</span>';

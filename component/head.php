@@ -58,14 +58,14 @@
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/hljs/styles/atom-one-dark.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.css','','css');?>">
-    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D592523','css'); ?>">
+    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D592524','css'); ?>">
     <?php endif; ?>
      
     <!-- JS -->
     <script src="<?php echo RAW::staticPath($this->options->CDNPath,'/jquery/jquery.min.js','','js');?>"></script>
     
     <?php echo $this->options->headinfo; ?>
-    <?php if(class_exists('Like_Plugin')):?>
+    <?php if(Utils::isPluginAvailable('Like')):?>
     <script>var likePath="<?php Helper::options()->index('/action/like?up'); ?>";</script>
     <?php endif; ?>
     <script>

@@ -13,7 +13,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <div id="widget-right" class="sider sider-r" data-siderbase="#pjax-container">
-    <?php if(class_exists('TePostViews_Plugin')): ?>
+    <?php if(Utils::isPluginAvailable('TePostViews')): ?>
     <div id="hot-posts" class="sider-item block-item">
         <span onclick="toggleSider(this);"><i class="fa fa-navicon"></i></span>
         <ul><?php TePostViews_Plugin::outputHotPosts(); ?></ul>

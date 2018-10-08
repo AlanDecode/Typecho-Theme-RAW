@@ -82,13 +82,13 @@ RAW = {
 
     parseURL : function(){
         var domain=document.domain;
-        $("a").each(function(i,item){
-            if((!$(item).attr("target") || !$(item).attr("target")=="") && !$(item).hasClass("post-like")){
+        $(`a:not(a[href^="#"]):not('.post-like')`).each(function(i,item){
+            if((!$(item).attr("target") || !$(item).attr("target")=="")){
                 if(item.host!=domain){
                     $(item).attr("target","_blank");
                 }
             }
-            if(item.host==domain && $(item).attr("target")!="_blank" && !$(item).hasClass("toc-item")){
+            if(item.host==domain && $(item).attr("target")!="_blank"){
                 $(item).attr("data-pjax","1");
             }
         })

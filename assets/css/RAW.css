@@ -243,7 +243,6 @@ footer a:hover{
 #author-info .author-bg{
     width: 100%;
     height: 150px;
-    background-image: url(https://cdn.imalan.cn/img/site/sagiri-banner.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1012,7 +1011,7 @@ article .excerpt{
 }
 .site-bg-mask{
     z-index: -1;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.9);
 }
 /* post list in home */
 .index-item{

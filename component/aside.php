@@ -15,9 +15,10 @@
     <div id="aside-close-btn"><a href="javascript:void(0);" onclick="toggleMblNav()"><i class="fa fa-close"></i> 关闭</a></div>
     <div class="aside-inner block-item" style="width:100%;overflow-y:auto">
         <div id="author-info">
-            <div class="author-bg"></div>
+            <div class="author-bg" style="background-image: url(<?php echo $this->options->authorbg ? $this->options->authorbg : '/usr/themes/RAW/assets/sagiri-banner.png' ?>);"></div>
             <a href="/about.html"><div class="author-avatar" style="background-image:url(<?php echo Typecho_Common::gravatarUrl($this->author->mail, 200, '', '', true); ?>)"></div></a>
             <div class="author-name"><?php echo $this->author(); ?></div>
+            <?php if($this->options->sitenav && $this->options->sitenav!=''): ?>
             <div class="author-links">
                 <ul>
                 <?php    
@@ -30,8 +31,10 @@
                 ?>
                 </ul>
             </div>
+            <?php endif; ?>
         </div>
         <div id="mbl-ctrler">
+            <?php if($this->options->sitenav && $this->options->sitenav!=''): ?>
             <?php 
                 $navs=explode(PHP_EOL,$this->options->sitenav);
                 foreach ($navs as $value) {
@@ -40,12 +43,13 @@
                     echo '<a href="'.$temp[2].'" target="'.$temp[3].'"><i class="fa fa-fw  fa-'.$temp[0].'"></i> '.$temp[1].'</a>';
                 }
             ?>
+            <?php endif; ?>
             <a href="#header" style="margin-top:20px"><i class="fa fa-angle-up"></i> 回到顶部</a>
             <a href="#footer" style="margin-bottom:20px"><i class="fa fa-angle-down"></i> 跳至底部</a>
         </div>
     </div>
     <div id="uptime" class="block-item sider-item"></div>
-    <?php if(class_exists('Meting_Plugin') && !Utils::isMobile()): ?>
+    <?php if(Utils::isPluginAvailable('Meting') && !Utils::isMobile()): ?>
     <div id="music" class="block-item">
         <div class="aplayer no-destroy" data-listmaxheight="250px" data-id="39875562" data-server="netease" data-type="playlist"></div>
     </div>

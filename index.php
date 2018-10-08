@@ -54,7 +54,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php endif; ?>   
                     <article class="<?php if(!$this->fields->banner) echo 'no-bn '; if($this->fields->type=='1') echo 'article-index' ?>">
                         <?php if($this->fields->type!='1'): ?>
-                        <h2 class="index-item-title"><a href="<?php $this->permalink(); ?>"><?php if(class_exists('Sticky_Plugin')) $this->sticky(); $this->title(); ?></a></h2>
+                        <h2 class="index-item-title"><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title(); ?></a></h2>
                         <?php endif;?>
                         <?php Content::exportPostMeta($this,$this->fields->type=='1'); ?>
                         <?php if($this->fields->type != '1' && $this->fields->excerpt): ?>

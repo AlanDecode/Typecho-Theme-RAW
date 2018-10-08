@@ -47,7 +47,7 @@
             }
         ?>          
     </article>
-    <?php if(class_exists('Like_Plugin')) Like_Plugin::theLike($link=true,$this); ?>
+    <?php if(Utils::isPluginAvailable('Like')) Like_Plugin::theLike($link=true,$this); ?>
     <ul class="page-navigator post-pager">
         <li class="prev"><span class="pager-name">上一篇<br></span><?php $this->thePrev('%s','没有了'); ?></li>
         <li class="next"><span class="pager-name">下一篇<br></span><?php $this->theNext('%s','没有了'); ?></li>
