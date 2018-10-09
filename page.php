@@ -47,10 +47,10 @@
     <script>
         var toc=`<div id="TOC" class="sider-item block-item toc sider-sticky">
         <span onclick="toggleSider(this);"><i class="fa fa-navicon"></i></span>
-        <span style="right:40px" onclick="toggleFixTOC(this);">点击固定</span>
         <?php echo $parsed['toc']; ?></div>`;
         $("#widget-right").append(toc);
         $("#widget-right > :not(.toc)").addClass("sider-shrink");
+        registerTOC();
     </script>
     <?php else: ?>
     <script>
@@ -63,7 +63,6 @@
     <?php if($this->fields->showTOC=='1' ):?>
     <div id="TOC" class="sider-item block-item toc sider-sticky TOC">
         <span onclick="toggleSider(this);"><i class="fa fa-navicon"></i></span>
-        <span style="right:40px" onclick="toggleFixTOC(this);">点击固定</span>
         <?php echo $parsed['toc']; ?>
     </div><!--END TOC-->
     <script>$("#widget-right > :not(.toc)").addClass("sider-shrink");</script>

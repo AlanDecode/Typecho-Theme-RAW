@@ -188,8 +188,8 @@ RAW = {
 $(document).ready(function(){
     RAW.initRAW();
     hljs.initHighlightingOnLoad();
+    registerTOC($("#TOC"));
 })
-
 $(document).click(function(e){
     var target=e.target;
     $(".board-item").removeClass("board-info-show");

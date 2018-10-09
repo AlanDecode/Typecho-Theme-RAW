@@ -69,27 +69,43 @@
     <script>var likePath="<?php Helper::options()->index('/action/like?up'); ?>";</script>
     <?php endif; ?>
     <script>
+    var lastOffset;
     function toggleSider(item){
         if($(item).parent().hasClass("sider-shrink")){
             $(item).parent().removeClass("sider-shrink");
         }else{
             $(item).parent().addClass("sider-shrink");
         }
+        if($("TOC").length) lastOffset=$("#TOC").offset().top;
     }
-    function toggleFixTOC(item){
-        if($(item).parent().hasClass("toc-fixed")){
-            $(item).parent().removeClass("toc-fixed");
-            $(item).parent().css("top","unset");
-            $(item).parent().css("left","unset");
-            $(item).html("点击固定");
+    function fixTOC(fix){
+        if(fix){
+            $("#TOC").css("top","50px");
+            $("#TOC").css("left",$("#TOC").offset().left);
+            $("#TOC").addClass("toc-fixed");
         }else{
-            var top=$(item).parent().offset().top-$(document).scrollTop();
-            var left=$(item).parent().offset().left;
-            $(item).parent().css("top",top+"px");
-            $(item).parent().css("left",left+"px");
-            $(item).parent().addClass("toc-fixed");
-            $(item).html("取消固定");
+            $("#TOC").removeClass("toc-fixed");
+            $("#TOC").css("top","unset");
+            $("#TOC").css("left","unset");
         }
+    }
+    function registerTOC(){        
+        lastOffset=0;
+        $(document).scroll(function(){
+            if($("#TOC").length < 1) return;
+            if(!lastOffset){
+                lastOffset=$("#TOC").offset().top;
+                return;
+            }
+            var top=$("#TOC").offset().top-$(document).scrollTop();
+            if(top<=51 && $("#TOC").offset().top>=lastOffset){
+                fixTOC(true);
+            }
+            else{
+                fixTOC(false);
+                lastOffset=$("#TOC").offset().top;
+            } 
+        })
     }
     </script>
 </head>
