@@ -773,17 +773,38 @@ article .excerpt{
     outline: none;
 }
 .comment-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    margin: 0;
+    margin-bottom: 2.5em;
+    height: 1px;
+}
+.OwO{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 .OwO .OwO-logo{
     z-index: unset!important;
 }
+.OwO .OwO-body{
+    max-width:100%;
+}  
+.comment-mail-me{
+    right: 0;
+    position: absolute;
+}  
 .OwO .OwO-body .OwO-items-image .OwO-item{
     max-width:-moz-calc(20% - 10px);
     max-width:-webkit-calc(20% - 10px);
     max-width:calc(20% - 10px)
+}
+@media screen and (max-width:760px){
+    .OwO .OwO-body .OwO-items-image .OwO-item{
+        max-width:-moz-calc(25% - 10px);
+        max-width:-webkit-calc(25% - 10px);
+        max-width:calc(25% - 10px)
+    }
 }
 #comment-submit-button{
     width: 100%;

@@ -83,7 +83,7 @@ var owo = new OwO({
     target: document.getElementsByClassName('input-area')[0],
     api: '/usr/themes/RAW/assets/owo/OwO.json?v=0.3',
     position: 'down',
-    width: '300px',
+    width: '400px',
     maxHeight: '250px'
 });
 </script>
