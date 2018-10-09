@@ -63,8 +63,6 @@ RAW = {
         RAW.loadBooks();
         RAW.loadMovies();
         RAW.reloadLike();
-        $("#aside").removeClass("show-aside");
-        $(".noscroll").hide();
     },
 
     reloadHLJS : function(){
@@ -218,9 +216,12 @@ $(document).scroll(function(){
 $(document).on('submit', 'form[data-pjax]', function(event) {
     $.pjax.submit(event, {container: '#comments',fragment: '#comments',timeout: 8000});
 })
-$(document).on('pjax:start', function(event) {
+$(document).on('pjax:click', function(event) {
+    $(".noscroll").hide();
     $("#aside").removeClass("show-aside");
     $(document).scrollTop(0);
+})
+$(document).on('pjax:start', function(event) {
     $("#loading").show();
     $("#pjax-container").hide();
 })
