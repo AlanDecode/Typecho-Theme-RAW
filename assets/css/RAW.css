@@ -87,6 +87,7 @@ footer{
 .sider{
     flex: 0 0 270px;
     max-width: 270px;
+    min-width: 270px;
 }
 
 /* header */

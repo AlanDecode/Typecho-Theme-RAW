@@ -31,8 +31,6 @@
                 }
             }
         ?>
-        <a href="/links.html" target="_self"><i class="fa fa-fw fa-link"></i><span> 友链</span></a>
-        <a href="/about.html" target="_self"><i class="fa fa-fw fa-info-circle"></i><span> 关于</span></a>
         </div>
         <div class="header-nav-right">
             <a href="javascript:void(0);" onclick="toggleSearch()" ><i class="fa fa-fw fa-search"></i><span class="header-nav-name"> 搜索</span></a>
