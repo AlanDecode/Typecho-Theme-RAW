@@ -80,7 +80,7 @@ footer{
     width: -webkit-calc(100% - 580px);
     width: calc(100% - 580px);
     position: relative;
-    padding: 0 0.5em;
+    padding: 0 1em;
     margin: 0 auto;
 	max-width: 800px;
 }
@@ -558,11 +558,6 @@ article{
 
 
 /* article style */
-article > p,article > pre,article > .post-meta,article > div.footnotes,
-article > h1,article > h2,article > h3,article > h4,article > h5,article > h6{
-    padding-right: 15px;
-    padding-left: 15px;
-}
 article > *{
     max-width: 100%!important;
 }
