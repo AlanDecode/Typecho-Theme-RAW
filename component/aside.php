@@ -49,9 +49,15 @@
         </div>
     </div>
     <div id="uptime" class="block-item sider-item"></div>
-    <?php if(Utils::isPluginAvailable('Meting') && !Utils::isMobile()): ?>
+    <?php if(Utils::isPluginAvailable('Meting') && !Utils::isMobile() && $this->options->sidermusic && $this->options->sidermusic!=''): ?>
+    <?php
+        $list=explode(PHP_EOL,$this->options->sidermusic)[0];
+        $server=explode(',',$list)[0];
+        $id=explode(',',$list)[1];
+        $autoplay=explode(',',$list)[2] ? explode(',',$list)[2] : 'false';
+    ?>
     <div id="music" class="block-item">
-        <div class="aplayer no-destroy" data-listmaxheight="250px" data-id="39875562" data-server="netease" data-type="playlist"></div>
+        <div class="aplayer no-destroy" data-listmaxheight="250px" data-id="<?php echo $id; ?>" data-autoplay="<?php echo $autoplay; ?>" data-server="<?php echo $server; ?>" data-type="playlist"></div>
     </div>
     <?php endif; ?>
 </div>

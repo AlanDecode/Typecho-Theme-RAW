@@ -13,8 +13,8 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <footer id="footer">
-    <div class="footer-left">©<a href="https://imalan.cn"><?php echo Helper::options()->title; ?></a></div>
-    <div class="footer-right"><!--a href="http://www.miitbeian.gov.cn/" target="_blank"> 京ICP备***号 • </a-->Powered by <a href="http://typecho.org">Typecho</a> • Theme <a href="https://blog.imalan.cn/archives/163/">RAW by 熊猫小A</a><!-- • <a href="https://www.upyun.com" target="_blank">又拍云</a--> </div>
+    <div class="footer-left">©<a href="https://imalan.cn"><?php echo Helper::options()->title; ?></a><?php echo $this->options->footerleft; ?></div>
+    <div class="footer-right"><?php echo $this->options->footerright; ?>Powered by <a href="http://typecho.org">Typecho</a> • Theme <a href="https://blog.imalan.cn/archives/163/">RAW by 熊猫小A</a></div>
 </footer><!-- end #footer -->
 <?php $this->footer(); ?>
 

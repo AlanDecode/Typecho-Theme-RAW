@@ -45,8 +45,14 @@ function themeConfig($form) {
     $form->addInput($indextitle);
     $sitenav = new Typecho_Widget_Helper_Form_Element_Textarea('sitenav', NULL, NULL, _t('导航链接'), _t('填写导航链接，一行一个，格式：图标,名称,链接,打开位置。'));
     $form->addInput($sitenav); 
-    $sociallinks=new Typecho_Widget_Helper_Form_Element_Textarea('sociallinks', NULL, NULL, '侧边栏链接', '一行一个，格式：图标,链接,打开位置，例如 twitter,https://twitter.com,_blank');
+    $sociallinks=new Typecho_Widget_Helper_Form_Element_Textarea('sociallinks', NULL, NULL, '侧边栏社交链接', '一行一个，格式：图标,链接,打开位置，例如 twitter,https://twitter.com,_blank');
     $form->addInput($sociallinks);
+    $sidermusic=new Typecho_Widget_Helper_Form_Element_Text('sidermusic', NULL, NULL, '侧边栏歌单', '格式：平台,id,是否自动播放。其中 id 是歌单 id，一般可以从歌单链接中获取；平台是歌单的来源，例如网易云是 netease；是否自动播放填写 true 或者 false，默认不自动播放。<br><b>注意：自动播放并非在所有浏览器中都可用。</b>');
+    $form->addInput($sidermusic);
+    $footerright=new Typecho_Widget_Helper_Form_Element_Text('footerright', NULL, NULL, '页面底部右侧文字', '会输出在 Powered By Typecho 左侧，不建议太长，在小屏幕上会被隐去。可以填入备案号、CDN 赞助商等。');
+    $form->addInput($footerright);
+    $footerleft=new Typecho_Widget_Helper_Form_Element_Text('footerleft', NULL, NULL, '页面底部左侧文字', '会输出在站点名右侧，不建议太长，在小屏幕上会被隐去。可以填入备案号、CDN 赞助商等。');
+    $form->addInput($footerleft);
     $bg=new Typecho_Widget_Helper_Form_Element_Text('bg', NULL, NULL, '站点背景图', '填写链接，背景图将会被加上白色遮罩');
     $form->addInput($bg);
     $authorbg=new Typecho_Widget_Helper_Form_Element_Text('authorbg', NULL, NULL , '侧边栏作者背景图', '填写链接');
