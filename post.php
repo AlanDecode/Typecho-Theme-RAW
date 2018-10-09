@@ -31,7 +31,7 @@
 <?php endif;?>
     <div id="pjax-container">
     <?php $this->need('component/crumbs-patch.php'); ?>
-    <article>
+    <article class="block-item">
         <h1><?php echo $this->title(); ?></h1>
         <?php Content::exportPostMeta($this); ?>
         <?php if($this->fields->excerpt): ?>

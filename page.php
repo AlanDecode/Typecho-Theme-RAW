@@ -31,7 +31,7 @@
 <?php endif; ?>
     <div id="pjax-container">
     <?php $this->need('component/crumbs-patch.php'); ?>
-    <article style="padding-top: 200px">
+    <article class="block-item" style="padding-top: 200px">
         <div class="post-header block-item">
             <div class="banner" style="background-color:#202020">
             <img data-action="none" style="display:none;" class="banner" src="<?php echo $this->fields->banner; ?>" onload="$(this).fadeIn(600);" />    
