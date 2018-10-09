@@ -44,8 +44,8 @@
                 }
             ?>
             <?php endif; ?>
-            <a href="#header" style="margin-top:20px"><i class="fa fa-angle-up"></i> 回到顶部</a>
-            <a href="#footer" style="margin-bottom:20px"><i class="fa fa-angle-down"></i> 跳至底部</a>
+            <a href="#header" style="margin-top:20px" onclick="$(`#aside`).removeClass(`show-aside`);$(`.noscroll`).hide();"><i class="fa fa-angle-up"></i> 回到顶部</a>
+            <a href="#footer" style="margin-bottom:20px" onclick="$(`#aside`).removeClass(`show-aside`);$(`.noscroll`).hide();"><i class="fa fa-angle-down"></i> 跳至底部</a>
         </div>
     </div>
     <div id="uptime" class="block-item sider-item"></div>
