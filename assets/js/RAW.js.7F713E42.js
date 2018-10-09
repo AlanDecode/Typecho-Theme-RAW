@@ -219,6 +219,7 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
     $.pjax.submit(event, {container: '#comments',fragment: '#comments',timeout: 8000});
 })
 $(document).on('pjax:start', function(event) {
+    $("#aside").removeClass("show-aside");
     $(document).scrollTop(0);
     $("#loading").show();
     $("#pjax-container").hide();
