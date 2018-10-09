@@ -61,7 +61,7 @@
     </div>
     <?php endif; ?>
 </div>
-<div id="loading">Loading...<br>ヾ(≧∇≦*)ゝ</div>
+<div id="loading"><i class="fa fa-spin fa-circle-o-notch"></i><br>加载中</div>
 <script>
 setInterval(function(){
 	var start_timestamp = 1498708800000;

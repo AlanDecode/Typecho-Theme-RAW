@@ -436,18 +436,18 @@ footer a:hover{
     margin-bottom: 10px;
 }
 #loading{
-    position: relative;
+    position: absolute;
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
-	margin-top: 60px;
+	margin-top: 80px;
 	font-size: 35px;
 	text-align: center;
-	line-height: 1.4em;
-	font-family: bgmSigmarOne;
-	animation: shake-shake .01s reverse infinite cubic-bezier(0.68,-0.55,0.27,1.55);
-    color: #d5527d!important;
+    line-height: 1.4em;
     display: none;
+}
+#loading i{
+    font-size: 50px;
 }
 /* pager in home */
 .page-navigator{
@@ -1448,31 +1448,6 @@ article .excerpt{
     }
 }
 
-@keyframes shake-shake {
-	0% {
-		text-shadow: 0 0 rgba(0,255,255,.5),0 0 rgba(255,0,0,.5);
-		transform: rotate(0.7deg);
-	}
-
-	25% {
-		text-shadow: -1px 0 rgba(0,255,255,.5),1px 0 rgba(255,0,0,.5);
-		transform: rotate(-0.7deg);
-	}
-
-	50% {
-		text-shadow: -3px 0 rgba(0,255,255,.5),2px 0 rgba(255,0,0,.5);
-		transform: rotate(0.7deg);
-		transform: translateX(1px);
-	}
-
-	100% {
-		text-shadow: 2px 0 rgba(0,255,255,.5),3px 0 rgba(255,0,0,.5);
-		transform: rotate(-0.7deg);
-		transform: translateX(-1px);
-	}
-}
-
-
 /* fonts */
 @font-face{
     font-family:"Makinas";
@@ -1481,7 +1456,4 @@ article .excerpt{
 @font-face{
     font-family:"Consola";
     src:url("../fonts/consola.ttf");
-}
-@font-face {
-	font-family:bgmSigmarOne;src:url('../fonts/bgmSigmarOne.woff.ttf');font-weight:strong;
 }

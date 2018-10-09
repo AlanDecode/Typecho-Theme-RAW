@@ -218,12 +218,10 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
 })
 $(document).on('pjax:click', function(event) {
     $(".noscroll").hide();
+    $("#loading").show();
+    $("#pjax-container").fadeTo(1,0.1);
     $("#aside").removeClass("show-aside");
     $(document).scrollTop(0);
-})
-$(document).on('pjax:start', function(event) {
-    $("#loading").show();
-    $("#pjax-container").hide();
 })
 $(document).on('pjax:end', function() {
     var arr=window.location.pathname.split("/");
@@ -232,8 +230,8 @@ $(document).on('pjax:end', function() {
         var fixurl=arr.join("/")+"/#comments";
         $.pjax({url: fixurl, container: '#pjax-container',fragment: '#pjax-container',timeout: 8000});
     }else{
-        $("#loading").hide();
-        $("#pjax-container").show();
+        $("#loading").fadeOut(150);
+        $("#pjax-container").fadeTo(500,1);
         if($(window.location.hash).length>0){
             setTimeout("$(document).scrollTop($(window.location.hash).offset().top-40)",400);
         }

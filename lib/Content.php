@@ -112,7 +112,7 @@ EOF;
             $html.=')"></div><div class="pm-info"><div class="pm-autor-name"><author>';
             echo $html;
             $archive->author();
-            echo '<author></div><div class="pm-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
+            echo '</author></div><div class="pm-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
             $archive->date('F j, Y');
             echo '</time>';
             if(Utils::isPluginAvailable('TePostViews')){
