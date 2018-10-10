@@ -15,7 +15,8 @@
 <script>
 var commentModText="<?php
 if(Helper::options()->commentsRequireModeration) echo '评论成功，请等待审核。';
-if(Helper::options()->commentsWhitelist) echo '评论成功，第一次评论需等待审核。';
+elseif(Helper::options()->commentsWhitelist) echo '评论成功，第一次评论需等待审核。';
+else echo '评论成功！';
 ?>";
 var commentsRequireMail=<?php echo Helper::options()->commentsRequireMail; ?>;
 var commentsRequireURL=<?php echo Helper::options()->commentsRequireURL; ?>;

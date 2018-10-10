@@ -62,7 +62,7 @@ function AjaxComment(){
     }else{
         cmtAuthorLink=$("#logged-in").attr("data-url");
         cmtAuthorMail=$("#logged-in").attr("data-email");
-        cmtAuthorName=$("#logged-in").attr("data-name");
+        cmtAuthorName=$("#logged-in").attr("data-name")+ `<span style="color:red">   评论成功！</span>`;
         cmtByAuthor=" comment-by-author";
     }
 
@@ -90,7 +90,7 @@ function AjaxComment(){
                     $(parent).prepend(html);
                 }else{
                     parent="#comment-"+parent;
-                    cmtParentAuthor=$(parent+">.comment-author a").text();
+                    cmtParentAuthor=$(parent+">.comment-author").text();
                     html=`<div class="comment-children"><ol class="comment-list"><li class="comment-body comment-child`+cmtByAuthor+`"><div class="comment-author"><span><img class="avatar" src="`+cmtAuthorImg+`"></span><cite class="fn"><a href="`+cmtAuthorLink+`" target="_blank">`+cmtAuthorName+`</a></cite></div><div class="comment-meta"><a href=""><time>刚刚</time></a></div><div class="comment-content"><p><span class="comment-reply-author">@`+cmtParentAuthor+`</span>`+cmtContent+`</p></div></li></ol></div>`;
                     $(parent).append(html);
                 }
