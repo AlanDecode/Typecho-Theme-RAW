@@ -12,6 +12,15 @@
 
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
+<script>
+var commentModText="<?php
+if(Helper::options()->commentsRequireModeration) echo '评论成功，请等待审核。';
+if(Helper::options()->commentsWhitelist) echo '评论成功，第一次评论需等待审核。';
+?>";
+var commentsRequireMail=<?php echo Helper::options()->commentsRequireMail; ?>;
+var commentsRequireURL=<?php echo Helper::options()->commentsRequireURL; ?>;
+</script>
+
 <div id="comments">
         <?php
         $parameter = array(
@@ -30,14 +39,14 @@
                 <?php $comments->cancelReply(); ?>
             </div>
             <h3 id="response" class="widget-title text-left">添加新评论</h3>
-            <form data-pjax method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
+            <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
                 <?php if($this->user->hasLogin()): ?>
-                <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
+                <p id="logged-in" data-name="<?php $this->user->screenName(); ?>" data-url="<?php $this->user->url(); ?>" data-email="<?php $this->user->mail(); ?>" ><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a no-pjax="1" href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
                 <?php else: ?>
                     <div class="comment-info-input">
                     <input type="text" name="author" id="author" placeholder="称呼(必填)" value="<?php $this->remember('author'); ?>" />
-                    <input type="email" name="mail" id="mail" placeholder="电子邮件(必填，将保密)" value="<?php $this->remember('mail'); ?>" />
-                    <input type="url" name="url" id="url" placeholder="网站(选填)"  value="<?php $this->remember('url'); ?>" />
+                    <input type="email" name="mail" id="mail" placeholder="电子邮件<?php echo Helper::options()->commentsRequireMail? '(必填，将保密)' : '(选填)' ?>" value="<?php $this->remember('mail'); ?>" />
+                    <input type="url" name="url" id="url" placeholder="网站<?php echo Helper::options()->commentsRequireURL? '(必填)' : '(选填)' ?>"  value="<?php $this->remember('url'); ?>" />
                     </div>
                 <?php endif; ?>
                 <p>

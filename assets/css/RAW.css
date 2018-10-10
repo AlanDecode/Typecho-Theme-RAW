@@ -12,6 +12,7 @@ html {
 	-ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
     color: rgba(0, 0, 0, 0.86);
+    background: #fcfffc;
 }
 article,aside,footer,header {
 	display:block
@@ -92,7 +93,7 @@ footer{
 
 /* header */
 header{
-    background-color: white;
+    background-color: #fcfffc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +102,6 @@ header{
 }
 .blog-title{
     margin: 0.2em 0;
-    color: white;
     max-width: 80%;
     text-align: center;
     color: white;
@@ -381,7 +381,7 @@ footer a:hover{
     content: "#最受欢迎";
 }
 #TOC{
-    background: white;
+    background: #fcfffc;
     max-height: 600px;
     overflow-y: auto;
     width: 270px;
@@ -1191,7 +1191,7 @@ article .excerpt{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
     overflow: hidden;
-    background: white;
+    background: #fcfffc;
     /* contents in item */
     display: flex;
     flex-flow: column nowrap;
@@ -1228,7 +1228,7 @@ article .excerpt{
     height: 100%;
     overflow: auto;
     transition: all 0.3s;
-    background-color: white;
+    background-color: #fcfffc;
     color: black;
     font-size: 0.9em;
     line-height: 1.3em;
