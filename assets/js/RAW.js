@@ -50,7 +50,7 @@ function AjaxComment(){
     var cmtParentAuthor="";
     var cmtAuthorImg="";
     var cmtContent;
-
+    var cmtByAuthor="";
     if($("#logged-in").length<1){
         if(!$("#author").val() || !$("#mail").val() || !$("#textarea").val()){
             alert("还没填好就想提交？");
@@ -62,7 +62,8 @@ function AjaxComment(){
     }else{
         cmtAuthorLink=$("#logged-in").attr("data-url");
         cmtAuthorMail=$("#logged-in").attr("data-email");
-        cmtAuthorName=$("#lodded-in").attr("data-name");
+        cmtAuthorName=$("#logged-in").attr("data-name");
+        cmtByAuthor=" comment-by-author";
     }
 
     var parent = -1;
@@ -85,12 +86,12 @@ function AjaxComment(){
                 var html="";
                 if(parent==-1){
                     parent="#comments > .comment-list";
-                    html=`<li class="comment-body comment-parent comment-by-author"><div class="comment-author"><span><img class="avatar" src="`+cmtAuthorImg+`"></span><cite class="fn"><a href="`+cmtAuthorLink+`" target="_blank">`+cmtAuthorName+`</a></cite></div><div class="comment-meta"><a href=""><time>刚刚</time></a></div><div class="comment-content"><p>`+cmtContent+`</p></div></li>`;
+                    html=`<li class="comment-body comment-parent`+cmtByAuthor+`"><div class="comment-author"><span><img class="avatar" src="`+cmtAuthorImg+`"></span><cite class="fn"><a href="`+cmtAuthorLink+`" target="_blank">`+cmtAuthorName+`</a></cite></div><div class="comment-meta"><a href=""><time>刚刚</time></a></div><div class="comment-content"><p>`+cmtContent+`</p></div></li>`;
                     $(parent).prepend(html);
                 }else{
                     parent="#comment-"+parent;
                     cmtParentAuthor=$(parent+">.comment-author a").text();
-                    html=`<div class="comment-children"><ol class="comment-list"><li class="comment-body comment-child comment-by-author"><div class="comment-author"><span><img class="avatar" src="`+cmtAuthorImg+`"></span><cite class="fn"><a href="`+cmtAuthorLink+`" target="_blank">`+cmtAuthorName+`</a></cite></div><div class="comment-meta"><a href=""><time>刚刚</time></a></div><div class="comment-content"><p><span class="comment-reply-author">@`+cmtParentAuthor+`</span>`+cmtContent+`</p></div></li></ol></div>`;
+                    html=`<div class="comment-children"><ol class="comment-list"><li class="comment-body comment-child`+cmtByAuthor+`"><div class="comment-author"><span><img class="avatar" src="`+cmtAuthorImg+`"></span><cite class="fn"><a href="`+cmtAuthorLink+`" target="_blank">`+cmtAuthorName+`</a></cite></div><div class="comment-meta"><a href=""><time>刚刚</time></a></div><div class="comment-content"><p><span class="comment-reply-author">@`+cmtParentAuthor+`</span>`+cmtContent+`</p></div></li></ol></div>`;
                     $(parent).append(html);
                 }
                 // 重置
