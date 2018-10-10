@@ -113,7 +113,7 @@ EOF;
             echo $html;
             $archive->author();
             echo '</author></div><div class="pm-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
-            $archive->date('F j, Y');
+            $archive->date('Y-m-d');
             echo '</time>';
             if(Utils::isPluginAvailable('TePostViews')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
@@ -127,7 +127,7 @@ EOF;
         }
         else{
             echo '<p class="post-meta"><i class="fa fa-calendar"></i><time>&nbsp;';
-            $archive->date('F j, Y');
+            $archive->date('Y-m-d');
             echo '</time>';
             if(Utils::isPluginAvailable('TePostViews')){
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
