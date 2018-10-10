@@ -5,7 +5,6 @@
 console.log(`%c Theme RAW 0.1 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px 0;`, `background: #1c2b36; padding:5px 0;`);
 
 function toggleMblNav(){
-    if($(window).width()>1024) return;
     if($("#aside").hasClass("show-aside")){
         $("#aside").removeClass("show-aside");
         $(".noscroll").fadeOut(200);
@@ -216,7 +215,7 @@ $(document).scroll(function(){
 $(document).on('submit', 'form[data-pjax]', function(event) {
     $.pjax.submit(event, {container: '#comments',fragment: '#comments',timeout: 8000});
 })
-$(document).on('pjax:click', function(event) {
+$(document).on('pjax:start', function(event) {
     $(".noscroll").hide();
     $("#loading").show();
     $("#pjax-container").fadeTo(1,0.1);
