@@ -32,8 +32,8 @@ function startSearch() {
         return;
     }
     var t="/search/"+c;
-    $.pjax({url: t, container: '#pjax-container',fragment: '#pjax-container',timeout: 8000});
     toggleSearch();
+    $.pjax({url: t, container: '#pjax-container',fragment: '#pjax-container',timeout: 8000});
 }
 
 function entersearch(){
@@ -295,7 +295,7 @@ $(document).scroll(function(){
 $(document).on('submit', 'form[data-pjax]', function(event) {
     $.pjax.submit(event, {container: '#comments',fragment: '#comments',timeout: 8000});
 })
-$(document).on('pjax:click', function(event) {
+$(document).on('pjax:start', function(event) {
     $(".noscroll").hide();
     $("#loading").show();
     $("#pjax-container").fadeTo(1,0.1);
