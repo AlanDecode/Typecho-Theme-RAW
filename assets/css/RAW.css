@@ -12,7 +12,7 @@ html {
 	-ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
     color: rgba(0, 0, 0, 0.86);
-    background: #fcfffc;
+    background: #f7fbf7;
 }
 article,aside,footer,header {
 	display:block
@@ -93,7 +93,7 @@ footer{
 
 /* header */
 header{
-    background-color: #fcfffc;
+    background-color: #f7fbf7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +119,7 @@ header{
     z-index: 2;
 }
 #header-nav .header-nav-inner{
-    width: 1000px;
+    width: 800px;
     max-width: 100%;
     margin: 0 auto;
     height: 100%;
@@ -154,7 +154,7 @@ header{
     height: 100vh;
     margin: 0;
     z-index: 999;
-    background-color: rgba(255,255,255,0.99);
+    background-color: #f7fbf7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,7 +169,8 @@ header{
     border: 1px rgba(0,0,0,0.5) solid;
     border-radius: 10px;
     outline:none;
-    text-align: center
+    text-align: center;
+    background-color: #f3f7f3;
 }
 #search-buttons{
     margin-top: 1em;
@@ -326,6 +327,7 @@ footer a:hover{
 }
 #uptime{
     margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     font-size: 1em;
     line-height: 1.4em;
@@ -341,13 +343,9 @@ footer a:hover{
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
-    margin-top:10px;
     overflow:hidden;
+    max-width: 270px;
 }
-
-
-
-
 
 /* right widget */
 #widget-right{
@@ -381,7 +379,7 @@ footer a:hover{
     content: "#最受欢迎";
 }
 #TOC{
-    background: #fcfffc;
+    background: #f7fbf7;
     max-height: 600px;
     overflow-y: auto;
     width: 270px;
@@ -441,13 +439,10 @@ footer a:hover{
     width: 100%;
     max-width: 100%;
 	margin-top: 80px;
-	font-size: 35px;
+	font-size: 1.5em;
 	text-align: center;
     line-height: 1.4em;
     display: none;
-}
-#loading i{
-    font-size: 50px;
 }
 /* pager in home */
 .page-navigator{
@@ -479,10 +474,11 @@ footer a:hover{
 /* pager in post */
 .post-pager{
     flex-flow:column nowrap;
-    background-color:#f7f8fa;
     align-items: center;
     justify-content:center;
     max-width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .post-pager li{
     flex:1;
@@ -558,26 +554,18 @@ article{
 
 
 /* article style */
-article > p,article > pre,article > .post-meta,article > div.footnotes,
-article > h1,article > h2,article > h3,article > h4,article > h5,article > h6{
-    padding-right: 15px;
-    padding-left: 15px;
-}
 article > *{
     max-width: 100%!important;
-}
-article p.img-grid{
-    padding-left: 0;
-    padding-right: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: max-content;
-    width: -moz-max-content;
-    margin: 0 auto;
+    margin-right: 15px!important;
+    margin-left: 15px!important;
 }
 blockquote *, ul *,ol *{
     max-width: 100%;
+}
+article blockquote,
+article .post-header{
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
 article .excerpt{
     margin:0 auto;
@@ -642,36 +630,8 @@ article sup{
 }
 article p img{
     max-width: 100%;
-    width: 100%;
-}
-article p.img-grid img{
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    height: 100%;
-}
-.zoom-img-wrap img{
-    height: unset!important;
-}
-.img-grid{
-    max-width: 100%!important;
-}
-@media screen and (max-width:1000px){
-    .img-grid{
-        max-width: 100%!important;
-    }
-}
-article p.img-grid.p-1{
-    justify-content: center!important;
-}
-article p.img-grid.p-2 img{
-    width: 49%;
-    margin-bottom: 2%;
-}
-article p.img-grid.p-3 img{
-    width: 32%;
-}
-article p.img-grid.p-4 img{
-    width: 49%;
-    margin-bottom: 2%;
+    text-align: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 article sup a{
     color: white!important;
@@ -760,8 +720,7 @@ article .excerpt{
     padding: 0.2em;
     outline: none;
     border-radius: 0.5em;
-    border: none;
-    background-color: rgb(247,248,250);   
+    border: none;  
 }
 #textarea{
     resize: none;
@@ -769,7 +728,6 @@ article .excerpt{
     height: 150px;
     border: none;
     border-radius: 0.5em;
-    background-color: rgb(247,248,250);
     padding: 0.7em;
     outline: none;
 }
@@ -812,7 +770,6 @@ article .excerpt{
     outline: none;
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: rgb(247,248,250);
     transition: 0.3s ease background-color;
     padding: 0.2em
 }
@@ -930,6 +887,7 @@ article .excerpt{
     font-size: 1em;
     padding: 0.5em;
     font-family: 'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei','Segoe UI Emoji','Segoe UI Symbol',Helvetica,Arial,sans-serif;
+    background-color: #f3f7f3;
 }
 
 
@@ -1191,7 +1149,7 @@ article .excerpt{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
     overflow: hidden;
-    background: #fcfffc;
+    background: #f7fbf7;
     /* contents in item */
     display: flex;
     flex-flow: column nowrap;
@@ -1228,7 +1186,7 @@ article .excerpt{
     height: 100%;
     overflow: auto;
     transition: all 0.3s;
-    background-color: #fcfffc;
+    background-color: #f7fbf7;
     color: black;
     font-size: 0.9em;
     line-height: 1.3em;
@@ -1266,6 +1224,7 @@ article .excerpt{
 /* fix for third party */
 #music > .aplayer{
     margin: 0;
+    background: #f7fbf7;
 }
 .hljs{
     overflow-y: hidden;

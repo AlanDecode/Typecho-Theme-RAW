@@ -39,7 +39,7 @@
             </div>
             <h1 class="blog-title"><?php $this->title(); ?></h1>
         </div>
-        <?php echo Content::parseIMG(Content::parseBoard($this->content)); ?>
+        <?php echo Content::parseBoard($this->content); ?>
     </article>
     <?php $this->need('component/comments.php') ?>
     <script>$(".toc").remove();</script>

@@ -40,10 +40,10 @@
         <?php 
             if($this->fields->showTOC=='1'){
                 $parsed=Content::parseTOC($this->content);
-                echo Content::parseIMG($parsed['content']);
+                echo $parsed['content'];
             }
             else{
-                echo Content::parseIMG($this->content);
+                echo $this->content;
             }
         ?>          
     </article>

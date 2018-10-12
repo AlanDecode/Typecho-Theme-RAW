@@ -40,11 +40,6 @@ class Content{
         return array('content'=>$new,'toc'=>$toc);
     }
 
-    static public function parseIMG($content){
-        $new=preg_replace('/<p>(<img.*?>)/s', '<p class="img-grid">${1}', $content);
-        return $new;
-    }
-
     static public function title(Widget_Archive $archive){
         $archive->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),

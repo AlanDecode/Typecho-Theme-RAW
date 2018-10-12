@@ -163,11 +163,6 @@ RAW = {
     },
 
     parseImgGrid : function(){
-        $("article p").each(function(){
-            if($(this).children("img").length>0){
-                $(this).addClass("p-"+String($(this).children("img").length));
-            }
-        })
         $("article img").each(function(i,item){
             if($(item).attr("data-action")!="none"){
                 $(item).attr("data-action","zoom");
@@ -266,7 +261,8 @@ RAW = {
 $(document).ready(function(){
     RAW.initRAW();
     hljs.initHighlightingOnLoad();
-    registerTOC($("#TOC"));
+    registerTOC();
+    registerAside();
     RAW.registerAjaxComment();
 })
 $(document).click(function(e){
@@ -279,6 +275,7 @@ $(document).click(function(e){
     })
 })
 $(document).scroll(function(){
+    if($(window).width()>1024) return;
 	var before = $(document).scrollTop();
     $(document).scroll(function() {
         var after = $(document).scrollTop();

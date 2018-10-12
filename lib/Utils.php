@@ -87,6 +87,17 @@ class Utils {
         return $is_mobile;
     }
 
+    public static function isPhone(){
+        $ua=strtolower($_SERVER["HTTP_USER_AGENT"]);
+        $devices=array("Android", 'iPhone', 'iPod', 'Phone');
+        foreach ($devices as $device) {
+            if(strpos($ua, strtolower($device))){
+                return true;
+            }
+        }
+        return false;
+    }
+
     // 判断插件是否存在并启用
     public static function isPluginAvailable($name) {
         if (class_exists($name.'_Plugin')){

@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/hljs/styles/atom-one-dark.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.css','','css');?>">
-    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D592531','css'); ?>">
+    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D592532','css'); ?>">
     <?php endif; ?>
      
     <!-- JS -->
@@ -70,6 +70,7 @@
     <?php endif; ?>
     <script>
     var lastOffset;
+    var lastOffset_aside;
     function toggleSider(item){
         if($(item).parent().hasClass("sider-shrink")){
             $(item).parent().removeClass("sider-shrink");
@@ -78,16 +79,34 @@
         }
         if($("TOC").length) lastOffset=$("#TOC").offset().top;
     }
-    function fixTOC(fix){
+    function fixItem(item,fix){
         if(fix){
-            $("#TOC").css("top","50px");
-            $("#TOC").css("left",$("#TOC").offset().left);
-            $("#TOC").addClass("toc-fixed");
+            $(item).css("top","50px");
+            $(item).css("left",$(item).offset().left);
+            $(item).addClass("toc-fixed");
         }else{
-            $("#TOC").removeClass("toc-fixed");
-            $("#TOC").css("top","unset");
-            $("#TOC").css("left","unset");
+            $(item).removeClass("toc-fixed");
+            $(item).css("top","unset");
+            $(item).css("left","unset");
         }
+    }
+    function registerAside(){        
+        lastOffset_aside=0;
+        $(document).scroll(function(){
+            if($("#music").length < 1) return;
+            if(!lastOffset_aside){
+                lastOffset_aside=$("#music").offset().top;
+                return;
+            }
+            var top=$("#music").offset().top-$(document).scrollTop();
+            if(top<=51 && $("#music").offset().top>=lastOffset_aside){
+                fixItem("#music",true);
+            }
+            else{
+                fixItem("#music",false);
+                lastOffset_aside=$("#music").offset().top;
+            } 
+        })
     }
     function registerTOC(){        
         lastOffset=0;
@@ -99,10 +118,10 @@
             }
             var top=$("#TOC").offset().top-$(document).scrollTop();
             if(top<=51 && $("#TOC").offset().top>=lastOffset){
-                fixTOC(true);
+                fixItem("#TOC",true);
             }
             else{
-                fixTOC(false);
+                fixItem("#TOC",false);
                 lastOffset=$("#TOC").offset().top;
             } 
         })
