@@ -110,26 +110,16 @@ function AjaxComment(){
     })
 }
 
-var curBooks=0;
-var curMovies=0;
 RAW = {
     initRAW : function(){ // init all
-        curBooks = 0;
-        curMovies = 0;
         RAW.parseImgGrid(); 
         RAW.parseURL();
-        RAW.loadBooks();
-        RAW.loadMovies();
         RAW.initFlowChart();
     },
 
     reloadRAW : function(){ // reload scripts after pjax
-        curBooks = 0;
-        curMovies = 0;
         RAW.parseImgGrid(); 
         RAW.parseURL();
-        RAW.loadBooks();
-        RAW.loadMovies();
         RAW.reloadLike();
     },
 
@@ -168,58 +158,6 @@ RAW = {
                 $(item).attr("data-action","zoom");
             }
         })
-    },
-
-    loadBooks : function(){
-        if(window.location.pathname!="/book" &&window.location.pathname!="/book.html" && window.location.pathname!="/book/") return;
-        $('.loadmore').html("加载中...");
-        $.getJSON("https://api.imalan.cn/Douban/getBooks.php?from="+String(curBooks),function(result){
-            $('.loadmore').html("加载更多");
-            if(result.length<10){
-                $("#loadMoreBooks").html("没有啦");
-            }
-            $.each(result,function(i,ite){
-                var item=result[i];
-                var html=`<div title="点击显示详情" id="board-book-item-`+String(curBooks)+`" class="board-item">
-                            <div class="board-thumb" style="background-image:url(`+item.img+`)"></div>
-                            <div class="board-title">`+item.title+`</div>
-                            <div class="board-info" title="点击关闭详情">
-                                <p class="board-info-basic">
-                                书名：`+item.title+`<br>
-                                评分：`+item.rating+`<br>
-                                作者：`+item.author+`<br>
-                                链接：<a target="_blank" href="`+item.link+`">豆瓣阅读</a><br>
-                                简介：<br>
-                                </p>
-                                <p class="board-info-summary">
-                                    `+item.summary+`
-                                </p>
-                            </div>
-                        </div>`;
-                $(".book-list").append(html);            
-                curBooks++;
-            });
-        });    
-    },
-    
-    loadMovies : function(){
-        if(window.location.pathname!="/movie" && window.location.pathname!="/movie.html" && window.location.pathname!="/movie") return;
-        $(".loadmore").html("加载中...");
-        $.getJSON("https://api.imalan.cn/Douban/getMovies.php?from="+String(curMovies),function(result){
-            $('.loadmore').html("加载更多");
-            if(result.length<10){
-                $("#loadMoreMovies").html("没有啦");
-            }
-            $.each(result,function(i,ite){
-                var item=result[i];
-                var html=`<div id="board-movie-item-`+String(curMovies)+`" class="board-item">
-                            <div class="board-thumb" style="background-image:url(`+item.img+`)"></div>
-                            <div class="board-title"><a href="`+item.url+`" target="_blank">`+item.name+`</a></div>
-                        </div>`;
-                $(".movie-list").append(html);            
-                curMovies++;
-            });
-        });    
     },
 
     reloadMathJAX : function(){
