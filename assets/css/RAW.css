@@ -1145,7 +1145,6 @@ article .excerpt{
 }
 .board-item {
     position: relative;
-    cursor: pointer;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
     overflow: hidden;
@@ -1155,7 +1154,6 @@ article .excerpt{
     flex-flow: column nowrap;
     justify-content: flex-start;
 }
-
 .board-item:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -1176,50 +1174,6 @@ article .excerpt{
     color: #202020 !important;
     font-weight: 700 !important;
 }
-/* detail panel */
-
-.board-info{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    transition: all 0.3s;
-    background-color: #f7fbf7;
-    color: black;
-    font-size: 0.9em;
-    line-height: 1.3em;
-    transform: translateY(100%);
-    padding: 0.5em;
-}
-.board-info-show > .board-info{
-    transform: translateY(0);
-}
-/* special for douban */
-.board-info>.douban-info-basic{
-    white-space: nowrap!important;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* loadmore button (span) */
-.loadmore{
-    padding: 0.3em;
-    background: black;
-    color: white;
-    transition:0.2s;
-    margin-top: 20px;
-    display: block;
-    width: max-content;
-    width: -moz-max-content;
-}
-.loadmore:hover{
-    background: rgba(0,0,0,0.6);
-}
-
-
-
 
 /* fix for third party */
 #music > .aplayer{
@@ -1230,14 +1184,11 @@ article .excerpt{
     overflow-y: hidden;
 }
 
-
 /* custom fix */
 .site-title{
     font-size: 110px;
     letter-spacing: 40px;
 }
-
-
 
 /* device query for responsive diesign */
 @media screen and (max-width:1023px){
