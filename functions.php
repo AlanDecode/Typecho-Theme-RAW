@@ -57,6 +57,8 @@ function themeConfig($form) {
     $form->addInput($bg);
     $authorbg=new Typecho_Widget_Helper_Form_Element_Text('authorbg', NULL, NULL , '侧边栏作者背景图', '填写链接');
     $form->addInput($authorbg);
+    $authorlink=new Typecho_Widget_Helper_Form_Element_Text('authorlink', NULL, NULL , '侧边栏作者头像链接', '填写点击头像时打开的页面，不填默认 /about.html');
+    $form->addInput($authorlink);
     $headinfo = new Typecho_Widget_Helper_Form_Element_Textarea('headinfo', NULL, NULL, _t('自定义头部，将输出在 head 标签结束前'), _t('这里可以引入 CSS、JS 等'));
     $form->addInput($headinfo); 
     $footerinfo = new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('自定义尾部，将输出在 footer 后'), _t('这里可以引入 CSS、JS 等'));

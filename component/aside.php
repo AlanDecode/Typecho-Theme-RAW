@@ -16,7 +16,7 @@
     <div class="aside-inner block-item" style="width:100%;overflow-y:auto">
         <div id="author-info">
             <div class="author-bg" style="background-image: url(<?php echo $this->options->authorbg ? $this->options->authorbg : '/usr/themes/RAW/assets/sagiri-banner.png' ?>);"></div>
-            <a href="/about"><div class="author-avatar" style="background-image:url(<?php echo Typecho_Common::gravatarUrl($this->author->mail, 200, '', '', true); ?>)"></div></a>
+            <a href="<?php echo $this->options->authorlink? $this->options->authorlink : '/about.html'; ?>"><div class="author-avatar" style="background-image:url(<?php echo Typecho_Common::gravatarUrl($this->author->mail, 200, '', '', true); ?>)"></div></a>
             <div class="author-name"><?php echo $this->author(); ?></div>
             <?php if($this->options->sociallinks && $this->options->sociallinks!=''): ?>
             <div class="author-links">

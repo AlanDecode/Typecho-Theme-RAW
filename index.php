@@ -67,7 +67,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             <?php endif;?>
                             <?php if($this->fields->type=='1'): ?>
                             <?php echo $this->content; ?>
-                            <p><a class="go-comments" href="<?php $this->permalink(); ?>#comments"><i class="fa fa-comments"></i> Comments</a></p>
+                            <p><a class="go-comments" href="<?php $this->permalink(); ?>#comments"><i class="fa fa-comments"></i> Comments (<?php echo $this->commentsNum; ?>)</a></p>
                             <?php endif;?>
                         <?php endif; ?>
                     </article>

@@ -118,6 +118,7 @@ EOF;
                 echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
                 Like_Plugin::theLike($link = false,$archive);
             }
+            echo '&nbsp;&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
             echo '</div></div></div>';
         }
         else{
@@ -134,6 +135,7 @@ EOF;
                 Like_Plugin::theLike($link = false,$archive);
                 echo '</span> <span style="display:none">Like(s)</span>';
             }
+            echo '&nbsp;&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
             echo '</p>';
         }
     }

@@ -13,6 +13,8 @@ html {
     -webkit-text-size-adjust:100%;
     color: rgba(0, 0, 0, 0.86);
     background: #f7fbf7;
+    font-size: 18px;
+    font-weight: 300;
 }
 article,aside,footer,header {
 	display:block
@@ -132,8 +134,7 @@ header{
 }
 #header-nav, #header-nav a{
     color: white;
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 1em;
     transition: 0.25s;
 }
 #header-nav a{
@@ -580,17 +581,17 @@ article h1,article h2,article h3,article h4,article h5,article h6{
     margin-bottom:0.2em;
 }
 article h1{
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin-top: 0;
 }
 article h2{
-    font-size: 2em;
+    font-size: 1.8em;
 }
 article h3{
-    font-size: 1.7em
+    font-size: 1.65em
 }
 article h4{
-    font-size: 1.4em;
+    font-size: 1.35em;
 }
 article a{
     padding: 0!important;
@@ -1098,8 +1099,11 @@ article .excerpt{
     align-items: center;
     justify-content: flex-start;
     color: #a0a0a0;
-    font-size: 0.98em;
+    font-size: 0.78em;
     margin-bottom: 10px;
+}
+.post-meta a{
+    color: #a0a0a0;
 }
 .pm-avatar{
     height: 50px;

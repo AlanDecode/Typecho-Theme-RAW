@@ -235,14 +235,10 @@ $(document).on('pjax:start', function(event) {
     $("#loading").show();
     $("#pjax-container").fadeTo(1,0.1);
     $("#aside").removeClass("show-aside");
-    $(document).scrollTop(0);
 })
 $(document).on('pjax:end', function() {
     $("#loading").fadeOut(150);
     $("#pjax-container").fadeTo(500,1);
-    if($(window.location.hash).length>0){
-        setTimeout("$(document).scrollTop($(window.location.hash).offset().top-40)",400);
-    }
     RAW.registerAjaxComment();
 })
 $(".noscroll").click(function(){
