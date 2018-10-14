@@ -22,7 +22,7 @@
     <div id="recent-comments" class="sider-item block-item">
         <span onclick="toggleSider(this);"><i class="fa fa-navicon"></i></span>
         <ul>
-            <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+            <?php $this->widget('Widget_Comments_Recent','ignoreAuthor=true')->to($comments); ?>
             <?php while($comments->next()): ?>
             <li>
                 <div class="rc-avatar"><?php $comments->gravatar(50,''); ?></div>
