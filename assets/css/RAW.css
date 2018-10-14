@@ -435,15 +435,22 @@ footer a:hover{
     margin-bottom: 10px;
 }
 #loading{
-    position: absolute;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-	margin-top: 80px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
 	font-size: 1.5em;
 	text-align: center;
     line-height: 1.4em;
-    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
 }
 /* pager in home */
 .page-navigator{
@@ -1104,6 +1111,9 @@ article .excerpt{
 }
 .post-meta a{
     color: #a0a0a0;
+}
+.post-meta a:hover{
+    border: none;
 }
 .pm-avatar{
     height: 50px;

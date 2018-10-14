@@ -40,7 +40,7 @@
 <script src="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.js','','js'); ?>"></script>
 <script src="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.min.js','','js'); ?>"></script>
 <script src="<?php echo RAW::staticPath($this->options->CDNPath,'/pjax/pjax.js','','js'); ?>"></script>
-<script src="<?php echo RAW::staticPath($this->options->CDNPath,'/js/RAW.js','7F713E53','js'); ?>"></script>
+<script src="<?php echo RAW::staticPath($this->options->CDNPath,'/js/RAW.js','7F713E54','js'); ?>"></script>
 <?php endif;?>
 <?php echo $this->options->footerinfo; ?>
 <script>
