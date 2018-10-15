@@ -111,14 +111,14 @@ EOF;
             $archive->date('Y-m-d');
             echo '</time>';
             if(Utils::isPluginAvailable('TePostViews')){
-                echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
+                echo '&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
                 $archive->viewsNum();
             }
             if(Utils::isPluginAvailable('Like')){
-                echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
+                echo '&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
                 Like_Plugin::theLike($link = false,$archive);
             }
-            echo '&nbsp;&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
+            echo '&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
             echo '</div></div></div>';
         }
         else{
@@ -126,16 +126,16 @@ EOF;
             $archive->date('Y-m-d');
             echo '</time>';
             if(Utils::isPluginAvailable('TePostViews')){
-                echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
+                echo '&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;';
                 $archive->viewsNum();
                 echo ' <span style="display:none">View(s)</span>';
             }
             if(Utils::isPluginAvailable('Like')){
-                echo '&nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
+                echo '&nbsp;&nbsp;<i class="fa fa-thumbs-o-up post-like"></i>&nbsp;<span>';
                 Like_Plugin::theLike($link = false,$archive);
                 echo '</span> <span style="display:none">Like(s)</span>';
             }
-            echo '&nbsp;&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
+            echo '&nbsp;&nbsp;<a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp;<span>'.$archive->commentsNum.'</a>';
             echo '</p>';
         }
     }

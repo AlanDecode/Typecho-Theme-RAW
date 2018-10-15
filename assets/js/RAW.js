@@ -232,11 +232,11 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
 })
 $(document).on('pjax:start', function(event) {
     $(".noscroll").hide();
-    $("#loading").css("visibility","visible").fadeTo(50,1);
+    $("#loading").fadeIn(50);
     $("#aside").removeClass("show-aside");
 })
 $(document).on('pjax:end', function() {
-    $("#loading").fadeTo(500,0).css("visibility","hidden");
+    $("#loading").fadeOut(450);
     RAW.registerAjaxComment();
 })
 $(".noscroll").click(function(){

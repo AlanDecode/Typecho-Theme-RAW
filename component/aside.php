@@ -20,16 +20,14 @@
             <div class="author-name"><?php echo $this->author(); ?></div>
             <?php if($this->options->sociallinks && $this->options->sociallinks!=''): ?>
             <div class="author-links">
-                <ul>
                 <?php    
                 $links=explode(PHP_EOL,$this->options->sociallinks);
                     foreach ($links as $value) {
                         $value=str_replace("\r",'', $value);
                         $temp=explode(',',$value);
-                        echo '<li style="float:left"><span><a href="'.$temp[1].'" target="'.$temp[2].'"><i class="fa fa-fw fa-'.$temp[0].'"></i></a></span></li>';
+                        echo '<a href="'.$temp[1].'" target="'.$temp[2].'"><i class="fa fa-fw fa-'.$temp[0].'"></i></a>';
                     }
                 ?>
-                </ul>
             </div>
             <?php endif; ?>
         </div>
@@ -57,11 +55,16 @@
         $autoplay=explode(',',$list)[2] ? explode(',',$list)[2] : 'false';
     ?>
     <div id="music" class="block-item">
-        <div class="aplayer no-destroy" data-listmaxheight="350px" data-id="<?php echo $id; ?>" data-autoplay="<?php echo $autoplay; ?>" data-server="<?php echo $server; ?>" data-type="playlist"></div>
+        <div class="aplayer no-destroy" data-listmaxheight="250px" data-id="<?php echo $id; ?>" data-autoplay="<?php echo $autoplay; ?>" data-server="<?php echo $server; ?>" data-type="playlist"></div>
     </div>
     <?php endif; ?>
+    <div id="desktop-ctrler" class="block-item sider-item">
+        <a href="#header"><i class="fa fa fa-arrow-up"></i></a>
+        <a href="#footer"><i class="fa fa fa-arrow-down"></i></a>
+        <a class="go-comments" href="#comments"><i class="fa fa fa-commenting-o"></i></a>
+    </div>
 </div>
-<div id="loading"><i class="fa fa-spin fa-circle-o-notch"></i>加载中</div>
+<div id="loading"><i class="fa fa-spin fa-circle-o-notch"></i><br>加载中</div>
 <script>
 setInterval(function(){
 	var start_timestamp = 1498708800000;

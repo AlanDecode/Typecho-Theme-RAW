@@ -21,7 +21,11 @@ else echo '评论成功！';
 var commentsRequireMail=<?php echo Helper::options()->commentsRequireMail; ?>;
 var commentsRequireURL=<?php echo Helper::options()->commentsRequireURL; ?>;
 </script>
-
+<style>
+#desktop-ctrler a.go-comments{
+    display: block;
+}
+</style>
 <div id="comments">
         <?php
         $parameter = array(

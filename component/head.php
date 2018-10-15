@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/hljs/styles/atom-one-dark.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.css','','css');?>">
-    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D59253a','css'); ?>">
+    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D59253b','css'); ?>">
     <?php endif; ?>
      
     <!-- JS -->
@@ -93,22 +93,22 @@
     function registerAside(){        
         lastOffset_aside=0;
         $(document).scroll(function(){
-            if($("#music").length < 1) return;
+            if($("#desktop-ctrler").length < 1) return;
             if(!lastOffset_aside){
-                lastOffset_aside=$("#music").offset().top;
+                lastOffset_aside=$("#desktop-ctrler").offset().top;
                 return;
             }
-            var top=$("#music").offset().top-$(document).scrollTop();
-            if(top<=51 && $("#music").offset().top>=lastOffset_aside){
-                fixItem("#music",true);
+            var top=$("#desktop-ctrler").offset().top-$(document).scrollTop();
+            if(top<=51 && $("#desktop-ctrler").offset().top>=lastOffset_aside){
+                fixItem("#desktop-ctrler",true);
             }
             else{
-                fixItem("#music",false);
-                lastOffset_aside=$("#music").offset().top;
+                fixItem("#desktop-ctrler",false);
+                lastOffset_aside=$("#desktop-ctrler").offset().top;
             } 
         })
     }
-    function registerTOC(){        
+    function registerTOC(){     
         lastOffset=0;
         $(document).scroll(function(){
             if($("#TOC").length < 1) return;

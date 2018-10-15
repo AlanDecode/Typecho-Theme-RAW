@@ -241,7 +241,7 @@ footer a:hover{
 }
 #author-info .author-bg{
     width: 100%;
-    height: 150px;
+    height: 120px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -250,7 +250,7 @@ footer a:hover{
     position: absolute;
     width: 100px;
     height: 100px;
-    top: 100px;
+    top: 70px;
     left: 85px;
     border-radius: 50px;
     background-position: center center;
@@ -278,30 +278,20 @@ footer a:hover{
     justify-content: space-around;
     align-content: center;
     margin: 0 auto;
+    padding-bottom: 1em;
 }
-.author-links ul{
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-top: 0;
-}
-#author-info .author-links span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    padding: 0.2em;
-    font-size: 1.8em;
+.author-links a{
     transition: 0.3s ease all;
-    cursor: pointer;
-}
-#author-info .author-links span a{
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
     color: #202020;
+    font-size: 1.4rem;
+    text-decoration: none;
 }
-#author-info .author-links span:hover{
+.author-links a:hover{
+    border: none;
+    color: red;
     transform: scale(1.2);
 }
 #mbl-ctrler{
@@ -342,6 +332,33 @@ footer a:hover{
     padding-bottom: 0;
     overflow:hidden;
     max-width: 270px;
+    margin-bottom: 10px;
+}
+#desktop-ctrler{
+    max-width: 270px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#desktop-ctrler::before{
+    content: "#CTRL"
+}
+#desktop-ctrler a{
+    color: #202020;
+    text-decoration: none;
+    transition: 0.2s ease all;
+    font-size: 1.3rem;
+    flex: 1;
+    text-align: center;
+}
+#desktop-ctrler a.go-comments{
+    display: none;
+}
+#desktop-ctrler a:hover{
+    border: none;
+    color: red;
+    transform: scale(1.2);
 }
 
 /* right widget */
@@ -434,18 +451,13 @@ footer a:hover{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    top:0;
+    padding-top:30vh;
     left: 0;
 	font-size: 1.5em;
 	text-align: center;
     line-height: 1.4em;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.86);
+    display: none;
     z-index: 2;
 }
 /* pager in home */
@@ -481,8 +493,6 @@ footer a:hover{
     align-items: center;
     justify-content:center;
     max-width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .post-pager li{
     flex:1;
@@ -666,7 +676,6 @@ article hr::after{
 article > ol,article > ul{
     list-style-position: inside;
     padding: 1em;
-    padding-left: 2em;
 }
 article > ul > li{
     text-indent: -1em;
@@ -708,6 +717,7 @@ article .excerpt{
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
+    border-top: 1px solid rgba(0,0,0,0.1);
 }
 #coments form,#coments p{
     width: 100%;
@@ -1202,6 +1212,17 @@ article .excerpt{
     #widget-right,#TOC{
         display: none;
     }
+    #pjax-container > article.block-item{
+        border: none;
+    }
+    article > * {
+        max-width: 100%!important;
+        margin-right: 0.5em!important;
+        margin-left: 0.5em!important;
+    }
+    #comments{
+        border: none;
+    }
 }
 
 @media screen and (max-width: 1300px){
@@ -1209,7 +1230,7 @@ article .excerpt{
         max-width: 100%;
     }
     /* fix sider */
-    #side-buttons, #uptime,#music{
+    #side-buttons, #uptime,#music,#desktop-ctrler{
         display: none;
     }
     #aside{
@@ -1257,7 +1278,7 @@ article .excerpt{
         background-color: #202020;
     }
     #aside-close-btn, #aside-close-btn a,
-    #author-info .author-links span a{
+    #author-info .author-links a{
         color: #a9a9a9;
     }
     #mbl-ctrler{
