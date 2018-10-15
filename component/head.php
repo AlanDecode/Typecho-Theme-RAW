@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/hljs/styles/atom-one-dark.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.css','','css');?>">
-    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D59253c','css'); ?>">
+    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D59253d','css'); ?>">
     <?php endif; ?>
      
     <!-- JS -->
