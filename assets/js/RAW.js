@@ -232,7 +232,7 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
 })
 $(document).on('pjax:start', function(event) {
     $(".noscroll").hide();
-    $("#loading").css("visibility","visible").fadeTo(150,1);
+    $("#loading").css("visibility","visible").fadeTo(50,1);
     $("#aside").removeClass("show-aside");
 })
 $(document).on('pjax:end', function() {

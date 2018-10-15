@@ -232,13 +232,11 @@ $(document).on('submit', 'form[data-pjax]', function(event) {
 })
 $(document).on('pjax:start', function(event) {
     $(".noscroll").hide();
-    $("#loading").show();
-    $("#pjax-container").fadeTo(1,0.1);
+    $("#loading").css("visibility","visible").fadeTo(50,1);
     $("#aside").removeClass("show-aside");
 })
 $(document).on('pjax:end', function() {
-    $("#loading").fadeOut(150);
-    $("#pjax-container").fadeTo(500,1);
+    $("#loading").fadeTo(500,0).css("visibility","hidden");
     RAW.registerAjaxComment();
 })
 $(".noscroll").click(function(){

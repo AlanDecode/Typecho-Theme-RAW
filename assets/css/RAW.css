@@ -12,9 +12,7 @@ html {
 	-ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
     color: rgba(0, 0, 0, 0.86);
-    background: #f7fbf7;
     font-size: 18px;
-    font-weight: 300;
 }
 article,aside,footer,header {
 	display:block
@@ -95,7 +93,6 @@ footer{
 
 /* header */
 header{
-    background-color: #f7fbf7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,10 +152,10 @@ header{
     height: 100vh;
     margin: 0;
     z-index: 999;
-    background-color: #f7fbf7;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fafafa;
     justify-content: flex-start;
 }
 #search-box input{
@@ -171,7 +168,6 @@ header{
     border-radius: 10px;
     outline:none;
     text-align: center;
-    background-color: #f3f7f3;
 }
 #search-buttons{
     margin-top: 1em;
@@ -380,10 +376,10 @@ footer a:hover{
     content: "#最受欢迎";
 }
 #TOC{
-    background: #f7fbf7;
     max-height: 600px;
     overflow-y: auto;
     width: 270px;
+    font-size: 16px;
 }
 #TOC::before{
     content: "#TOC";
@@ -446,7 +442,7 @@ footer a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     visibility: hidden;
     opacity: 0;
@@ -779,7 +775,7 @@ article .excerpt{
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.1);
     transition: 0.3s ease background-color;
-    padding: 0.2em
+    padding: 0.2em;
 }
 #comment-submit-button:hover{
     color: white;
@@ -895,7 +891,7 @@ article .excerpt{
     font-size: 1em;
     padding: 0.5em;
     font-family: 'PingFang SC','Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei','Segoe UI Emoji','Segoe UI Symbol',Helvetica,Arial,sans-serif;
-    background-color: #f3f7f3;
+    background-color: #f6f6f6;
 }
 
 
@@ -988,8 +984,7 @@ article .excerpt{
     background-position: center;
 }
 .block-item{
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
-    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 .site-bg,.site-bg-mask{
     position: fixed;
@@ -1162,7 +1157,6 @@ article .excerpt{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
     overflow: hidden;
-    background: #f7fbf7;
     /* contents in item */
     display: flex;
     flex-flow: column nowrap;
@@ -1192,7 +1186,6 @@ article .excerpt{
 /* fix for third party */
 #music > .aplayer{
     margin: 0;
-    background: #f7fbf7;
 }
 .hljs{
     overflow-y: hidden;
@@ -1348,6 +1341,13 @@ article .excerpt{
         min-width: 30%;
         max-width: 30%;
         margin: 1.6%;
+    }
+    #comments .comment-author .avatar{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    #comments .comment-children{
+        padding-left: 2.5rem;
     }
 }
 

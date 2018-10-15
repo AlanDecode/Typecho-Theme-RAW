@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/hljs/styles/atom-one-dark.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/owo/owo.min.css','','css');?>">
     <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/zoomjs/zoom.css','','css');?>">
-    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D592538','css'); ?>">
+    <link rel="stylesheet" href="<?php echo RAW::staticPath($this->options->CDNPath,'/css/RAW.css','8D59253a','css'); ?>">
     <?php endif; ?>
      
     <!-- JS -->
@@ -127,4 +127,9 @@
         })
     }
     </script>
+    <?php if($this->options->colorscheme && $this->options->colorscheme!=''):?>
+    <style>
+        html,header,#loading,#music > .aplayer,#search-box.board-item{background-color:<?php echo $this->options->colorscheme; ?>}
+    </style>
+    <?php endif;?>
 </head>

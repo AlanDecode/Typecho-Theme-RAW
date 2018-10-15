@@ -37,8 +37,7 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 }
 
 function themeConfig($form) {
-    $randombanner = new Typecho_Widget_Helper_Form_Element_Textarea('randombanner', NULL, NULL, _t('头部大图'), _t('填写头部大图地址，一行一个，首页大图与未设置主图的文章将从这里随机选取图片作为头部图片'));
-    $form->addInput($randombanner);
+    //基本设置
     $notice = new Typecho_Widget_Helper_Form_Element_Textarea('notice', NULL, NULL, _t('网站公告'), _t('网站公告'));
     $form->addInput($notice);
     $indextitle = new Typecho_Widget_Helper_Form_Element_Text('indextitle', NULL, NULL, _t('站点大图内文字'), _t('填写站点大图内文字'));
@@ -49,16 +48,24 @@ function themeConfig($form) {
     $form->addInput($sociallinks);
     $sidermusic=new Typecho_Widget_Helper_Form_Element_Text('sidermusic', NULL, NULL, '侧边栏歌单', '格式：平台,id,是否自动播放。其中 id 是歌单 id，一般可以从歌单链接中获取；平台是歌单的来源，例如网易云是 netease；是否自动播放填写 true 或者 false，默认不自动播放。<br><b>注意：自动播放并非在所有浏览器中都可用。</b>');
     $form->addInput($sidermusic);
+    $authorlink=new Typecho_Widget_Helper_Form_Element_Text('authorlink', NULL, NULL , '侧边栏作者头像链接', '填写点击头像时打开的页面，不填默认 /about.html<br><br><br>');
+    $form->addInput($authorlink);
+
+    //外观设置
+    $randombanner = new Typecho_Widget_Helper_Form_Element_Textarea('randombanner', NULL, NULL, _t('头部大图'), _t('填写头部大图地址，一行一个，首页大图与未设置主图的文章将从这里随机选取图片作为头部图片'));
+    $form->addInput($randombanner);
     $footerright=new Typecho_Widget_Helper_Form_Element_Text('footerright', NULL, NULL, '页面底部右侧文字', '会输出在 Powered By Typecho 左侧，不建议太长，在小屏幕上会被隐去。可以填入备案号、CDN 赞助商等。');
     $form->addInput($footerright);
     $footerleft=new Typecho_Widget_Helper_Form_Element_Text('footerleft', NULL, NULL, '页面底部左侧文字', '会输出在站点名右侧，不建议太长，在小屏幕上会被隐去。可以填入备案号、CDN 赞助商等。');
     $form->addInput($footerleft);
     $bg=new Typecho_Widget_Helper_Form_Element_Text('bg', NULL, NULL, '站点背景图', '填写链接，背景图将会被加上白色遮罩');
     $form->addInput($bg);
-    $authorbg=new Typecho_Widget_Helper_Form_Element_Text('authorbg', NULL, NULL , '侧边栏作者背景图', '填写链接');
+    $colorscheme=new Typecho_Widget_Helper_Form_Element_Text('colorscheme', NULL, NULL, '主题色调', '填写十六进制颜色，例如 #fafafa');
+    $form->addInput($colorscheme);
+    $authorbg=new Typecho_Widget_Helper_Form_Element_Text('authorbg', NULL, NULL , '侧边栏作者背景图', '填写链接<br><br><br>');
     $form->addInput($authorbg);
-    $authorlink=new Typecho_Widget_Helper_Form_Element_Text('authorlink', NULL, NULL , '侧边栏作者头像链接', '填写点击头像时打开的页面，不填默认 /about.html');
-    $form->addInput($authorlink);
+
+    //高级设置
     $headinfo = new Typecho_Widget_Helper_Form_Element_Textarea('headinfo', NULL, NULL, _t('自定义头部，将输出在 head 标签结束前'), _t('这里可以引入 CSS、JS 等'));
     $form->addInput($headinfo); 
     $footerinfo = new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('自定义尾部，将输出在 footer 后'), _t('这里可以引入 CSS、JS 等'));
@@ -67,6 +74,6 @@ function themeConfig($form) {
     $form->addInput($pjaxreload); 
     $CDNPath= new Typecho_Widget_Helper_Form_Element_Text('CDNPath', NULL, NULL, _t('镜像 CDN 域名'), _t('例如 https://static.imalan.cn'));
     $form->addInput($CDNPath);
-    $debugmode= new Typecho_Widget_Helper_Form_Element_Text('debugmode', NULL, NULL, _t('维护模式'), _t('不为空时启用。启用后会跳过 CDN 从源站加载未压缩的静态文件，仅在调试时使用'));
+    $debugmode= new Typecho_Widget_Helper_Form_Element_Text('debugmode', NULL, NULL, _t('维护模式'), _t('不为空时启用。启用后会跳过 CDN 从源站加载未压缩的静态文件，仅在调试时使用<br><br><br>'));
     $form->addInput($debugmode);
 }
