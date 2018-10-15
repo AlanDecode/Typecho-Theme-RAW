@@ -452,6 +452,7 @@ footer a:hover{
     width: 100vw;
     height: 100vh;
     padding-top:30vh;
+    top:0;
     left: 0;
 	font-size: 1.5em;
 	text-align: center;
