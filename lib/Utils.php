@@ -1,8 +1,7 @@
+
 <?php
 /** 
 * Utils.php
-* 
-* 时间格式化、PJAX 等
 * 
 * @author      熊猫小A | AlanDecode
 * @version     0.1
@@ -13,13 +12,223 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+global $toc;
+global $curid;
+function parseTOC_callback($matchs){
+    $GLOBALS['curid']=$GLOBALS['curid']+1;
+    $GLOBALS['toc'].='<li><a href="#TOC-'.(string)$GLOBALS['curid'].'" class="toc-item toc-level-'.$matchs[1].'">'.$matchs[2].'</a></li>';
+    return '<h'.$matchs[1].' id="TOC-'.(string)$GLOBALS['curid'].'">'.$matchs[2].'</h'.$matchs[1].'>';
+}
+
+$GLOBALS['BIU_VERSION']='0.1';
+$GLOBALS['BIU_DEBUG']=1;
+
 class Utils {
+    
+    /**
+     * 随机文章
+     */
+    function getRandomPosts($limit = 10){    
+        $db = Typecho_Db::get();
+        $result = $db->fetchAll($db->select()->from('table.contents')
+            ->where('status = ?','publish')
+            ->where('type = ?', 'post')
+            ->where('created <= unix_timestamp(now())', 'post')
+            ->limit($limit)
+            ->order('RAND()')
+        );
+        if($result){
+            $i=1;
+            foreach($result as $val){
+                if($i<=3){
+                    $var = ' class="red"';
+                }else{
+                    $var = '';
+                }
+                $val = Typecho_Widget::widget('Widget_Abstract_Contents')->push($val);
+                $post_title = htmlspecialchars($val['title']);
+                $permalink = $val['permalink'];
+                echo '<span><a href="'.$permalink.'" title="'.$post_title.'" target="_blank">'.$post_title.'</a></span>';
+                $i++;
+            }
+        }
+    }
+
+    /**
+     * 导出评论 meta
+     */
+    static public function exportCommentMeta($comment){
+        echo '<i class="fa fa-user-o"></i>&nbsp<b>';
+        $comment->author();
+        echo  '</b> • <i class="fa fa-clock-o"></i>&nbsp'.self::formatDate($comment->created,'NATURAL');
+        echo ' • '.self::getBrowser($comment->agent).' | '.self::getOS($comment->agent);
+    }
+
+    /**
+    * 浏览器及操作系统判断
+    *
+    * @param string $agent 系统数据库中访者数据
+    */
+
+    /** 获取浏览器信息 */
+    static public function getBrowser($agent)
+    {
+        if (preg_match('/MSIE\s([^\s|;]+)/i', $agent, $regs)) {
+            $outputer = '<i class="fa fa-internet-explorer"></i>';
+        } else if (preg_match('/FireFox\/([^\s]+)/i', $agent, $regs)) {
+            $outputer = '<i class="fa fa-firefox"></i>';
+        } else if (preg_match('/Chrome([\d]*)\/([^\s]+)/i', $agent, $regs)) {
+            $outputer = '<i class="fa fa-chrome"></i>';
+        } else if (preg_match('/QQBrowser\/([^\s]+)/i', $agent, $regs)) {
+            $regg = explode("/",$regs[1]);
+            $outputer = '<i class="fa fa-qq"></i>';
+        } else if (preg_match('/safari\/([^\s]+)/i', $agent, $regs)) {
+            $outputer = '<i class="fa fa-safari"></i>';
+        } else if (preg_match('/Opera[\s|\/]([^\s]+)/i', $agent, $regs)) {
+            $outputer = '<i class="fa fa-opera"></i>';
+        } else {
+            $outputer = '<i class="fa fa-question-o"></i>';
+        }
+
+        return $outputer;
+    }
+
+    /** 获取操作系统信息 */
+    static public function getOS($agent)
+    {
+        $os = false;
+
+        if (preg_match('/win/i', $agent)) {
+            $os = '<i class="fa fa-windows"></i>';
+        } else if (preg_match('/android/i', $agent)) {
+            $os = '<i class="fa fa-android"></i>';
+        } else if (preg_match('/linux/i', $agent)) {
+            $os = '<i class="fa fa-linux"></i>';
+        } else if (preg_match('/mac/i', $agent)) {
+            $os = '<i class="fa fa-apple"></i>';
+        } else if (preg_match('/iphone/i', $agent)) {
+            $os = '<i class="fa fa-apple"></i>';
+        } else if (preg_match('/ipad/i', $agent)) {
+            $os = '<i class="fa fa-apple"></i>';
+        } else {
+            $os = '<i class="fa fa-laptop"></i>';
+        }
+
+        return $os;
+    }
+
+    /**
+     * 解析器
+     * 
+     * 用以解析图片集、高亮、ruby
+     * 
+     * @param string    $content
+     */
+    static public function parseAll($content,$parseBoard=false){
+        $new  = self::parseFancyBox(self::parseRuby($content));
+        if($parseBoard){
+            return self::parseBoard($new);
+        }
+        else{
+            return $new;
+        }
+    }
+    
+    
+    /**
+     * 解析目录
+     * 
+     * @return array
+     * 
+     */
+    static public function parseTOC($content){
+        global $toc;
+        $GLOBALS['curid']=0;
+        $GLOBALS['toc']='<ul>';
+        $new=preg_replace_callback('/<h([2-6]).*?>(.*?)<\/h.*?>/s', 'parseTOC_callback', $content);
+        $GLOBALS['toc'].='</ul>';
+        return array('content'=>$new,'toc'=>$toc);
+    }
+
+    /**
+     * 解析 fancybox
+     * 
+     * @return string
+     */
+    static public function parseFancyBox($content){
+        $reg='/<img(.*?)src="(.*?)"(.*?)>/s';
+        $rp='<a data-fancybox="gallery" href="${2}"><img${1}src="${2}"${3}></a>';
+        $new=preg_replace($reg,$rp,$content);
+        return $new;
+    }
+
+    /**
+     * 解析友情链接
+     * 
+     * @return string
+     */
+    static public function parseBoard($string){
+        $reg='/\[(.*?)\]\((.*?)\)\+\((.*?)\)/s';
+        $rp='<div class="board-item link-item"><div class="board-thumb" style="background-image:url(${3})"></div><div class="board-title"><a href="${2}" target="_blank">${1}</a></div></div>';
+        $new=preg_replace($reg,$rp,$string);
+        return $new;
+    }
+
+    /**
+     * 解析 ruby
+     * 
+     * @return string
+     * 
+     */
+    static public function parseRuby($string){
+        $reg='/\{\{(.*?):(.*?)\}\}/s';
+        $rp='<ruby>${1}<rp>(</rp><rt>${2}</rt><rp>)</rp></ruby>';
+        $new=preg_replace($reg,$rp,$string);
+        return $new;
+    }
+
+    
+    /**
+     * 随机banner
+     * 
+     * @return string
+     */
+    static public function randomBanner($list){
+        if(!$list || $list == ''){
+            return 'https://cdn.imalan.cn/img/site/IMG_1676.JPG';
+        }
+        $banners=explode(PHP_EOL,$list);
+        $url=$banners[array_rand($banners)];
+        $url=str_replace('\r','', $url);
+        return $url;
+    }
+
+    /**
+     * 导出标题
+     * 
+     * @return void
+     */
+    static public function title(Widget_Archive $archive){
+        $archive->archiveTitle(array(
+            'category'  =>  _t('分类 %s 下的文章'),
+            'search'    =>  _t('包含关键字 %s 的文章'),
+            'tag'       =>  _t('标签 %s 下的文章'),
+            'author'    =>  _t('%s 发布的文章')
+        ), '', ' - ');
+        Helper::options()->title();
+    }
+
     public static function formatDate($time, $format) {
         if (strtoupper($format) == 'NATURAL') {
             return self::naturalDate($time);
         }
         return date($format, $time);
     }
+    /**
+     * 自然日期
+     * 
+     * @return void
+     */
     public static function naturalDate($from) {
         $now = time();
         $between = time() - $from;
@@ -52,13 +261,85 @@ class Utils {
         return "";
     }
 
-    public static function isPJAX() {
-        if (array_key_exists('HTTP_X_PJAX', $_SERVER) && $_SERVER['HTTP_X_PJAX']) {
-            return true;
+    /**
+     * 导出文章 meta
+     * 
+     * @return string
+     */
+    static public function exportPostMeta(Widget_Archive $archive,$type){
+        echo '<i class="fa fa-calendar"></i>&nbsp;'.self::formatDate($archive->created,'NATURAL');
+        if(!$type=='1'){
+            echo ' • <i class="fa fa-th-large"></i>&nbsp;';
+            $archive->category(' ');
         }
-        return false;
+        if(self::isPluginAvailable('TePostViews')){
+            echo ' • <i class="fa fa-eye"></i>&nbsp;';
+            $archive->viewsNum();
+        }
+        echo ' • <a href="'.$archive->permalink.'#comments"><i class="fa fa-commenting-o"></i>&nbsp';
+        $archive->commentsNum();
+        echo '</a>';
     }
-	
+
+    /**
+     * 导出 header
+     * 
+     * @return void
+     */
+    static public function exportHeader(Widget_Archive $archive,$img) {
+		echo '<title>';
+		self::title($archive);
+		echo '</title>';
+        $html = '';
+        $site=Helper::options()->title;
+        $description='';
+        $createTime = date('c', $archive->created);
+        $modifyTime = date('c', $archive->modified);
+        $link=$archive->permalink;
+        $type='';
+        $author=$archive->author->screenName;
+        if($archive->is("index")){
+            $description=Helper::options()->description;
+            $type='website';
+        }
+        elseif ($archive->is("post") || $archive->is("page")) {
+            if($archive->fields->excerpt && $archive->fields->excerpt!=''){
+                $description=$archive->fields->excerpt;
+            }
+            else{
+                $description = Typecho_Common::subStr(strip_tags($archive->excerpt), 0, 100, "...");
+            }
+            $type='article';
+        }
+
+        echo '<meta name="description" content="';
+        echo $description;
+        echo '" />
+<meta property="og:title" content="';
+        self::title($archive);
+        $html = <<< EOF
+" />
+<meta name="author" content="{$author}" />
+<meta property="og:site_name" content="{$site}" />
+<meta property="og:type" content="{$type}" />
+<meta property="og:description" content="{$description}" />
+<meta property="og:url" content="{$link}" />
+<meta property="og:image" content="{$img}" />
+<meta property="article:published_time" content="{$createTime}" />
+<meta property="article:modified_time" content="{$modifyTime}" />
+<meta name="twitter:title" content="
+EOF;
+        echo $html;
+        self::title($archive);
+        $html = <<<EOF
+" />
+<meta name="twitter:description" content="{$description}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{$img}" />\n
+EOF;
+        echo $html;
+    }
+
 	/**
      * 移动设备识别
      *
@@ -87,6 +368,11 @@ class Utils {
         return $is_mobile;
     }
 
+    /**
+     * 手机识别
+     * 
+     * @return boolean
+     */
     public static function isPhone(){
         $ua=strtolower($_SERVER["HTTP_USER_AGENT"]);
         $devices=array("Android", 'iPhone', 'iPod', 'Phone');
@@ -98,7 +384,11 @@ class Utils {
         return false;
     }
 
-    // 判断插件是否存在并启用
+    /**
+     * 判断插件是否存在并启用
+     * 
+     * @return boolean
+     */
     public static function isPluginAvailable($name) {
         if (class_exists($name.'_Plugin')){
             $plugins = Typecho_Plugin::export();

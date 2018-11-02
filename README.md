@@ -10,26 +10,32 @@
 
 如我所说，这个主题的目标是帮助你“在互联网上寻找栖息之地”。独立博客繁盛的时候这个目标是很容达成的，但现在却很难了。不论是微博还是 Twitter，都是「广场」性质的东西，称不上「栖息之地」。
 
+## 日志
+
+* 2018-11-02：完全重写（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+  * 样式完全重写（首页、文章、评论等等）
+  * 增加了归档页面
+  * 首页可点击加载更多，无需刷新页面
+  * 增加 Service Worker 缓存规则，二次刷新速度大幅提升（需要进一步配置）
+  * 修改主题配色（下一版本开放配色自定义）
+  * 可自定义背景图
+  * 移除了 PJAX
+  * 移除了 AJAX 评论
+  * 移除了 MathJAX
+  * 移除了 FlowChart
+  * 多处细节修改
+
 ## 使用
 
 [主题介绍](https://blog.imalan.cn/archives/163/) | [开始使用](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8) | [常见问题](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 **请先仔细阅读帮助文档的内容，若有使用上的问题请首先在文档中寻找解决方法**
 
-## TODO
-
-- [x] 自定义侧边栏全站音乐播放器
-- [ ] ~~读书清单独立页面~~
-- [ ] ~~电影清单独立页面~~
-- [x] 自定义 footer 信息
-- [x] 更完善的 AJAX 评论
-
 读书、电影页面已经通过插件方式实现，功能更强：[Typecho-Plugin-DoubanBoard 发布](https://blog.imalan.cn/archives/168/)
 
 ## 已知问题
 
 - [ ] 密码保护的文章依然会被显示
-- [x] ~~评论表情与评论图片样式冲突~~
 
 ## 贡献
 
@@ -37,11 +43,11 @@
 
 ## Credit
 
-评论嵌套与评论列表样式部分来自：[Mirages](https://get233.com/archives/mirages-intro.html)。这个主题的写作过程离不开 [Mirages](https://get233.com/archives/mirages-intro.html)、[handsome](https://www.ihewro.com/archives/489/)、[Just Lepture](https://lepture.com/) 等的帮助，感谢。
+这个主题的写作过程离不开 [Mirages](https://get233.com/archives/mirages-intro.html)、[handsome](https://www.ihewro.com/archives/489/)、[Memory](https://shawnzeng.com/wordpress-theme-memory.html) 等的帮助，感谢。
 
 本项目引用了：
 
-[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [FlowChart](https://flowchart.js.org/) | [OwO](https://github.com/DIYgod/OwO) | [zoom.js](https://github.com/fat/zoom.js/) | [jquery-pjax](https://github.com/defunkt/jquery-pjax)
+[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/)
 
 感谢以上项目。
 
