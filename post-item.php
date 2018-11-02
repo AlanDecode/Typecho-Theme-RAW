@@ -44,7 +44,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <h1><?php $this->title();?></h1>
                 <?php echo Utils::parseAll($this->content,true); ?>
             <?php else:?>
-                <h1><a href="<?php $this->permalink(); ?>"><?php $this->title();?></a></h1>
+                <h1><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
                 <p><?php $this->excerpt(150); ?></p>
             <?php endif;?>
             </article>
