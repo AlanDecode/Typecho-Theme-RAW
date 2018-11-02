@@ -4,8 +4,6 @@
 
 ![](https://raw.githubusercontent.com/AlanDecode/Typecho-Theme-RAW/master/screenshot.png)
 
-演示站点：[熊猫小A的博客](https://blog.imalan.cn)
-
 ## 简介
 
 这是我为 Typecho 写的第一个主题。设计之初想要写成极简的专注内容的主题，但是经过几次修改与重构之后成了现在这样，大概因为太过简洁就无法带给我归属感吧。
@@ -25,7 +23,6 @@
 - [ ] ~~电影清单独立页面~~
 - [x] 自定义 footer 信息
 - [x] 更完善的 AJAX 评论
-- [ ] 页面平滑滚动
 
 读书、电影页面已经通过插件方式实现，功能更强：[Typecho-Plugin-DoubanBoard 发布](https://blog.imalan.cn/archives/168/)
 
