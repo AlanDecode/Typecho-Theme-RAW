@@ -14,7 +14,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 require_once("lib/Utils.php");
-require_once("lib/comments.php");
+require_once("lib/Comments.php");
 
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $thumb = new Typecho_Widget_Helper_Form_Element_Textarea('banner', NULL, NULL, '文章主图', '输入图片URL，该图片会用于主页文章列表的显示');
@@ -42,6 +42,8 @@ function themeConfig($form) {
     $form->addInput($aside_nav);
     $aside_link=new Typecho_Widget_Helper_Form_Element_Textarea('aside_link', NULL, NULL, _t('全站友链'), _t('全站侧边栏友情链接，请直接以 a 标签书写。一行一个。'));
     $form->addInput($aside_link);
+    $site_bg=new Typecho_Widget_Helper_Form_Element_Textarea('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
+    $form->addInput($site_bg);
 	$customhead = new Typecho_Widget_Helper_Form_Element_Textarea('customhead', NULL, NULL, _t('head 标签结束前输出信息'), _t('将输出在 head 标签结束前，你可以输入统计代码或者 CSS 等，也可以使用 link 标签引入别的 CSS、JS。'));
     $form->addInput($customhead);
     $customfooter = new Typecho_Widget_Helper_Form_Element_Textarea('customfooter', NULL, NULL, _t('body 标签结束前输出信息'), _t('将输出在 body 标签结束前，你可以输入 JS 或者 CSS 等。'));

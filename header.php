@@ -40,7 +40,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
     </nav>
 </header>
-<div class="bg" style="background-image:url(/usr/themes/RAW/assets/watermelon.jpg)"></div>
+<div class="bg" style="background-image:url(<?php echo $this->options->site_bg?$this->options->site_bg : '/usr/themes/RAW/assets/watermelon.jpg'; ?>)"></div>
 <div class="bg bg-mask"></div>
 
 <div id="hidden-login-form" class="login-form" style="display:none">

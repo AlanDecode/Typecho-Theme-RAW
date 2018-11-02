@@ -19,6 +19,7 @@
   * 增加 Service Worker 缓存规则，二次刷新速度大幅提升（需要进一步配置）
   * 修改主题配色（下一版本开放配色自定义）
   * 可自定义背景图
+  * 更换 zoom.js 为 fancyBox
   * 移除了 PJAX
   * 移除了 AJAX 评论
   * 移除了 MathJAX
