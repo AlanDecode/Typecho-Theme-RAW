@@ -1503,47 +1503,6 @@ article .footnotes ol::before{
     display: inline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* board item for friend-links and other boards */
 .board-list{
     display: flex;
@@ -1568,7 +1527,7 @@ article .footnotes ol::before{
 .board-thumb {
     width: 100%;
     /* customize this for diffrent style */
-    padding-top: 141%;
+    padding-top: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
