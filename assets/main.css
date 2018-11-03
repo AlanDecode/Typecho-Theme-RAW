@@ -348,17 +348,14 @@
       --aside-width: 250px;
   }
   
-  :root{
-        --text-color: #333;
-        --dark-color: #222;
-        --darker-color: #111;
-        --highlight-color: rgb(255,112,121);
-        --highlight-fade-color: rgba(255,112,121,0.6);
-  }
-  
-  :root{
-        --border-color: var(--highlight-fade-color);
-  }
+:root{
+    --text-color: #333;
+    --dark-color: #222;
+    --darker-color: #111;
+    --highlight-color: rgb(255,112,121);
+    --highlight-fade-color: rgba(255,112,121,0.6);
+    --border-color: var(--highlight-fade-color);
+}
   
   *{
       box-sizing: border-box;

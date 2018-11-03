@@ -30,7 +30,7 @@ function loadMorePosts(){
     var target;
     if(nextUrl=="") target=$(".next a").attr("href");
     else target=nextUrl;
-    if(target!=""){
+    if(typeof(target)!="undefined" && target!=""){
         $("#index-loadmore-btn").html(`<div class="idot"></div><div class="idot"></div><div class="idot"></div>`);
         $.ajax({
             url:target,
