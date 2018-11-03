@@ -851,6 +851,7 @@ aside > div a:hover{
 }
 .post-item-body{
     padding-top: 0;
+    min-width: 100%;
 }
 .post-item-header{
     color: var(--text-color);
