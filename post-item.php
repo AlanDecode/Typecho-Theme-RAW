@@ -15,6 +15,26 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <div class="post-item-body"><h1 style="text-align:center;margin-top:40px">糟糕，是 404 的感觉</h1></div>
     </div>
 <?php else:?>
+    <?php if($this->is('archive')):?>
+    <div class="post-item no-repeat">
+        <div class="post-item-body" style="padding-top:1em">
+        <b>
+            <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
+                文章列表 &raquo; 第&nbsp;<?php echo $this->_currentPage; ?>&nbsp;页
+            <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
+                文章 &raquo; <?php $this->title() ?>
+            <?php else: ?><!-- 页面为其他页时 -->
+            <?php $this->archiveTitle(array(
+                'category'  =>  _t('分类 "%s" 下的文章'),
+                'search'    =>  _t('包含关键字 "%s" 的文章'),
+                'tag'       =>  _t('标签 "%s" 下的文章'),
+                'author'    =>  _t('%s 发布的文章')
+            ), '', ''); ?>
+            <?php endif; ?>
+        </b>
+        </div>
+    </div>
+    <?php endif;?>
     <?php while($this->next()): ?>
     <div class="post-item">
         <div class="post-item-header flex align-items-center">
@@ -58,6 +78,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <i class="fa fa-heart"></i> ENJOY <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
                 </a></span>
             <?php endif; ?>
+            <?php if(!$this->is('index')):?>
+                <span>Tags：<?php $this->tags('，', true, 'none'); ?></span>
+            <?php endif;?>
             <?php if($this->is('index')):?>
                 <?php if(!$this->fields->type=='1'): ?>
                 <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>">阅读全文</a></span>
