@@ -2,7 +2,7 @@
 // Author: 熊猫小A
 // Link: https://imalan.cn
 
-console.log(`%c Theme RAW 0.3 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px 0;`, `background: #1c2b36; padding:5px 0;`);
+console.log(` %c Theme RAW 0.3 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
 
 $(document).scroll(function(){
     if($(window).width()>767) return;
@@ -30,7 +30,7 @@ function loadMorePosts(){
     var target;
     if(nextUrl=="") target=$(".next a").attr("href");
     else target=nextUrl;
-    if(target!=""){
+    if(target!="" && typeof(target)!="undefined"){
         $("#index-loadmore-btn").html(`<div class="idot"></div><div class="idot"></div><div class="idot"></div>`);
         $.ajax({
             url:target,
