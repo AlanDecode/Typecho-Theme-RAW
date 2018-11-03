@@ -16,7 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </div>
 <?php else:?>
     <?php if($this->is('archive')):?>
-    <div class="post-item no-repeat">
+    <div class="post-item">
         <div class="post-item-body" style="padding-top:1em">
         <b>
             <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
@@ -44,7 +44,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <span><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
             </div>
         </div>
-        <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left';?> flex">
+        <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
             <article>
             <?php if($this->is('post') || $this->fields->type=='1' ): ?>
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>

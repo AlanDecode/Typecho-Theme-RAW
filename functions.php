@@ -23,6 +23,8 @@ function themeInit($archive){
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $thumb = new Typecho_Widget_Helper_Form_Element_Textarea('banner', NULL, NULL, '文章主图', '输入图片URL，该图片会用于主页文章列表的显示');
     $layout->addItem($thumb);
+    $indextype=new Typecho_Widget_Helper_Form_Element_Select('indextype',array('0'=>'普通','1'=>'大图版式'),'0','首页版式','设置文章在首页的显示样式，大图版式的头图会显示得大一些，适合你觉得比较有特色的文章。');
+    $layout->addItem($indextype);
     $showTOC=new Typecho_Widget_Helper_Form_Element_Select('showTOC',array('0'=>'不显示目录','1'=>'显示目录'),'0','文章目录','是否显示文章目录');
     $layout->addItem($showTOC);
     $type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说'),'0','文章类型');

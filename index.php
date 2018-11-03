@@ -18,7 +18,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <div class="center flex-1">
        <?php $this->need('post-item.php'); ?>
        <?php $this->pageNav('上一页', '下一页', 0, '', 'wrapClass=hidden&prevClass=prev&nextClass=next'); ?>
-        <div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div>
+        <?php if($this->have()):?>
+            <div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div>
+        <?php else:?>
+            <div class="post-item">
+                <div class="post-item-body" style="padding-top:1em;text-align:center"><b><a href="/">返回首页</a></b></div>
+            </div>
+        <?php endif;?>
         <?php $this->need('footer-info.php'); ?>
     </div>
     <?php $this->need('aside.php'); ?>

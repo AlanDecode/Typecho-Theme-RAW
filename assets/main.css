@@ -520,12 +520,13 @@ header > nav{
 }
 #brand{
     line-height: 50px;
-    font-size: 40px;
+    font-size: 32px;
     display: block;
     min-width: var(--nav-left-width);
     color: var(--highlight-fade-color);
     transition: 0.3s ease all;
     margin-right: 20px;
+    letter-spacing: 0.1em;
 }
 #brand:hover{
     color: var(--highlight-color);
@@ -926,6 +927,32 @@ aside > div a:hover{
     }
     .post-item-body.pull-left h1,.post-item-body.pull-left p{
         padding-right: 0;
+    }
+}
+.post-item-body.featured{
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.post-item-body.featured .post-item-banner{
+    width: 100%;
+    height: 320px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+.post-item-body.featured .index-item-banner-wrap {
+    -webkit-box-ordinal-group: -1;
+    -ms-flex-order: -1;
+    -webkit-order: -1;
+    order: -1;
+}
+.post-item-body.pull-left.featured h1,.post-item-body.featured.pull-left p{
+    padding-right: 0;
+}
+@media screen and (max-width:1024px){
+    .post-item-body.featured .post-item-banner{
+        height: 250px;
     }
 }
 @media screen and (max-width:767px){
