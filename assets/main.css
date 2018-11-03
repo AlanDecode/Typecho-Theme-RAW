@@ -952,7 +952,7 @@ aside > div a:hover{
 }
 @media screen and (max-width:1024px){
     .post-item-body.featured .post-item-banner{
-        height: 250px;
+        height: 200px;
     }
 }
 @media screen and (max-width:767px){
@@ -1411,7 +1411,7 @@ article .footnotes ol::before{
     justify-content: flex-end;
 }
 .comment-body{
-    max-width: 100%;
+    max-width: calc(100% - 56px);
 }
 .comment-body .comment-content{
     margin-right: 7rem;
