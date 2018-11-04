@@ -12,32 +12,21 @@
 
 ## 日志
 
-* 2018-11-02：完全重写（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
-  * 样式完全重写（首页、文章、评论等等）
-  * 增加了归档页面
-  * 首页可点击加载更多，无需刷新页面
-  * 增加 Service Worker 缓存规则，二次刷新速度大幅提升（需要进一步配置：[配置方法](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E4%BD%BF%E7%94%A8-service-worker-%E5%8A%A0%E9%80%9F%E7%BD%91%E7%AB%99)）
-  * 修改主题配色（下一版本开放配色自定义）
-  * 可自定义背景图
-  * 更换 zoom.js 为 fancyBox
-  * 暂时移除了博客公告
-  * 移除了 PJAX
-  * 移除了 AJAX 评论
-  * 移除了 MathJAX
-  * 移除了 FlowChart
-  * 多处细节修改
+* 2018-11-04：Ver 0.4（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+  * 页面平滑滚动
+  * 新的评论区表情插入方式，使用代码代替了 img 标签
+  * 现在文章编辑界面也可以插入表情了！（也就是文章内也可以使用表情）
+  * 添加了图片排版的快捷方式，支持通过 Markdown 格式排版图片
+  * 去除了红色边界线，改为 box-shadow
+  * 取消了站点背景白色遮罩
+  * 小屏幕上底栏改为浮动块
+  * bug 修复
 
 ## 使用
 
 [主题介绍](https://blog.imalan.cn/archives/163/) | [开始使用](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8) | [常见问题](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 **请先仔细阅读帮助文档的内容，若有使用上的问题请首先在文档中寻找解决方法**
-
-读书、电影页面已经通过插件方式实现，功能更强：[Typecho-Plugin-DoubanBoard 发布](https://blog.imalan.cn/archives/168/)
-
-## 已知问题
-
-- [ ] 密码保护的文章依然会被显示
 
 ## 贡献
 
@@ -57,8 +46,6 @@
 
 本程序遵循 MIT 开源协议。
 
-![](https://raw.githubusercontent.com/AlanDecode/Typecho-Theme-RAW/master/LICENSE.png)
-
 使用本程序导致的任何不可知事件都与原作者无关，原作者不承担任何后果。
 
-如果你能保留页面右下角的作者信息的话我会非常感谢你的。
+如果你能保留页面底部的作者信息的话我会非常感谢你的。
