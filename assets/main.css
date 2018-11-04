@@ -513,7 +513,8 @@ header > nav{
     left: 0;
     top: 0;
     z-index: -2;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .bg-mask{
     z-index: -1;
