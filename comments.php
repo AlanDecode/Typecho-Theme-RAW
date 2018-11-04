@@ -77,13 +77,13 @@
     </div>
 
 <?php if($this->allow('comment')): ?>
-<script src="<?php $this->options->themeUrl('/assets/owo/owo.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/owo/owo_custom.js'); ?>"></script>
 <script>
 var owo = new OwO({
     logo: 'OωO表情',
     container: document.getElementsByClassName('OwO')[0],
     target: document.getElementsByClassName('input-area')[0],
-    api: '<?php $this->options->themeUrl('/assets/owo/OwO_1.json'); ?>',
+    api: '<?php $this->options->themeUrl('/assets/owo/OwO_2.json'); ?>',
     position: 'down',
     width: '400px',
     maxHeight: '250px'

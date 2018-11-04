@@ -723,12 +723,12 @@ aside{
     font-size: 0.9em;
     color: var(--text-color);
     background: white;
+    margin-bottom: 20px;
 }
 .nav-left-panel > ul{
     padding: 0;
     list-style: none;
     margin-top: 0;
-    margin-bottom: 20px;
     background: white;
 }
 @media screen and (max-width:767px){
@@ -1508,10 +1508,12 @@ article .footnotes ol::before{
     border-color: transparent transparent transparent #eeeeee;
 }
 
-.comment-content img.biaoqing{
+.comment-content img.biaoqing,article img.biaoqing{
     display: inline-block;
-    height: 1.6em;
+    height: 2em;
     vertical-align: bottom;
+    margin: 0;
+    box-shadow: none;
 }
 .OwO .OwO-body{
     min-width: 245px;

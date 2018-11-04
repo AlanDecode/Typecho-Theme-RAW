@@ -41,7 +41,7 @@ function threadedComments($comments,$singleCommentOptions){
         </div>
         <div class="comment-body flex flex-direction-column">
             <span class="comment-meta"><?php Utils::exportCommentMeta($comments);?></span>
-            <div class="comment-content"><?php echo getParent($comments);  $comments->content(); ?></div>
+            <div class="comment-content"><?php echo getParent($comments); echo Utils::parseBiaoQing($comments->content); ?></div>
         </div>
     </div>
     </div>

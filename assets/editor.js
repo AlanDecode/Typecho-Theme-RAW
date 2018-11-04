@@ -1,5 +1,17 @@
 $(function() {
-    if($('#wmd-button-row').length>0)$('#wmd-button-row').append('<li class="wmd-spacer wmd-spacer1" id="wmd-spacer5"></li><li class="wmd-button" id="wmd-photoset-button" style="" title="插入图集">图集</li>');
+    if($('#wmd-button-row').length>0){
+        $('#wmd-button-row').append('<li class="wmd-spacer wmd-spacer1"></li><li class="wmd-button" id="wmd-photoset-button" style="" title="插入图集">图集</li>');
+        $('#wmd-button-row').append('<li class="wmd-spacer wmd-spacer1"></li><li class="wmd-button" id="wmd-owo-button" style="" title="插入表情"><span class="OwO"></span></li>');
+        var owo = new OwO({
+            logo: 'OωO',
+            container: document.getElementsByClassName('OwO')[0],
+            target: document.getElementById('text'),
+            api: '/usr/themes/RAW/assets/owo/OwO_2.json',
+            position: 'down',
+            width: '400px',
+            maxHeight: '250px'
+        });
+    }
 	$(document).on('click', '#wmd-photoset-button', function() {
         $('body').append(
             '<div id="RAWPhotoSetPanel">'+
