@@ -18,10 +18,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <meta name="renderer" content="webkit">
 <meta name="HandheldFriendly" content="true">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="//cdn.imalan.cn" />
-<link rel="dns-prefetch" href="//static.imalan.cn" />
-<link rel="dns-prefetch" href="//blog.imalan.cn" />
 <?php 
 $banner=$this->fields->banner ? $this->fields->banner : '' ;
 Utils::exportHeader($this,$banner);
