@@ -1265,7 +1265,6 @@ article > ul >li{
     list-style-type: square;
 }
 article > ul > li,article > ol > li{
-    text-indent: -1rem;
     line-height: 1.8;
     margin: 0.5rem 0;
 }
