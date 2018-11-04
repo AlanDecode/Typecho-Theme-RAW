@@ -20,11 +20,16 @@ function parseTOC_callback($matchs){
     return '<h'.$matchs[1].' id="TOC-'.(string)$GLOBALS['curid'].'">'.$matchs[2].'</h'.$matchs[1].'>';
 }
 
-$GLOBALS['BIU_VERSION']='0.1';
-$GLOBALS['BIU_DEBUG']=1;
-
-class Utils {
+class Utils {   
     
+    /**
+     * 编辑界面添加Button
+     */
+    public static function addButton(){
+        echo '<script type="text/javascript" src="/usr/themes/RAW/assets/editor.js"></script>';
+        echo '<style>#custom-field textarea{width:100%}</style>';
+    }
+
     /**
      * 随机文章
      */
@@ -125,13 +130,24 @@ class Utils {
      * @param string    $content
      */
     static public function parseAll($content,$parseBoard=false){
-        $new  = self::parseFancyBox(self::parseRuby($content));
+        $new  = self::parsePhotoSet(self::parseFancyBox(self::parseRuby($content)));
         if($parseBoard){
             return self::parseBoard($new);
         }
         else{
             return $new;
         }
+    }
+
+    /**
+     * 解析照片集
+     *
+     */
+    static public function parsePhotoSet($content){
+        $reg='/\[photos.*?col="(.*?)".*?des="(.*?)"\](.*?)\[\/photos\]/s';
+        $rp='<div class="photos col${1}" data-des="${2}">${3}</div>';
+        $new=preg_replace($reg,$rp,$content);
+        return $new;
     }
     
     

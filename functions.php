@@ -20,6 +20,9 @@ function themeInit($archive){
     Helper::options()->commentsMaxNestingLevels = 999;
 }
 
+Typecho_Plugin::factory('admin/write-post.php')->bottom = array('Utils', 'addButton');
+Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addButton');
+
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $thumb = new Typecho_Widget_Helper_Form_Element_Textarea('banner', NULL, NULL, '文章主图', '输入图片URL，该图片会用于主页文章列表的显示');
     $layout->addItem($thumb);
@@ -29,7 +32,6 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $layout->addItem($showTOC);
     $type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说'),'0','文章类型');
     $layout->addItem($type);
-    echo '<style>#custom-field textarea{width:100%}</style>';
 }
 
 function themeConfig($form) {
