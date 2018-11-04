@@ -49,7 +49,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php 
         if($this->options->aside_nav &&$this->options->aside_nav!=''){
             echo '<div id="pages" class="nav-left-panel">
-            &nbsp;&nbsp;页面导航
+            <span><i class="fa fa-compass"></i> 页面导航</span>
                 <ul>';
             $navs=explode(PHP_EOL,$this->options->aside_nav);
             foreach ($navs as $value) {
@@ -63,7 +63,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php 
         if($this->options->aside_link &&$this->options->aside_link!=''){
             echo '<div id="links" class="nav-left-panel">
-            &nbsp;&nbsp;友情链接
+            <span><i class="fa fa-link"></i> 友情链接</span>
                 <ul>';
             $navs=explode(PHP_EOL,$this->options->aside_link);
             foreach ($navs as $value) {
@@ -75,7 +75,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         }
     ?>
     <?php if($this->is('post') || $this->is('page')):?>
-    <div id="ctrler" class="flex flex-direction-column align-items-end">
+    <div style="box-shadow:none" id="ctrler" class="flex flex-direction-column align-items-end">
         <?php if(Utils::isPluginAvailable('Like')):?>
         <div>
             <a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>"><span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span> </span><i class="fa fa-heart"></i></a>

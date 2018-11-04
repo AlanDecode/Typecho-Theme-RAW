@@ -14,7 +14,7 @@ $(document).scroll(function(){
         }
         var after = $(document).scrollTop();
         if (before<after && after>40 ) {
-            $(".nav-links").css("transform","translateY(100%)");
+            $(".nav-links").css("transform","translateY(calc(100% + 5px))");
             before = after;
         };
         if (before>after || after<=40) {
