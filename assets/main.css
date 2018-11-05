@@ -979,6 +979,40 @@ aside > div a:hover{
 .post-item-body.pull-left.featured h1,.post-item-body.featured.pull-left p{
     padding-right: 0;
 }
+.post-pager{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.post-pager-item{
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.post-pager-item::before{
+    content: attr(data-title);
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+    display: none;
+    transform: translateY(calc(100% + 0.2em));
+}
+.post-pager-item:hover::before{
+    display: block;
+}
+.post-pager-item>*{
+    padding: 1.2em 0;
+    display: block;
+}
+.post-pager-item:nth-child(2){
+    border-left: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
 @media screen and (max-width:1024px){
     .post-item-body.featured .post-item-banner{
         height: 200px;

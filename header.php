@@ -72,3 +72,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </div>
     <p style="margin: 0.2em auto;line-height:1.5;color:rgba(0,0,0,0.4);max-width:90%;text-align:center">点击「搜索」或者使用 Enter 键开始搜索</p>
 </div>
+
+<?php if($this->options->reward_img&&$this->options->reward_img!='') :?>
+<div id="reward" style="display:none">
+<div style="font-size:1.5rem;text-align:center;overflow:hidden">给博主喂食</div>
+<img style="max-width:100%" src="<?php echo $this->options->reward_img; ?>" />
+</div>
+</div>
+<?php endif;?>

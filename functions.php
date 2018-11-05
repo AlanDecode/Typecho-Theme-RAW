@@ -36,9 +36,9 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 function themeConfig($form) {
     //基本设置
-    $sitelogo=new Typecho_Widget_Helper_Form_Element_Textarea('sitelogo', NULL, NULL, _t('左上角站点文字'), _t('左上角站点标题，不填写默认为系统站点标题。'));
+    $sitelogo=new Typecho_Widget_Helper_Form_Element_Text('sitelogo', NULL, NULL, _t('左上角站点文字'), _t('左上角站点标题，不填写默认为系统站点标题。'));
     $form->addInput($sitelogo);
-    $left_link=new Typecho_Widget_Helper_Form_Element_Textarea('left_link', NULL, NULL, _t('侧边栏头像打开链接'), _t('输入点击侧边栏头像要打开的位置，默认为站点首页。'));
+    $left_link=new Typecho_Widget_Helper_Form_Element_Text('left_link', NULL, NULL, _t('侧边栏头像打开链接'), _t('输入点击侧边栏头像要打开的位置，默认为站点首页。'));
     $form->addInput($left_link);
     $headernav=new Typecho_Widget_Helper_Form_Element_Textarea('headernav', NULL, NULL, _t('顶部导航链接'), _t('顶部导航链接，一行一个，格式：图标,名称,链接，例如：home,首页,/ 。图标名称参考 font-awesome。小屏幕会被隐藏。'));
     $form->addInput($headernav);
@@ -46,8 +46,10 @@ function themeConfig($form) {
     $form->addInput($aside_nav);
     $aside_link=new Typecho_Widget_Helper_Form_Element_Textarea('aside_link', NULL, NULL, _t('全站友链'), _t('全站侧边栏友情链接，请直接以 a 标签书写。一行一个。'));
     $form->addInput($aside_link);
-    $site_bg=new Typecho_Widget_Helper_Form_Element_Textarea('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
+    $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
     $form->addInput($site_bg);
+    $reward_img=new Typecho_Widget_Helper_Form_Element_Text('reward_img', NULL, NULL, _t('打赏二维码图片地址'), _t('填写图片链接，若不需要打赏则留空。只支持一张图，若需要多种支付方式请自行合成二维码图片。'));
+    $form->addInput($reward_img);
     $footerinfo=new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('页面底部输出内容'), _t('你可以输入需要在页面底部输出的内容，包括备案号等。请使用标准的 HTML 语法书写。'));
     $form->addInput($footerinfo);
     $headinfo=new Typecho_Widget_Helper_Form_Element_Textarea('headinfo', NULL, NULL, _t('head 标签内输出信息'), _t('这里的内容会输出在 head 标签靠前的位置，不建议在这里加入 CSS，你可以输入一些 meta 标签等。'));

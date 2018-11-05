@@ -21,6 +21,47 @@ function parseTOC_callback($matchs){
 }
 
 class Utils {   
+    /**
+     * 文章上一篇
+     */
+    public static function thePrev($archive){
+        $db = Typecho_Db::get();
+        $content = $db->fetchRow($db->select()->from('table.contents')->where('table.contents.created < ?', $archive->created)
+        ->where('table.contents.status = ?', 'publish')
+        ->where('table.contents.type = ?', $archive->type)
+        ->where('table.contents.password IS NULL')
+        ->order('table.contents.created', Typecho_Db::SORT_DESC)
+        ->limit(1));
+
+        if ($content) {
+            $content = $archive->filter($content);
+            echo '<div class="post-pager-item post-pager-prev" data-title="'.$content['title'].'"><a href="'.$content['permalink'].'"><i class="fa fa-hand-o-left"></i> 上一篇</a></div>';
+        } else {
+            echo '<div class="post-pager-item post-pager-prev" data-title="真的没有啦！"><span>没有啦~</span></div>';
+        }
+
+    }
+
+    /**
+     * 文章下一篇
+     */
+    public static function theNext($archive){
+        $db = Typecho_Db::get();
+        $content = $db->fetchRow($db->select()->from('table.contents')->where('table.contents.created > ? AND table.contents.created < ?',
+            $archive->created, Helper::options()->gmtTime)
+            ->where('table.contents.status = ?', 'publish')
+            ->where('table.contents.type = ?', $archive->type)
+            ->where('table.contents.password IS NULL')
+            ->order('table.contents.created', Typecho_Db::SORT_ASC)
+            ->limit(1));
+
+        if ($content) {
+            $content = $archive->filter($content);
+            echo '<div class="post-pager-item post-pager-next" data-title="'.$content['title'].'"><a href="'.$content['permalink'].'">下一篇 <i class="fa fa-hand-o-right"></i></a></div>';
+        } else {
+            echo '<div class="post-pager-item post-pager-next" data-title="真的没有啦！"><span>没有啦~</span></div>';
+        }
+    }
     
     /**
      * 编辑界面添加Button
