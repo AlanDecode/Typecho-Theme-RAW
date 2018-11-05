@@ -555,6 +555,11 @@ header > nav{
     color: var(--highlight-color);
     border-bottom: 3px solid var(--highlight-color);
 }
+@media screen and (max-width:1024px){
+    .nav-link.current{
+        border-bottom: none;
+    }
+}
 .avatar{
     width: 35px;
     border-radius: 50%;
