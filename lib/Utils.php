@@ -264,7 +264,7 @@ class Utils {
     static public function parseTOC($content){
         global $toc;
         $GLOBALS['curid']=0;
-        $GLOBALS['toc']='<ul>';
+        $GLOBALS['toc']='<ul id="toc-ul">';
         $new=preg_replace_callback('/<h([2-6]).*?>(.*?)<\/h.*?>/s', 'parseTOC_callback', $content);
         $GLOBALS['toc'].='</ul>';
         return array('content'=>$new,'toc'=>$toc);

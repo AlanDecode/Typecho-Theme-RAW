@@ -30,7 +30,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php endif; ?>
     <?php if($this->fields->showTOC=='1' && ($this->is('post') || $this->is('page'))):?>
     <div id="TOC">
-        <span style="font-size:0.9em"><i style="font-size:0.9em" class="fa fa-th-list"></i> 文章目录</span>
+        <span style="font-size:0.9em" class="hidden-xs"><i style="font-size:0.9em" class="fa fa-th-list"></i> 文章目录</span>
         <?php echo $GLOBALS['TOC_O']; ?>
     </div>
     <?php endif;?>

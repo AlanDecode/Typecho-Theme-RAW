@@ -49,8 +49,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php 
         if($this->options->aside_nav &&$this->options->aside_nav!=''){
             echo '<div id="pages" class="nav-left-panel">
-            <span><i class="fa fa-compass"></i> 页面导航</span>
-                <ul>';
+            <span class="hidden-xs"><i class="fa fa-compass"></i> 页面导航</span>
+                <ul id="pages-ul">';
             $navs=explode(PHP_EOL,$this->options->aside_nav);
             foreach ($navs as $value) {
                 $value=str_replace("\r",'', $value);
