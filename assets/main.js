@@ -28,7 +28,7 @@ nextUrl="";
 function loadMorePosts(){
     if(nextUrl==null) return;
     var target;
-    if(nextUrl=="") target=$(".next a").attr("href");
+    if(nextUrl=="") target=$(".next").attr("href");
     else target=nextUrl;
     if(target!="" && typeof(target)!="undefined"){
         $("#index-loadmore-btn").html(`<div class="idot"></div><div class="idot"></div><div class="idot"></div>`);
@@ -36,7 +36,7 @@ function loadMorePosts(){
             url:target,
             async:true,
             success:function(data){
-                nextUrl=$(data).find(".next a").attr("href");
+                nextUrl=$(data).find(".next").attr("href");
                 $("#post-list").append($(data).find("#post-list").html());
                 if(typeof(nextUrl)=="undefined"){
                     $("#index-loadmore-btn").html("没有了");
@@ -121,6 +121,9 @@ function registerFixedTOC(){
 
 $(document).ready(function(){
     parseURL();
+    $.each($(".nav-link"),function(i,item){
+        if($(item).attr("href")==window.location.pathname) $(item).addClass("current");
+    })
     registerFixedCtrler();
     registerFixedTOC();
     hljs.initHighlightingOnLoad();

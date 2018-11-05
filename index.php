@@ -23,7 +23,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php $this->need('nav-left.php'); ?>
     <div class="center flex-1">
        <?php $this->need('post-item.php'); ?>
-       <?php $this->pageNav('上一页', '下一页', 0, '', 'wrapClass=hidden&prevClass=prev&nextClass=next'); ?>
+       <?php $this->pageLink('下一页','next','hidden'); ?>
         <?php if($this->have()):?>
             <div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div>
         <?php else:?>
@@ -36,3 +36,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php $this->need('aside.php'); ?>
 </div>
 <?php $this->need('footer.php'); ?>
+<style>
+a.next{display:none}
+</style>

@@ -22,7 +22,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         foreach ($navs as $value) {
                             $value=str_replace("\r",'', $value);
                             $temp=explode(',',$value);
-                            echo '<a class="nav-link flex justify-content-center align-items-center" href="'.$temp[2].'"><i class="fa fa-fw  fa-'.$temp[0].'"></i>'.$temp[1].'</a>';
+                            echo '<a onclick="$(`.nav-link`).removeClass(`current`);$(this).addClass(`current`);" class="nav-link flex justify-content-center align-items-center" href="'.$temp[2].'"><i class="fa fa-fw  fa-'.$temp[0].'"></i>'.$temp[1].'</a>';
                         }
                     }
                 ?>

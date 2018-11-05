@@ -83,6 +83,7 @@ class Utils {
         }  
         .OwO .OwO-body .OwO-items{
             -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
         }
         .OwO .OwO-body .OwO-items-image .OwO-item{
             max-width:-moz-calc(20% - 10px);

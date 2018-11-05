@@ -72,7 +72,7 @@
             'before'        =>  '<div class="comment-list">',
             'after'         =>  '</div>'
             )); ?>
-            <?php $comments->pageNav('旧评论', '新评论'); ?>
+            <?php $comments->pageNav('<i class="fa fa-hand-o-left"></i>', '<i class="fa fa-hand-o-right"></i>',1, '...'); ?>
         <?php endif; ?>
     </div>
 
