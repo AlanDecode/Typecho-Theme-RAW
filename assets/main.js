@@ -2,7 +2,7 @@
 // Author: 熊猫小A
 // Link: https://imalan.cn
 
-console.log(` %c Theme RAW 0.4 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
+console.log(` %c Theme RAW 0.5 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
 
 $(document).scroll(function(){
     if($(window).width()>767) return;

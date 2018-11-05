@@ -20,6 +20,8 @@ function themeInit($archive){
     Helper::options()->commentsMaxNestingLevels = 999;
 }
 
+$GLOBALS['RAW_VER']=0.5;
+
 Typecho_Plugin::factory('admin/write-post.php')->bottom = array('Utils', 'addButton');
 Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addButton');
 
@@ -36,6 +38,9 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 
 function themeConfig($form) {
     //基本设置
+    echo '<div id="raw-check-update" style="padding:0.1rem 1rem;background:#eeeeee;border-radius:5px;"></div>';
+    echo '<script>var RAW_VER='.$GLOBALS['RAW_VER'].'</script>';
+    echo '<script src="/usr/themes/RAW/assets/check_update.js"></script>';
     $sitelogo=new Typecho_Widget_Helper_Form_Element_Text('sitelogo', NULL, NULL, _t('左上角站点文字'), _t('左上角站点标题，不填写默认为系统站点标题。'));
     $form->addInput($sitelogo);
     $left_link=new Typecho_Widget_Helper_Form_Element_Text('left_link', NULL, NULL, _t('侧边栏头像打开链接'), _t('输入点击侧边栏头像要打开的位置，默认为站点首页。'));
