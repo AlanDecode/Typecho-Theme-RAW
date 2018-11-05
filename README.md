@@ -12,7 +12,7 @@
 
 ## 日志
 
-* 2018-11-04：Ver 0.5（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+* 2018-11-05：Ver 0.5（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
  * 后台可设置打赏二维码
  * 完善了文章界面的分页按钮
  * 增加了后台检测主题更新的功能
