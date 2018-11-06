@@ -50,7 +50,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>
                 <a data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img src="<?php echo $this->fields->banner; ?>"/></a>
                 <?php endif; ?>
-                <?php if(!($this->fields->type=='1')): ?><h1><?php $this->title();?></h1><?php endif; ?>
+                <?php if(!($this->fields->type=='1')): ?><h1><?php $this->title();?>
+                <?php if($this->user->hasLogin()): ?>
+                <sup><a target="_blank" href="<?php echo $this->options->adminUrl.'write-post.php?cid='.$this->cid;?>" class="footnote-ref"><i class="fa fa-edit"></i></a></sup>
+                <?php endif;?>
+                </h1><?php endif; ?>
                 <?php if($this->fields->showTOC=='1'):?>
                     <?php 
                         $parsed=Utils::parseTOC(Utils::parseAll($this->content));
@@ -61,7 +65,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php echo Utils::parseAll($this->content); ?>
                 <?php endif; ?>
             <?php elseif($this->is('page')):?>
-                <h1><?php $this->title();?></h1>
+                <h1><?php $this->title();?>
+                <?php if($this->user->hasLogin()): ?>
+                <sup><a target="_blank" href="<?php echo $this->options->adminUrl.'write-page.php?cid='.$this->cid;?>" class="footnote-ref"><i class="fa fa-edit"></i></a></sup>
+                <?php endif;?></h1>
                 <?php echo Utils::parseAll($this->content,true); ?>
             <?php else:?>
                 <h1><a onclick="$(this).html($(this).html()+`(载入中...)`);" href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
