@@ -499,6 +499,7 @@ header{
     -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     background: white;
     z-index: 10;
+    position: fixed;
 }
 header > nav{
     width: var(--main-width);
@@ -629,7 +630,7 @@ header > nav{
 #main{
     width: var(--main-width);
     max-width: 100%;
-    margin: 15px auto 20px auto;
+    margin: 65px auto 20px auto;
     padding: 0 20px;
     padding-bottom: 20px;
 }
@@ -1066,7 +1067,7 @@ aside > div a:hover{
     }
     #main{
         padding: 0;
-        margin-top: 15px;
+        margin-top: 65px;
         margin-bottom: 50px;
     }
 }
