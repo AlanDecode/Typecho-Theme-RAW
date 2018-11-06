@@ -12,10 +12,14 @@
 
 ## 日志
 
-* 2018-11-05：Ver 0.5（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
- * 后台可设置打赏二维码
- * 完善了文章界面的分页按钮
- * 增加了后台检测主题更新的功能
+2018-11-07：Ver 0.6（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+* 优化了照片集的输入与解析，详细用法见 [在文章中插入照片集](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E7%85%A7%E7%89%87%E9%9B%86)
+* 用户已登录时在文章页面添加了编辑按钮
+* 取消了页面平滑滚动（使用触控板时表现不佳）
+* 移除默认背景图片，改为纯色
+* 修改了文章与评论分页样式
+* 修改了小屏幕下模态框样式
+* bug 修复 
 
 ## 使用
 

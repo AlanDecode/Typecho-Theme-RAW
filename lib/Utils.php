@@ -68,7 +68,7 @@ class Utils {
      */
     public static function addButton(){
         echo '<script src="/usr/themes/RAW/assets/owo/owo_custom.js"></script>';
-        echo '<script type="text/javascript" src="/usr/themes/RAW/assets/editor.js"></script>';
+        echo '<script type="text/javascript" src="/usr/themes/RAW/assets/editor01.js"></script>';
         echo '<link rel="stylesheet" href="/usr/themes/RAW/assets/owo/owo.min.css" />';
         echo '<style>#custom-field textarea{width:100%}
         .OwO span{background:none!important;width:unset!important;height:unset!important}
@@ -221,8 +221,8 @@ class Utils {
      *
      */
     static public function parsePhotoSet($content){
-        $reg='/\[photos.*?col="(.*?)".*?des="(.*?)"\](.*?)\[\/photos\]/s';
-        $rp='<div class="photos col${1}" data-des="${2}">${3}</div>';
+        $reg='/\[photos.*?des="(.*?)"\](.*?)\[\/photos\]/s';
+        $rp='<div class="photos" data-des="${1}">${2}</div>';
         $new=preg_replace($reg,$rp,$content);
         return $new;
     }

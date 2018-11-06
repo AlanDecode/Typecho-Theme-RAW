@@ -499,7 +499,6 @@ header{
     -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     background: white;
     z-index: 10;
-    position: fixed;
 }
 header > nav{
     width: var(--main-width);
@@ -630,7 +629,7 @@ header > nav{
 #main{
     width: var(--main-width);
     max-width: 100%;
-    margin: 65px auto 20px auto;
+    margin: 15px auto 20px auto;
     padding: 0 20px;
     padding-bottom: 20px;
 }
@@ -1067,7 +1066,7 @@ aside > div a:hover{
     }
     #main{
         padding: 0;
-        margin-top: 65px;
+        margin-top: 15px;
         margin-bottom: 50px;
     }
 }
@@ -1198,63 +1197,46 @@ article a:hover{
     color: var(--highlight-color);
     border-bottom: 1px solid var(--border-color);
 }
-.photos{
+article .photos{
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    position: relative!important;
-    width: unset;
-    max-width: 100%;
+    position: relative;
+    padding-top: 1.8rem!important;
 }
-.photos.photos.col2,.photos.photos.col3{
-    padding-top:1.5rem!important; 
-}
-.photos.col2::before,.photos.col3::before{
+article .photos::before {
     content: " • 图集 • " attr(data-des);
     position: absolute;
     font-size: 1rem;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.25);
+    color: rgba(0,0,0,0.25);
     left: 2.5px;
     top: 0;
 }
-
-
-.photos a{
-    display: inline-block;
-    border:none;
-    flex: 1;
-    min-width: 95%;
-    margin: 2.5px;
+article .photos a{
     display: block;
-    overflow: hidden;
-    position: relative;
-    min-width: 95%;
-    max-width: 100%;
-    padding: 0!important;
+    flex: 1;
+    border: none;
+    text-decoration: none;
+    margin: 0 5px;
 }
-.photos img{
-    position: relative!important;
+article .photos a:first-of-type{
+    margin-left: 0!important;
+}
+article .photos a:last-of-type{
+    margin-right: 0!important;
+}
+article .photos a:hover{
+    border:none;
+    text-decoration:none
+}
+article .photos img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: 0;
 }
 
-.photos.col2 a{
-    min-width: 45%;
-    max-width: calc(50% - 5px);
-    padding-top: calc(50% - 5px)!important;
-}
-.photos.col3 a{
-    min-width: 30%;
-    max-width: calc(33.3333% - 5px);
-    padding-top: calc(33.3333% - 5px)!important;
-}
-.photos.col2 img,.photos.col3 img{
-    position: absolute!important;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 article code{
     font-size: .97rem;
     padding: 0.2rem;
