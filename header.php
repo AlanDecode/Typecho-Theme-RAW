@@ -40,7 +40,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
     </nav>
 </header>
-<div class="bg" style="background-image:url(<?php echo $this->options->site_bg?$this->options->site_bg : '/usr/themes/RAW/assets/bg-suica.png'; ?>)"></div>
+<?php if($this->options->site_bg && $this->options->site_bg!=''):?>
+<div class="bg" style="background-image:url(<?php echo $this->options->site_bg; ?>)"></div>
+<?php else:?>
+<div class="bg" style="background:#EBE9E4"></div>
+<?php endif;?>
 <!--div class="bg bg-mask"></div-->
 
 <div id="hidden-login-form" class="login-form" style="display:none">
