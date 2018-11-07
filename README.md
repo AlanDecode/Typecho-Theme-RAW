@@ -23,13 +23,13 @@
 
 ## 使用
 
-[主题介绍](https://blog.imalan.cn/archives/163/) | [开始使用](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8) | [常见问题](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+[主题介绍](https://www.imalan.cn/archives/163/) | [开始使用](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8) | [常见问题](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 **请先仔细阅读帮助文档的内容，若有使用上的问题请首先在文档中寻找解决方法**
 
 ## 贡献
 
-我是第一次尝试写主题，因此有诸多处理不当的地方，欢迎各位提 Pull Request。若有建议与意见请通过 issue 提出，或者在[主题介绍](https://blog.imalan.cn/archives/163/)页面下方留言。
+我是第一次尝试写主题，因此有诸多处理不当的地方，欢迎各位提 Pull Request。若有建议与意见请通过 issue 提出，或者在[主题介绍](https://www.imalan.cn/archives/163/)页面下方留言。
 
 ## Credit
 
@@ -37,7 +37,7 @@
 
 本项目引用了：
 
-[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/)
+[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [scrollTo](http://demos.flesler.com/jquery/scrollTo/)
 
 感谢以上项目。
 

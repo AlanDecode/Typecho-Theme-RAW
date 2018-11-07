@@ -58,7 +58,7 @@ function loadMorePosts(){
 function parseURL(){
     var domain=document.domain;
     $(`a:not(a[href^="#"]):not('.post-like')`).each(function(i,item){
-        if((!$(item).attr("target") || !$(item).attr("target")=="")){
+        if((!$(item).attr("target") || (!$(item).attr("target")=="" && !$(item).attr("target")=="_self" ))){
             if(item.host!=domain){
                 $(item).attr("target","_blank");
             }

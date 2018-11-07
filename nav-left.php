@@ -81,8 +81,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>"><span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span> </span><i class="fa fa-heart"></i></a>
         </div>
         <?php endif; ?>
-        <div><a href="#header"><i class="fa fa-arrow-up"></i></a></div>
-        <div><a href="#comments"><?php $this->commentsNum(); ?> <i class="fa fa-commenting-o"></i></a></div>
+        <div><a href="javascript:void(0)" target="_self" onclick="$.scrollTo(`#header`,300)"><i class="fa fa-arrow-up"></i></a></div>
+        <div><a href="javascript:void(0)" target="_self" onclick="$.scrollTo(`#comments`,300)"><?php $this->commentsNum(); ?> <i class="fa fa-commenting-o"></i></a></div>
     </div>
     <?php endif;?>
 </nav>
