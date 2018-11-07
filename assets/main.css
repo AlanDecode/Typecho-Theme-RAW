@@ -660,6 +660,7 @@ aside{
     margin: 0 20px;
     overflow-x: hidden;
 }
+#nav-left > div >ul{margin-bottom:0}
 @media screen and (max-width: 767px){
     #nav-left{
         display: none;
