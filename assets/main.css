@@ -1775,3 +1775,13 @@ aside > div,#nav-left > div,#nav-left > div >ul,#comments{
 	transform:scale(1)
 }
 }
+@keyframes neon {
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff5722, 0 0 70px #ff5722, 0 0 80px #ff5722, 0 0 100px #ff5722, 0 0 150px #ff5722;
+        
+    }
+    from {
+        filter: brightness(110%);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
+  }
+}
