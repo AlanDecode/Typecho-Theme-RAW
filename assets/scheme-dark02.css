@@ -10,6 +10,12 @@ html.night{
 .night::-webkit-scrollbar-track,.night *::-webkit-scrollbar-track {
     background-color: var(--bg-color);
 }
+.night::-webkit-scrollbar {
+	background-color: var(--text-color);
+}
+::-webkit-scrollbar-thumb {
+    background:  var(--text-color);
+}
 .night{
     transition: 0.3s ease-in-out;
 }
@@ -27,9 +33,6 @@ html.night{
 .night img,.night .board-thumb{
     filter: brightness(0.65);
 }
-img,.board-thumb{
-    transition: 0.3s ease filter;
-}
 .night header,.night .post-item,.night aside>div,.night #nav-left>div,.night #nav-left>div ul,.night #comments,
 .night .OwO .OwO-logo,.night .comment-info-input input,.night  #textarea,.night #comment-submit-button,.night .fancybox-content,
 .night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item
@@ -37,13 +40,16 @@ img,.board-thumb{
     background: var(--dark-color);
 }
 header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
-.OwO .OwO-logo,.comment-info-input input, #textarea,#comment-submit-button,.fancybox-content,
+.OwO .OwO-logo,.comment-info-input input, #textarea,#comment-submit-button,
 .OwO .OwO-body,.OwO .OwO-body .OwO-bar,.OwO .OwO-body .OwO-items-image .OwO-item
 {
     transition: 0.3s ease background;
 }
 .night .comment-info-input input,.night  #textarea{
     color: var(--text-color);
+}
+.nav-left-panel > ul >li,aside > div >span,.avatar-circle-bg{
+    transition: 0.3s ease border;
 }
 .night .nav-left-panel > ul >li,.night aside > div >span,.night .avatar-circle-bg{
     border:none;
@@ -67,105 +73,56 @@ article pre code,.bg-mask,.comment-content{
 .archive-list span{
     transition: 0.3s ease color;
 }
+.night #brand:hover{
+    animation: neon 0.75s ease-in-out infinite alternate;
+}
+.night article h1, .night article h2, .night article h3, .night article h4, .night article h5, .night article h6{
+    color:var(--text-color)
+}
 @media screen and (max-width: 768px){
     .night .nav-links{
         background: var(--bg-color);
     }
 }
 
-/*
-
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
-
-*/
-
 .night .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #abb2bf;
-    background: #282c34;
-  }
-  
-  .night .hljs-comment,
-  .night .hljs-quote {
-color: #5c6370;
-font-style: italic;
+	display:block;
+	overflow-x:auto;
+	padding:0.5em;
+	color:#abb2bf;
+	background:#282c34;
 }
-
-.night .hljs-doctag,
-.night .hljs-keyword,
-.night .hljs-formula {
-color: #c678dd;
+.night .hljs-comment,.night .hljs-quote {
+	color:#5c6370;
+	font-style:italic;
 }
-
-.night .hljs-section,
-.night .hljs-name,
-.night .hljs-selector-tag,
-.night .hljs-deletion,
-.night .hljs-subst {
-color: #e06c75;
+.night .hljs-doctag,.night .hljs-keyword,.night .hljs-formula {
+	color:#c678dd;
 }
-
+.night .hljs-section,.night .hljs-name,.night .hljs-selector-tag,.night .hljs-deletion,.night .hljs-subst {
+	color:#e06c75;
+}
 .night .hljs-literal {
-color: #56b6c2;
+	color:#56b6c2;
 }
-
-.night .hljs-string,
-.night .hljs-regexp,
-.night .hljs-addition,
-.night .hljs-attribute,
-.night .hljs-meta-string {
-color: #98c379;
+.night .hljs-string,.night .hljs-regexp,.night .hljs-addition,.night .hljs-attribute,.night .hljs-meta-string {
+	color:#98c379;
 }
-
-.night .hljs-built_in,
-.night .hljs-class .hljs-title {
-color: #e6c07b;
+.night .hljs-built_in,.night .hljs-class .hljs-title {
+	color:#e6c07b;
 }
-
-.night .hljs-attr,
-.night .hljs-variable,
-.night .hljs-template-variable,
-.night .hljs-type,
-.night .hljs-selector-class,
-.night .hljs-selector-attr,
-.night .hljs-selector-pseudo,
-.night .hljs-number {
-color: #d19a66;
+.night .hljs-attr,.night .hljs-variable,.night .hljs-template-variable,.night .hljs-type,.night .hljs-selector-class,.night .hljs-selector-attr,.night .hljs-selector-pseudo,.night .hljs-number {
+	color:#d19a66;
 }
-
-.night .hljs-symbol,
-.night .hljs-bullet,
-.night .hljs-link,
-.night .hljs-meta,
-.night .hljs-selector-id,
-.night .hljs-title {
-color: #61aeee;
+.night .hljs-symbol,.night .hljs-bullet,.night .hljs-link,.night .hljs-meta,.night .hljs-selector-id,.night .hljs-title {
+	color:#61aeee;
 }
-
 .night .hljs-emphasis {
-font-style: italic;
+	font-style:italic;
 }
-
 .night .hljs-strong {
-font-weight: bold;
+	font-weight:bold;
 }
-
 .night .hljs-link {
-text-decoration: underline;
+	text-decoration:underline;
 }
