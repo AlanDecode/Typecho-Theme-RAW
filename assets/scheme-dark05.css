@@ -37,7 +37,8 @@ html.night{
 .night .OwO .OwO-logo,.night .comment-info-input input,.night  #textarea,.night #comment-submit-button,.night .fancybox-content,
 .night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item,
 .night .post-item.shuoshuo .post-item-body, .night .post-item.shuoshuo .post-item-footer,
-.night #search button:not(.fancybox-button)
+.night #search button:not(.fancybox-button),
+.night .nav-left-panel > ul
 {
     background: var(--dark-color);
 }
@@ -81,6 +82,9 @@ header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
 }
 .night .comment-content::before{
     border-color: transparent var(--darker-color) transparent transparent;
+}
+.night .comment-by-author.comment-item>.comment-body>.comment-content::before{
+    border-color: transparent transparent transparent var(--darker-color);
 }
 
 article pre code,.bg-mask,.comment-content{

@@ -185,7 +185,7 @@ function checkNightMode(){
         return;
     }
     if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
-        if(new Date().getHours() > 21 || new Date().getHours() < 7){
+        if(new Date().getHours() >= 21 || new Date().getHours() < 7){
             $("html").addClass("night");
             document.cookie = "night=1;path=/";
             console.log('夜间模式开启');
