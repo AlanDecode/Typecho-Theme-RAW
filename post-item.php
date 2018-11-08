@@ -12,13 +12,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div id="post-list">
 <?php if(!$this->have()):?>
     <div class="post-item">
-    <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px">糟糕，是 404 的感觉</h1></div>
+    <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px;color:var(--text-color)">糟糕，是 404 的感觉</h1></div>
     </div>
 <?php else:?>
     <?php if($this->is('archive')):?>
     <div class="post-item">
         <div class="post-item-body" style="padding-top:1em">
-        <b>
+        <b style="color:var(--text-color)">
             <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
                 文章列表 &raquo; 第&nbsp;<?php echo $this->_currentPage; ?>&nbsp;页
             <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
