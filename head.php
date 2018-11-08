@@ -11,7 +11,11 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <!DOCTYPE HTML>
-<html class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>"> <!--start html-->
+<html class="<?php
+if($this->options->colormode=='1') echo 'night';
+elseif ($this->options->colormode=='2') echo 'day';
+else echo($_COOKIE['night'] == '1' ? 'night' : ''); 
+?>"> <!--start html-->
 <head> <!--start head-->
 <meta charset="<?php $this->options->charset(); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +36,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.23.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark03.css');?>">
 <!--JS-->
 <script src="<?php $this->options->themeUrl('/assets/jquery/jquery.min.js'); ?>"></script>

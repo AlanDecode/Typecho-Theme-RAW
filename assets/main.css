@@ -1687,7 +1687,7 @@ article .footnotes ol::before{
     border:none;
 }
 .board-title,.board-title a:hover{
-    color: #202020!important;
+    border: none
 }
 @media screen and (max-width:767px){
     .board-item{

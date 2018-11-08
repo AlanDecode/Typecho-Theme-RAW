@@ -168,6 +168,11 @@ function switchNightMode(){
 }
 
 (function(){
+    if($("html").hasClass("night")) return;
+    if($("html").hasClass("day")){
+        $("html").removeClass("night");
+        return;
+    }
     if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
         if(new Date().getHours() > 21 || new Date().getHours() < 7){
             $("html").addClass("night");

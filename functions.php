@@ -51,6 +51,8 @@ function themeConfig($form) {
     $form->addInput($aside_nav);
     $aside_link=new Typecho_Widget_Helper_Form_Element_Textarea('aside_link', NULL, NULL, _t('全站友链'), _t('全站侧边栏友情链接，请直接以 a 标签书写。一行一个。'));
     $form->addInput($aside_link);
+    $colormode=new Typecho_Widget_Helper_Form_Element_Select('colormode',array('0'=>'自动切换','1'=>'夜间模式','2'=>'日间模式'),'0','博客颜色模式','设置主题默认模式。不论如何设置，都可以通过右上角按钮切换。');
+    $form->addInput($colormode);
     $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
     $form->addInput($site_bg);
     $reward_img=new Typecho_Widget_Helper_Form_Element_Text('reward_img', NULL, NULL, _t('打赏二维码图片地址'), _t('填写图片链接，若不需要打赏则留空。只支持一张图，若需要多种支付方式请自行合成二维码图片。'));
