@@ -354,13 +354,13 @@
     display: none;
   }
 
-  :root{
+  html{
       --main-width: 1262px;
       --nav-left-width: 200px;
       --aside-width: 250px;
   }
   
-:root{
+html{
     --text-color: #333;
     --dark-color: #222;
     --darker-color: #111;
@@ -534,7 +534,7 @@ header > nav{
 }
 .bg-mask{
     z-index: -1;
-    background: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0);
 }
 #brand{
     line-height: 50px;
@@ -1430,7 +1430,10 @@ article .footnotes ol::before{
 .OwO .OwO-body{
     max-width:100%;
     z-index: 11
-}  
+} 
+.OwO .OwO-body .OwO-bar{
+    color: var(--text-color)
+} 
 .comment-mail-me{
     display:inline;
     text-align:right;
@@ -1521,6 +1524,7 @@ article .footnotes ol::before{
 .comment-body .comment-content{
     margin-right: 7rem;
     word-break: break-word;
+    color: var(--text-color);
 }
 .comment-by-author.comment-item>.comment-body>.comment-content{
     margin-left: 7rem;
@@ -1678,7 +1682,7 @@ article .footnotes ol::before{
     text-overflow: ellipsis!important;
     white-space: nowrap !important;
     text-align: center !important;
-    color: #202020 !important;
+    color: var(--text-color) !important;
     font-weight: 700 !important;   
     border:none;
 }

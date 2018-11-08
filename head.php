@@ -11,7 +11,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <!DOCTYPE HTML>
-<html> <!--start html-->
+<html class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>"> <!--start html-->
 <head> <!--start head-->
 <meta charset="<?php $this->options->charset(); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,8 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.21.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.22.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark.css');?>">
 <!--JS-->
 <script src="<?php $this->options->themeUrl('/assets/jquery/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/scrollTo/jquery.scrollTo.min.js'); ?>"></script>

@@ -153,3 +153,37 @@ $(document).ready(function(){
     registerFixedTOC();
     hljs.initHighlightingOnLoad();
 })
+
+function switchNightMode(){
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if(night == '0'){
+        $("html").addClass("night");
+        document.cookie = "night=1;path=/"
+        console.log('夜间模式开启');
+    }else{
+        $("html").removeClass("night");
+        document.cookie = "night=0;path=/"
+        console.log('夜间模式关闭');
+    }
+}
+
+(function(){
+    if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
+        if(new Date().getHours() > 21 || new Date().getHours() < 7){
+            $("html").addClass("night");
+            document.cookie = "night=1;path=/";
+            console.log('夜间模式开启');
+        }else{
+            $("html").removeClass("night");
+            document.cookie = "night=0;path=/";
+            console.log('夜间模式关闭');
+        }
+    }else{
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if(night == '0'){
+            $("html").removeClass("night");
+        }else if(night == '1'){
+            $("html").addClass("night");
+        }
+    }
+})();

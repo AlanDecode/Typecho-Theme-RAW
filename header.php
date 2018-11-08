@@ -35,6 +35,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </div>
         <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
+            <a href="javascript:void(0)" target="_self" class="nav-link" onclick="switchNightMode()"><i class="fa fa-lightbulb-o"></i></a>
             <a data-fancybox data-src="#search" href="javascript:;" class="nav-link"><i class="fa fa-search"></i></a>
             <a style="display: flex;" data-fancybox data-src="#hidden-login-form" href="javascript:;"><img style="width:35px;height:35px" class="avatar author-avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" /></a>
         </div>
@@ -45,7 +46,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php else:?>
 <div class="bg" style="background:#EBE9E4"></div>
 <?php endif;?>
-<!--div class="bg bg-mask"></div-->
+<div class="bg bg-mask"></div>
 
 <div id="hidden-login-form" class="login-form" style="display:none">
     <?php if($this->user->hasLogin()): ?>
@@ -79,7 +80,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <?php if($this->options->reward_img&&$this->options->reward_img!='') :?>
 <div id="reward" style="display:none">
-<div style="font-size:1.5rem;text-align:center;overflow:hidden">给博主喂食</div>
+<div style="font-size:1.5rem;text-align:center;overflow:hidden;color:var(--text-color);margin-bottom:0.2em">给博主喂食</div>
 <img style="max-width:100%" src="<?php echo $this->options->reward_img; ?>" />
 </div>
 </div>

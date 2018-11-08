@@ -30,7 +30,7 @@
             <div class="cancel-comment-reply">
                 <?php $comments->cancelReply(); ?>
             </div>
-            <h3 id="response" class="widget-title text-left">添加新评论</h3>
+            <h3 id="response" class="widget-title text-left" style="color:var(--text-color)">添加新评论</h3>
             <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
                 <?php if($this->user->hasLogin()): ?>
                 <p id="logged-in" data-name="<?php $this->user->screenName(); ?>" data-url="<?php $this->user->url(); ?>" data-email="<?php $this->user->mail(); ?>" ><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a no-pjax="1" href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
@@ -48,7 +48,7 @@
                     <span class="OwO"></span>
                     <span class="comment-mail-me">
                         <input name="receiveMail" type="checkbox" value="yes" id="receiveMail" checked />
-                        <label for="receiveMail"><strong>接收</strong>邮件通知</label>
+                        <label for="receiveMail" style="color:var(--text-color)"><strong>接收</strong>邮件通知</label>
                     </span>
                     <button id="comment-submit-button" type="submit" class="submit"><?php _e('提交评论'); ?></button>
                 </p>
@@ -59,13 +59,13 @@
         </div>
         <?php else: ?>
             <div class="comment-closed">
-                <p>该页面评论已关闭</p>
+                <p style="color:var(--text-color)">该页面评论已关闭</p>
             </div>
         <?php endif;?>
         <?php if ($comments->have()): ?>
             <h3 class="comment-separator">
                 <div class="comment-tab-current">
-                    <span class="comment-num"><?php $this->commentsNum(_t('评论列表'), _t('已有 1 条评论'), _t('已有 %d 条评论')); ?></span>
+                    <span class="comment-num" style="color:var(--text-color)"><?php $this->commentsNum(_t('评论列表'), _t('已有 1 条评论'), _t('已有 %d 条评论')); ?></span>
                 </div>
             </h3>
             <?php $comments->listComments(array(
