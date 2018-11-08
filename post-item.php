@@ -36,15 +36,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </div>
     <?php endif;?>
     <?php while($this->next()): ?>
-    <div class="post-item">
+    <div class="post-item <?php if($this->fields->type=='1' && ($this->is('index') || $this->is('archive'))) echo 'shuoshuo';?>">
         <div class="post-item-header flex align-items-center">
             <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
             <div style="font-size: 0.9rem; line-height: 1.5;" class="post-meta flex flex-direction-column">
-                <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '说说'; else echo '文章'; ?></span>
+                <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '说说'; else echo '日志'; ?></span>
                 <span><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
             </div>
         </div>
-        <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
+        <div class="post-item-body <?php if($this->fields->type=='1' && ($this->is('index') || $this->is('archive'))) echo 'shrink';?> <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
             <article>
             <?php if($this->is('post') || $this->fields->type=='1' ): ?>
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>
@@ -82,7 +82,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <div class="post-item-footer">
             <?php if(Utils::isPluginAvailable('Like')):?>
                 <span class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
-                    <i class="fa fa-heart"></i> ENJOY <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
+                    <i class="fa fa-heart"></i> LIKE <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
                 </a></span>
             <?php endif; ?>
             <?php if(!$this->is('index')):?>
@@ -92,7 +92,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php if(!$this->fields->type=='1'): ?>
                 <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>">阅读全文</a></span>
                 <?php else:?>
-                <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments">Comments</a></span>
+                <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
+                <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-down"></i> 展开</a></span>
                 <?php endif; ?>
             <?php endif; ?>
         </div>

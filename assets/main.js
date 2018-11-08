@@ -2,7 +2,7 @@
 // Author: 熊猫小A
 // Link: https://imalan.cn
 
-console.log(` %c Theme RAW 0.6 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
+console.log(` %c Theme RAW 0.7 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
 
 $(document).scroll(function(){
     if($(window).width()>767) return;
@@ -144,6 +144,7 @@ function parsedPhotos(){
 }
 
 $(document).ready(function(){
+    checkNightMode();
     parsedPhotos();
     parseURL();
     $.each($(".nav-link"),function(i,item){
@@ -153,6 +154,16 @@ $(document).ready(function(){
     registerFixedTOC();
     hljs.initHighlightingOnLoad();
 })
+
+function toggleShrink(item){
+    if($(item).parent().parent().prev().hasClass("shrink")){
+        $(item).html(`<i class="fa fa-chevron-circle-up"></i> 收起`);
+        $(item).parent().parent().prev().removeClass("shrink");
+    }else{
+        $(item).html(`<i class="fa fa-chevron-circle-down"></i> 展开`);
+        $(item).parent().parent().prev().addClass("shrink");
+    }
+}
 
 function switchNightMode(){
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
@@ -167,7 +178,7 @@ function switchNightMode(){
     }
 }
 
-(function(){
+function checkNightMode(){
     if($("html").hasClass("night")) return;
     if($("html").hasClass("day")){
         $("html").removeClass("night");
@@ -191,4 +202,4 @@ function switchNightMode(){
             $("html").addClass("night");
         }
     }
-})();
+}

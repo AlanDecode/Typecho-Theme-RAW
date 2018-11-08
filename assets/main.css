@@ -546,6 +546,11 @@ header > nav{
     margin-right: 20px;
     letter-spacing: 0.1em;
 }
+@media screen and (max-width:767px){
+    #brand{
+        min-width: unset;
+    }
+}
 #brand:hover{
     color: var(--highlight-color);
 }
@@ -623,6 +628,8 @@ header > nav{
     padding: 0.3em;
     border: 1px solid var(--border-color);
     border-radius: 4px;
+    background: none;
+    color: var(--text-color);
 }
 #search button:not(.fancybox-button){
     border-color: var(--highlight-fade-color);
@@ -907,6 +914,7 @@ aside > div a:hover{
 }
 .post-item-header{
     color: var(--text-color);
+    position: relative;
 }
 .post-item-header img{
     width: 48px;
@@ -1004,6 +1012,54 @@ aside > div a:hover{
 .post-item-body.pull-left.featured h1,.post-item-body.featured.pull-left p{
     padding-right: 0;
 }
+.post-item.shuoshuo{
+    background: none;
+    box-shadow: none;
+}
+.post-item.shuoshuo .post-item-header{
+    padding-left: calc(48px + 2em);
+}
+.post-item.shuoshuo .post-item-body,
+.post-item.shuoshuo .post-item-footer{
+    margin-left: calc(48px + 2em);
+    max-width: 100%;
+    min-width: unset;
+    background: white;
+    border-top-right-radius: 16px;
+}
+.post-item.shuoshuo .post-item-body article{
+    overflow: hidden;
+}
+.post-item.shuoshuo .post-item-body.shrink{
+    max-height: 220px;
+    overflow: hidden;
+}
+@media screen and (max-width:768px){
+    .post-item.shuoshuo .post-item-body.shrink{
+        max-height: 180px;
+    }
+}
+.post-item.shuoshuo .post-item-footer{
+    background: white;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.post-item.shuoshuo .post-item-header{
+    padding-bottom:0.5em;
+}
+.post-item.shuoshuo .post-item-header>div>span:first-child{
+    display: none;
+}
+.post-item.shuoshuo .post-item-header .avatar{
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+
+
+
 .post-pager{
     display: flex;
     flex-direction: row;

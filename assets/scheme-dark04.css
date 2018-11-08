@@ -35,9 +35,25 @@ html.night{
 }
 .night header,.night .post-item,.night aside>div,.night #nav-left>div,.night #nav-left>div ul,.night #comments,
 .night .OwO .OwO-logo,.night .comment-info-input input,.night  #textarea,.night #comment-submit-button,.night .fancybox-content,
-.night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item
+.night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item,
+.night .post-item.shuoshuo .post-item-body, .night .post-item.shuoshuo .post-item-footer,
+.night #search button:not(.fancybox-button)
 {
     background: var(--dark-color);
+}
+.night header,.night .post-item.shuoshuo{
+    background: none;
+}
+.night .post-item:not(.shuoshuo){
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.night .post-item.shuoshuo .post-item-body{
+    border: 1px solid rgba(255,255,255,0.3);
+    border-bottom: none;
+}
+.night .post-item.shuoshuo .post-item-footer{
+    border: 1px solid rgba(255,255,255,0.3);
+    border-top: none;
 }
 header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
 .OwO .OwO-logo,.comment-info-input input, #textarea,#comment-submit-button,
@@ -75,6 +91,7 @@ article pre code,.bg-mask,.comment-content{
 }
 .night #brand:hover{
     animation: neon 0.75s ease-in-out infinite alternate;
+    color: white;
 }
 .night article h1, .night article h2, .night article h3, .night article h4, .night article h5, .night article h6{
     color:var(--text-color)

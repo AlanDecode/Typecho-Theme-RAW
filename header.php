@@ -70,12 +70,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 </div>
 
 <div id="search" style="display:none">
-    <p>输入要搜索的内容</p>
+    <p style="color:var(--text-color)">输入要搜索的内容</p>
     <input onkeydown="enterSearch();" type="text" name="search-content" id="search" class="text" required />
     <div style="margin:1em auto" id="search-buttons">
-        <button id="btn-search" onclick="startSearch();">搜索</button>
+        <button style="color:var(--text-color)" id="btn-search" onclick="startSearch();">搜索</button>
     </div>
-    <p style="margin: 0.2em auto;line-height:1.5;color:rgba(0,0,0,0.4);max-width:90%;text-align:center">点击「搜索」或者使用 Enter 键开始搜索</p>
+    <p style="margin: 0.2em auto;line-height:1.5;color:rgba(0,0,0,0.4);max-width:90%;text-align:center;color:var(--text-color)">点击「搜索」或者使用 Enter 键开始搜索</p>
 </div>
 
 <?php if($this->options->reward_img&&$this->options->reward_img!='') :?>

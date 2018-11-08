@@ -2,16 +2,16 @@
 /**
  * 一款简单的三栏主题~
  * 
- * 作者：<a href="https://imalan.cn">熊猫小A</a>
+ * 作者：<a href="https://www.imalan.cn">熊猫小A</a>
  * 
- * 主题介绍：<a href="https://blog.imalan.cn/archives/163/" target="_blank">Typecho Theme RAW 发布</a>
+ * 主题介绍：<a href="https://www.imalan.cn/archives/163/" target="_blank">Typecho Theme RAW 发布</a>
  * 
  * Wiki：<a href="https://github.com/AlanDecode/Typecho-Theme-RAW/wiki" target="_blank">主题 Wiki</a>
  * 
  * @package Typecho-Theme-RAW
  * @author 熊猫小A
- * @version 0.6
- * @link https://imalan.cn
+ * @version 0.7
+ * @link https://www.imalan.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
