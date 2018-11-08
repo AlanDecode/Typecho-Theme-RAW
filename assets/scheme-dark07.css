@@ -5,7 +5,7 @@ html.night{
     --highlight-color: #e93413;
     --highlight-fade-color: #9ea0a6;
     --border-color: var(--highlight-fade-color);
-    --bg-color:#263238;
+    --bg-color:#2c2a2a;
 }
 .night::-webkit-scrollbar-track,.night *::-webkit-scrollbar-track {
     background-color: var(--bg-color);
@@ -38,9 +38,13 @@ html.night{
 .night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item,
 .night .post-item.shuoshuo .post-item-body, .night .post-item.shuoshuo .post-item-footer,
 .night #search button:not(.fancybox-button),
-.night .nav-left-panel > ul
+.night .nav-left-panel > ul,
+.night .cancel-comment-reply
 {
     background: var(--dark-color);
+}
+.night .cancel-comment-reply{
+    color: var(--text-color);
 }
 .night header,.night .post-item.shuoshuo{
     background: none;
