@@ -5,7 +5,7 @@ html.night{
     --highlight-color: #e93413;
     --highlight-fade-color: #9ea0a6;
     --border-color: var(--highlight-fade-color);
-    --bg-color:#263238;
+    --bg-color:#2c2a2a;
 }
 .night::-webkit-scrollbar-track,.night *::-webkit-scrollbar-track {
     background-color: var(--bg-color);
