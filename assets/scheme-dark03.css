@@ -13,7 +13,7 @@ html.night{
 .night::-webkit-scrollbar {
 	background-color: var(--text-color);
 }
-::-webkit-scrollbar-thumb {
+.night::-webkit-scrollbar-thumb {
     background:  var(--text-color);
 }
 .night{
