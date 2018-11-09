@@ -49,7 +49,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <span><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
             </div>
         </div>
-        <div class="post-item-body <?php if($this->fields->type=='1' && ($this->is('index') || $this->is('archive'))) echo 'shrink';?> <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
+        <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
             <article>
             <?php if($this->is('post') || $this->fields->type=='1' ): ?>
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>
@@ -98,7 +98,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>">阅读全文</a></span>
                 <?php else:?>
                 <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
-                <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-down"></i> 展开</a></span>
+                <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-up"></i> 收起</a></span>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
