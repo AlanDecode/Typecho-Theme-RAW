@@ -20,7 +20,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <div class="post-item-body flex justify-content-justify align-items-center" style="padding:0">
         <b style="color:var(--text-color);display:block;padding:1em">
             <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
-                首页
+                <a href="/">首页</a>
             <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
                 文章 &raquo; <?php $this->title() ?>
             <?php else: ?><!-- 页面为其他页时 -->

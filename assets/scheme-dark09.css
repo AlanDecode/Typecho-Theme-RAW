@@ -49,7 +49,7 @@ html.night{
 .night header,.night .post-item.shuoshuo{
     background: none;
 }
-.post-item.item-nav{
+.night .post-item.item-nav{
     border: 1px solid rgba(255,255,255,0.3);
 }
 .night .post-item.shuoshuo .post-item-body{
