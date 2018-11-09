@@ -1022,16 +1022,12 @@ aside > div a:hover{
     background: none;
     box-shadow: none;
 }
-.post-item.shuoshuo .post-item-header{
-    padding-left: calc(48px + 2em);
-}
 .post-item.shuoshuo .post-item-body,
 .post-item.shuoshuo .post-item-footer{
-    margin-left: calc(48px + 2em);
-    max-width: 100%;
-    min-width: unset;
     background: var(--bg-color);
-    border-top-right-radius: 16px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    position: relative;
 }
 .post-item.shuoshuo .post-item-body article{
     overflow: hidden;
@@ -1048,19 +1044,19 @@ aside > div a:hover{
 .post-item.shuoshuo .post-item-footer{
     background: var(--bg-color);
     border-top-right-radius: 0;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
-.post-item.shuoshuo .post-item-header{
-    padding-bottom:0.5em;
-}
-.post-item.shuoshuo .post-item-header>div>span:first-child{
-    display: none;
-}
-.post-item.shuoshuo .post-item-header .avatar{
+.post-item.shuoshuo .post-item-body::before{
     position: absolute;
-    left: 1em;
-    top: 1em;
+    display: block;
+    content: "";
+    border: 12px solid;
+    left: calc(1em + 24px);
+    transform: translateX(-50%);
+    top: -23.5px;
+    border-color: transparent transparent var(--bg-color) transparent;
 }
 .post-item.shuoshuo{
     display: var(--shuoshuo-display);

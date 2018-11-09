@@ -43,6 +43,9 @@ html.night{
 {
     background: var(--dark-color);
 }
+.night .post-item.shuoshuo .post-item-body::before{
+    border-color: transparent transparent var(--dark-color) transparent;
+}
 .night .cancel-comment-reply{
     color: var(--text-color);
 }
@@ -51,14 +54,6 @@ html.night{
 }
 .night .post-item.item-nav{
     border: 1px solid rgba(255,255,255,0.3);
-}
-.night .post-item.shuoshuo .post-item-body{
-    border: 1px solid rgba(255,255,255,0.3);
-    border-bottom: none;
-}
-.night .post-item.shuoshuo .post-item-footer{
-    border: 1px solid rgba(255,255,255,0.3);
-    border-top: none;
 }
 header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
 .OwO .OwO-logo,.comment-info-input input, #textarea,#comment-submit-button,
