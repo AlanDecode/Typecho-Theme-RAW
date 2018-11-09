@@ -22,7 +22,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
                 <a href="/">首页</a>
             <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
-                文章 &raquo; <?php $this->title() ?>
+                日志 &raquo; <?php $this->title() ?>
             <?php else: ?><!-- 页面为其他页时 -->
             <?php $this->archiveTitle(array(
                 'category'  =>  _t('分类 "%s" 下的文章'),
@@ -33,7 +33,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <?php endif; ?>
         </b>
         <div class="index-filter flex justify-content-justify align-items-center">
-            <div class="current" onclick="filterItems(this,1);">文章</div>
+            <div class="current" onclick="filterItems(this,1);">日志</div>
             <div onclick="filterItems(this,2);">说说</div>
             <div onclick="filterItems(this,0);">全部</div>
         </div>
