@@ -358,6 +358,8 @@
       --main-width: 1262px;
       --nav-left-width: 200px;
       --aside-width: 250px;
+      --shuoshuo-display:none;
+      --post-item-display:block;
   }
   
 html{
@@ -367,6 +369,7 @@ html{
     --highlight-color: rgb(255,112,121);
     --highlight-fade-color: rgba(255,112,121,0.6);
     --border-color: var(--highlight-fade-color);
+    --bg-color:#fff;
 }
   
   *{
@@ -513,7 +516,7 @@ header{
     width: 100%;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
-    background: white;
+    background: var(--bg-color);
     z-index: 10;
 }
 header > nav{
@@ -599,7 +602,7 @@ header > nav{
         width: calc(100% - 20px);
         left: 10px;
         justify-content: space-around;
-        background: white;
+        background: var(--bg-color);
         transition:0.3s ease all;
         box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
         -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
@@ -697,7 +700,7 @@ aside{
 
 #author-panel{
     position: relative;
-    background: white;
+    background: var(--bg-color);
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 6px;
@@ -754,14 +757,14 @@ aside{
 .nav-left-panel{
     font-size: 0.9em;
     color: var(--text-color);
-    background: white;
+    background: var(--bg-color);
     margin-bottom: 20px;
 }
 .nav-left-panel > ul{
     padding: 0;
     list-style: none;
     margin-top: 0;
-    background: white;
+    background: var(--bg-color);
 }
 @media screen and (max-width:767px){
     .nav-left-panel > ul{
@@ -803,7 +806,7 @@ aside{
 aside> div{
     padding: 0.5em 0;
     padding-top: 0;
-    background: white;
+    background: var(--bg-color);
 }
 .login-form{
     border: 1px solid var(--border-color);
@@ -900,10 +903,13 @@ aside > div a:hover{
 .post-item{
     margin: 5px;
     margin-bottom: 20px;
-    background: white;
+    background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
+}
+.post-item:not(.item-nav):not(.loadmore):not(.shuoshuo){
+    display: var(--post-item-display);
 }
 .post-item-header,.post-item-body,.post-item-footer{
     padding: 1em;
@@ -1024,7 +1030,7 @@ aside > div a:hover{
     margin-left: calc(48px + 2em);
     max-width: 100%;
     min-width: unset;
-    background: white;
+    background: var(--bg-color);
     border-top-right-radius: 16px;
 }
 .post-item.shuoshuo .post-item-body article{
@@ -1040,7 +1046,7 @@ aside > div a:hover{
     }
 }
 .post-item.shuoshuo .post-item-footer{
-    background: white;
+    background: var(--bg-color);
     border-top-right-radius: 0;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -1056,8 +1062,31 @@ aside > div a:hover{
     left: 1em;
     top: 1em;
 }
-
-
+.post-item.shuoshuo{
+    display: var(--shuoshuo-display);
+}
+.post-item.item-nav .post-item-body{
+    flex-direction: row!important
+}
+.post-item.item-nav .index-filter{
+    height: 100%;
+}
+.post-item.item-nav .index-filter >div{
+    cursor: pointer;
+    padding: 1em;
+    border-bottom: 3px solid transparent;
+    color: var(--text-color);
+}
+.post-item.item-nav .index-filter >div.current,.post-item.item-nav .index-filter >div:hover{
+    color: var(--highlight-color);
+    border-bottom: 3px solid var(--highlight-color);
+}
+.post-item.item-nav{
+    display: none!important;
+}
+.post-item.item-nav:first-child{
+    display: block!important;
+}
 
 
 .post-pager{
@@ -1435,7 +1464,7 @@ article .footnotes ol::before{
     margin: 5px;
     margin-bottom: 50px;
     padding:1em;
-    background: white;
+    background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
@@ -1523,7 +1552,7 @@ article .footnotes ol::before{
 #comment-submit-button{
     cursor: pointer;
     color: var(--highlight-fade-color);
-    background: white;
+    background: var(--bg-color);
     font-size: 1rem;
     height: 40px;
     border:2px solid rgba(0,0,0,.2);

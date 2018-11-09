@@ -15,12 +15,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px;color:var(--text-color)">糟糕，是 404 的感觉</h1></div>
     </div>
 <?php else:?>
-    <?php if($this->is('archive')):?>
-    <div class="post-item">
-        <div class="post-item-body" style="padding-top:1em">
-        <b style="color:var(--text-color)">
+    <?php if($this->is('archive')||$this->is('index')):?>
+    <div class="post-item item-nav">
+        <div class="post-item-body flex justify-content-justify align-items-center" style="padding:0">
+        <b style="color:var(--text-color);display:block;padding:1em">
             <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
-                文章列表 &raquo; 第&nbsp;<?php echo $this->_currentPage; ?>&nbsp;页
+                首页
             <?php elseif ($this->is('post')): ?><!-- 页面为文章单页时 -->
                 文章 &raquo; <?php $this->title() ?>
             <?php else: ?><!-- 页面为其他页时 -->
@@ -32,6 +32,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             ), '', ''); ?>
             <?php endif; ?>
         </b>
+        <div class="index-filter flex justify-content-justify align-items-center">
+            <div class="current" onclick="filterItems(this,1);">文章</div>
+            <div onclick="filterItems(this,2);">说说</div>
+            <div onclick="filterItems(this,0);">全部</div>
+        </div>
         </div>
     </div>
     <?php endif;?>
