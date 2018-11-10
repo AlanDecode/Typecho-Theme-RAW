@@ -41,10 +41,10 @@ Utils::exportHeader($this,$banner);
 <?php if($this->options->columnorder=='1'):?>
 <style>
 aside{
-    order:1;
+    order:-1;
 }
 #nav-left{
-    order:-1;
+    order:1;
 }
 </style>
 <?php endif;?>
