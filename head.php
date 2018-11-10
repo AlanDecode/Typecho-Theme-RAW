@@ -46,6 +46,9 @@ aside{
 #nav-left{
     order:1;
 }
+#ctrler{
+    align-items: flex-start!important;
+}
 </style>
 <?php endif;?>
 <?php if(($this->options->showaside=='1')||($this->options->showaside=='2'&&!$this->user->hasLogin())):?>
