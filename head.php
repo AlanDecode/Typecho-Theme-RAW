@@ -73,6 +73,11 @@ html {
 .center{
     margin:0 20px;
 }
+@media screen and (max-width: 767px){ 
+.center {
+    margin: 0;
+}
+}
 </style>
 <?php endif;?>
 <!--JS-->
