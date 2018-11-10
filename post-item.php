@@ -33,9 +33,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <?php endif; ?>
         </b>
         <div class="index-filter flex justify-content-justify align-items-center">
-            <div class="current" onclick="filterItems(this,1);">日志</div>
+            <div class="current" onclick="filterItems(this,0);">全部</div>
+            <div onclick="filterItems(this,1);">日志</div>
             <div onclick="filterItems(this,2);">说说</div>
-            <div onclick="filterItems(this,0);">全部</div>
         </div>
         </div>
     </div>
