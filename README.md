@@ -12,13 +12,12 @@
 
 ## 日志
 
-2018-11-08 Ver 0.7（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
-* **夜间模式！**（可设置默认模式，也可自动切换：21:00 至 7:00 为夜间模式）
-* 新的说说样式（更好的区分正经文章和破事水）
-* 使用 scrollTo.js 代替了锚点跳转
-* 首页摘要减少至 80 字
-* 修正了 footer 显示信息错误的问题
-* 其他 bug 修复
+2018-11-10 Ver 0.8（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+
+* 修改了说说样式
+* 可设置是否显示最近评论与热门日志（右侧边栏）
+* 可只是三栏显示顺序
+* bug fix
 
 ## 使用
 

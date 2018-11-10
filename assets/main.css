@@ -357,7 +357,7 @@ display: none;
 html{
     --main-width: 1262px;
     --nav-left-width: 200px;
-    --aside-width: 250px;
+    --aside-width: 220px;
     --shuoshuo-display:block;
     --post-item-display:block;
 }
@@ -1442,6 +1442,18 @@ article .footnotes ol::before{
     width: 50%;
     max-width: 100px;
     margin: 40px 0 20px;
+}
+article table{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 6px;
+}
+article table thead{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+article table th,article table td{
+    padding: 0.5em;
+    text-align: center;
 }
 .footnotes hr{
     display:none

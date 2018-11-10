@@ -146,3 +146,22 @@ article pre code,.bg-mask,.comment-content{
 .night .hljs-link {
 	text-decoration:underline;
 }
+
+
+.night .aplayer .aplayer-list ol li{
+    border:1px solid rgba(0,0,0,0.1)
+}
+.aplayer .aplayer-list ol li:first-child{
+    border-top:none
+}
+.night .aplayer{
+    background:var(--darker-color)!important
+}
+.night .aplayer .aplayer-lrc:after, 
+.night .aplayer .aplayer-lrc:before,
+.night .aplayer .aplayer-list ol li.aplayer-list-light{
+    background:none!important
+}
+.night .aplayer .aplayer-list ol li:hover {
+    background: var(--dark-color);
+}
