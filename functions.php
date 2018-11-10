@@ -53,6 +53,8 @@ function themeConfig($form) {
     $form->addInput($aside_link);
     $colormode=new Typecho_Widget_Helper_Form_Element_Select('colormode',array('0'=>'自动切换','1'=>'夜间模式','2'=>'日间模式'),'0','博客颜色模式','设置主题默认模式。不论如何设置，都可以通过右上角按钮切换。');
     $form->addInput($colormode);
+    $columnorder=new Typecho_Widget_Helper_Form_Element_Select('columnorder',array('0'=>'正序','1'=>'逆序'),'0','设置三栏的显示顺序','设置导航栏，文章栏，热门统计栏的显示顺序。');
+    $form->addInput($columnorder);
     $showaside=new Typecho_Widget_Helper_Form_Element_Select('showaside',array('0'=>'显示','1'=>'不显示','2'=>'登录显示'),'0','是否显示右侧边栏','设置是否显示右侧边栏。（仅隐藏最近评论与热门日志模块，文章目录仍然会显示）');
     $form->addInput($showaside);
     $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));

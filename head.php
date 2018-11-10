@@ -38,13 +38,25 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.29.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0a.css');?>">
+<?php if($this->options->columnorder=='1'):?>
+aside{
+    order:1;
+}
+#nav-left{
+    order:-1;
+}
+<?php endif;?>
 <?php if(($this->options->showaside=='1')||($this->options->showaside=='2'&&!$this->user->hasLogin())):?>
 <style>
 html {
     --main-width: 1012px;
 }
 .center{
+    <?php if($this->options->columnorder=='1'):?>
+    margin-left:0;
+    <?php else: ?>
     margin-right:0;
+    <?php endif;?>
 }
 </style>
 <?php endif;?>
