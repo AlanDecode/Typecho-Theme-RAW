@@ -39,12 +39,14 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.29.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0a.css');?>">
 <?php if($this->options->columnorder=='1'):?>
+<style>
 aside{
     order:1;
 }
 #nav-left{
     order:-1;
 }
+</style>
 <?php endif;?>
 <?php if(($this->options->showaside=='1')||($this->options->showaside=='2'&&!$this->user->hasLogin())):?>
 <style>
