@@ -36,7 +36,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.28.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.29.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0a.css');?>">
 <?php if(($this->options->showaside=='1')||($this->options->showaside=='2'&&!$this->user->hasLogin())):?>
 <style>

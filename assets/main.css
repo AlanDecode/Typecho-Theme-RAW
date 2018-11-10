@@ -1317,7 +1317,8 @@ article .photos a{
     text-decoration: none;
     margin: 0 5px;
 }
-article > ul li p{
+article > ul li p,
+article > ol li p{
     display: inline;
 }
 article .photos a:first-of-type{
