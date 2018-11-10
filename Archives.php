@@ -80,7 +80,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <?php $this->need('comments.php'); ?>
         <?php $this->need('footer-info.php'); ?>
     </div>
-    <?php $this->need('aside.php'); ?>
+    <?php if($this->options->showaside=='0'||($this->options->showaside=='2'&&$this->user->hasLogin())):?>
+        <?php $this->need('aside.php'); ?>
+    <?php endif;?>
 </div>
 <?php $this->need('footer.php'); ?>
 <style>
