@@ -12,7 +12,7 @@
 
 ## 日志
 
-2018-11-10 Ver 0.81（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+2018-11-12 Ver 0.81（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
 
 * 修改了说说样式
 * 可设置是否显示最近评论与热门日志（右侧边栏）
