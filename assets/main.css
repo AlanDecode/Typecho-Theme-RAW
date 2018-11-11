@@ -899,7 +899,7 @@ aside > div a:hover{
     width: 100%;
 }
 #ctrler>div *{
-    color: var(--text-color);
+    color: var(--highlight-fade-color);
     transition: 0.3s ease color;
 }
 #ctrler>div:hover *{
