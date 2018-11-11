@@ -65,6 +65,21 @@ html {
 }
 </style>
 <?php endif;?>
+<?php if($this->fields->showTOC=='1' && ($this->is('post') || $this->is('page'))):?>
+<style>
+html {
+    --main-width: 1262px;
+}
+.center{
+    margin:0 20px;
+}
+@media screen and (max-width: 767px){ 
+.center {
+    margin: 0;
+}
+}
+</style>
+<?php endif;?>
 <!--JS-->
 <script src="<?php $this->options->themeUrl('/assets/jquery/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/scrollTo/jquery.scrollTo.min.js'); ?>"></script>
