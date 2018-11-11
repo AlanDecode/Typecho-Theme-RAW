@@ -9,6 +9,7 @@ $(document).scroll(function(){
 	var before = $(document).scrollTop();
     $(document).scroll(function() {
         if($(document).scrollTop()+$(window).height()>=$("#footer-info").offset().top){
+            $("#ctrler").css("transform","translateX(0)");
             $(".nav-links").css("transform","translateY(0)");
             return;
         }
