@@ -103,7 +103,7 @@ function registerFixedTOC(){
     toc_offset=0;
     $(document).scroll(function(){
         if($("#TOC").length < 1) return;
-        $("#TOC").css("max-width",$("aside").width()+"px");
+        $("#TOC").css("max-width",$("#TOC").parent().width()+"px");
         if(!toc_offset){
             toc_offset=$("#TOC").offset().top;
             return;

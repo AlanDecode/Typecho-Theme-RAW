@@ -661,6 +661,7 @@ header > nav{
 }
 #nav-left{
     width: var(--nav-left-width);
+    order: -1;
 }
 aside{
     width: var(--aside-width);
@@ -861,8 +862,9 @@ aside > div a:hover{
     color: var(--highlight-color);
 }
 #TOC{
-    width: var(--aside-width);
-    max-width: var(--aside-width);
+    width: 100%;
+    max-width: 100%;
+    background: var(--bg-color);
 }
 #TOC>ul{
     list-style: none;
