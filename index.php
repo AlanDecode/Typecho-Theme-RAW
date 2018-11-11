@@ -10,7 +10,7 @@
  * 
  * @package Typecho-Theme-RAW
  * @author 熊猫小A
- * @version 0.7
+ * @version 0.8
  * @link https://www.imalan.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
