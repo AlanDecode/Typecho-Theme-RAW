@@ -4,13 +4,13 @@
  * 
  * 作者：<a href="https://www.imalan.cn">熊猫小A</a>
  * 
- * 主题介绍：<a href="https://www.imalan.cn/archives/163/" target="_blank">Typecho Theme RAW 发布</a>
+ * 主题介绍：<a href="https://blog.imalan.cn/archives/163/" target="_blank">Typecho Theme RAW 发布</a>
  * 
  * Wiki：<a href="https://github.com/AlanDecode/Typecho-Theme-RAW/wiki" target="_blank">主题 Wiki</a>
  * 
  * @package Typecho-Theme-RAW
  * @author 熊猫小A
- * @version 0.8
+ * @version 0.81
  * @link https://www.imalan.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
