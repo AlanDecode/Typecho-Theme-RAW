@@ -14,11 +14,13 @@ $(document).scroll(function(){
         }
         var after = $(document).scrollTop();
         if (before<after && after>40 ) {
-            $(".nav-links").css("transform","translateY(calc(100% + 5px))");
+            $(".nav-links").css("transform","translateY(100%)");
+            $("#ctrler").css("transform","translateX(-100%)");
             before = after;
         };
         if (before>after || after<=40) {
             $(".nav-links").css("transform","translateY(0)");
+            $("#ctrler").css("transform","translateX(0)");
             before = after;
         };
     });
@@ -78,27 +80,6 @@ function fixItem(item,fix,offset){
     }
 }
 
-var ctrler_offset;
-var toc_offset;
-function registerFixedCtrler(){
-    ctrler_offset=0;
-    $(document).scroll(function(){
-        if($("#ctrler").length<1) return;
-        if(!ctrler_offset){
-            ctrler_offset=$("#ctrler").offset().top;
-            return;
-        }
-        var top=$("#ctrler").offset().top-$(document).scrollTop();
-        if(top<=1 && $("#ctrler").offset().top>=ctrler_offset){
-            fixItem("#ctrler",true,0);
-        }
-        else{
-            fixItem("#ctrler",false,0);
-            ctrler_offset=$("#ctrler").offset().top;
-        } 
-    })
-}
-
 function registerFixedTOC(){     
     toc_offset=0;
     $(document).scroll(function(){
@@ -143,6 +124,10 @@ function parsedPhotos(){
     })
 }
 
+$(".post-like").click(function(){
+    $(this).addClass("done");
+})
+
 $(document).ready(function(){
     checkNightMode();
     parsedPhotos();
@@ -150,7 +135,6 @@ $(document).ready(function(){
     $.each($(".nav-link"),function(i,item){
         if($(item).attr("href")==window.location.pathname) $(item).addClass("current");
     })
-    registerFixedCtrler();
     registerFixedTOC();
     hljs.initHighlightingOnLoad();
 })

@@ -418,7 +418,7 @@ class Utils {
             echo ' • <i class="fa fa-th-large"></i>&nbsp;';
             $archive->category(' ');
         }
-        if(self::isPluginAvailable('TePostViews')){
+        if(self::isPluginAvailable('TePostViews')&&!$type=='1'){
             echo ' • <i class="fa fa-eye"></i>&nbsp;';
             $archive->viewsNum();
         }

@@ -30,7 +30,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/owo/owo.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/main.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/main.14.js'); ?>"></script>
 <!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php echo $this->options->customfooter; ?>
 <script src='<?php $this->options->themeUrl('/assets/mathjax/2.7.4/MathJax.js'); ?>' async></script>
@@ -39,5 +39,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     });
 </script>
+<?php if(Utils::isPluginAvailable('Like')):?>
+<script>
+var cookies = $.macaroon('_syan_like') || "";
+$.each($(".post-like"),function(i,item){
+    var id = $(item).attr('data-pid');
+    if (-1 !== cookies.indexOf("," + id + ","))  $(item).addClass("done");
+})
+</script>
+<?php endif;?>
 </body>
 </html>

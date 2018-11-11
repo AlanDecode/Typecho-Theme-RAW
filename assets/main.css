@@ -596,11 +596,10 @@ header > nav{
 @media screen and (max-width: 768px){
     .nav-links{
         position: fixed;
-        bottom: 5px;
+        bottom: 0;
         padding: 0.5em;
-        border-radius: 6px;
-        width: calc(100% - 20px);
-        left: 10px;
+        width: 100%;
+        left: 0;
         justify-content: space-around;
         background: var(--bg-color);
         transition:0.3s ease all;
@@ -881,6 +880,33 @@ aside > div a:hover{
 }
 #TOC > ul >li a:hover{
     color:var(--highlight-color)!important;
+}
+
+#ctrler{
+    position: fixed;
+    left: 0;
+    bottom: 70px;
+    padding: 0.6em;
+    background: var(--bg-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    transition: 0.3s ease all;
+}
+#ctrler>div{
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    width: 100%;
+}
+#ctrler>div *{
+    color: var(--text-color);
+    transition: 0.3s ease color;
+}
+#ctrler>div:hover *{
+    color: var(--highlight-color);
+}
+.post-like.done *,.post-like.done{
+    color: red!important;
 }
 
 .post-item{
