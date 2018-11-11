@@ -33,7 +33,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php endif;?>
         <?php $this->need('footer-info.php'); ?>
     </div>
-
     <?php if($this->options->showaside=='0'||($this->options->showaside=='2'&&$this->user->hasLogin())):?>
         <?php $this->need('aside.php'); ?>
     <?php endif;?>

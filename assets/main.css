@@ -356,8 +356,8 @@ display: none;
 
 html{
     --main-width: 1262px;
-    --nav-left-width: 200px;
-    --aside-width: 220px;
+    --nav-left-width: 210px;
+    --aside-width: 210px;
     --shuoshuo-display:block;
     --post-item-display:block;
 }
@@ -775,9 +775,6 @@ aside{
 .nav-left-panel > ul >li{
     border-bottom: 1px solid #ebeef2;
 }
-.nav-left-panel > ul >li:last-child{
-    border: none;
-}
 .nav-left-panel a{
     padding: 0.8em;
     display: block;
@@ -787,23 +784,6 @@ aside{
 .nav-left-panel a:hover{
     color: var(--highlight-color);
 }
-#ctrler{
-    padding-top: 60px;
-    padding-right: 1rem;
-    font-size: 1.3em;
-    width: var(--nav-left-width);
-}
-#ctrler>div{
-    margin-bottom: 15px;
-}
-#ctrler a{
-    color: var(--text-color);
-    transition: 0.3s ease color;
-}
-#ctrler a:hover{
-    color:var(--highlight-color);
-}
-
 aside> div{
     padding: 0.5em 0;
     padding-top: 0;
@@ -865,6 +845,7 @@ aside > div a:hover{
     width: 100%;
     max-width: 100%;
     background: var(--bg-color);
+    padding-bottom: 20px;
 }
 #TOC>ul{
     list-style: none;

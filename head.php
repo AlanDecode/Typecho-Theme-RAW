@@ -36,7 +36,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.2b.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0b.css');?>">
 <?php if($this->options->columnorder=='1'):?>
 <style>
@@ -46,12 +46,9 @@ aside{
 #nav-left{
     order:1;
 }
-#ctrler{
-    align-items: flex-start!important;
-}
 </style>
 <?php endif;?>
-<?php if(($this->options->showaside=='1')||($this->options->showaside=='2'&&!$this->user->hasLogin())):?>
+<?php if(!Utils::haveAside($this,$this->user->hasLogin())):?>
 <style>
 html {
     --main-width: 1012px;
@@ -62,21 +59,6 @@ html {
     <?php else: ?>
     margin-right:0;
     <?php endif;?>
-}
-</style>
-<?php endif;?>
-<?php if($this->fields->showTOC=='1' && ($this->is('post') || $this->is('page'))):?>
-<style>
-html {
-    --main-width: 1262px;
-}
-.center{
-    margin:0 20px;
-}
-@media screen and (max-width: 767px){ 
-.center {
-    margin: 0;
-}
 }
 </style>
 <?php endif;?>

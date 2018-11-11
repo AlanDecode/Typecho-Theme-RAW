@@ -74,15 +74,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>';
         }
     ?>
-    <?php if($this->is('post') || $this->is('page')):?>
-    <div style="box-shadow:none" id="ctrler" class="flex flex-direction-column align-items-end">
-        <?php if(Utils::isPluginAvailable('Like')):?>
-        <div>
-            <a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>"><span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span> </span><i class="fa fa-heart"></i></a>
-        </div>
-        <?php endif; ?>
-        <div><a href="javascript:void(0)" target="_self" onclick="$.scrollTo(`#header`,300)"><i class="fa fa-arrow-up"></i></a></div>
-        <div><a href="javascript:void(0)" target="_self" onclick="$.scrollTo(`#comments`,300)"><?php $this->commentsNum(); ?> <i class="fa fa-commenting-o"></i></a></div>
+    <?php if(Utils::tocPosition($this,$this->user->hasLogin())=='nav-left'):?>
+    <div id="TOC">
+        <span style="font-size:0.9em" class="hidden-xs"><i style="font-size:0.9em" class="fa fa-th-list"></i> 文章目录</span>
+        <?php echo $GLOBALS['TOC_O']; ?>
     </div>
     <?php endif;?>
 </nav>

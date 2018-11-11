@@ -39,7 +39,8 @@ html.night{
 .night .post-item.shuoshuo .post-item-body, .night .post-item.shuoshuo .post-item-footer,
 .night #search button:not(.fancybox-button),
 .night .nav-left-panel > ul,
-.night .cancel-comment-reply
+.night .cancel-comment-reply,
+.night #TOC
 {
     background: var(--dark-color);
 }
@@ -69,9 +70,6 @@ header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
 }
 .night .nav-left-panel > ul >li,.night aside > div >span,.night .avatar-circle-bg{
     border:none;
-}
-.night #nav-left>div:last-child{
-    background: none;
 }
 .night .avatar-circle{
     background: none;

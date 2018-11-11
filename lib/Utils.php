@@ -21,6 +21,31 @@ function parseTOC_callback($matchs){
 }
 
 class Utils {   
+
+    /**
+     * 布局
+     */
+    public static function haveAside($archive,$login){
+        if(Helper::options()->showaside=='1') return false;
+        if(Helper::options()->showaside=='2'&&!$login) return false;
+        return true;
+    }
+
+    public static function tocPosition($archive,$login){
+        if((!$archive->is('post')&&!$archive->is('page'))||$archive->fields->showTOC!='1') return false;
+        if(self::haveAside($archive,$login)) return 'aside';
+        else return 'nav-left';
+    }
+
+    public static function asidePosition($archive){
+        /**
+         * 0：right
+         * 1: left
+         */
+        if(Helper::options()->columnorder=='1') return 1;
+        else return 0;
+    }
+
     /**
      * 文章上一篇
      */

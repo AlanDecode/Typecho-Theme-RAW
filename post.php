@@ -13,7 +13,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php $this->need('header.php'); ?>
 
 <div id="main" class="flex flex-1">
-    <?php $this->need('nav-left.php'); ?>
     <div class="center flex-1">
         <?php $this->need('post-item.php'); ?>
         <div class="post-item">
@@ -28,7 +27,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php $this->need('comments.php'); ?>
         <?php $this->need('footer-info.php'); ?>
     </div>
-    <?php if($this->options->showaside=='0'||($this->options->showaside=='2'&&$this->user->hasLogin())||$this->fields->showTOC=='1'):?>
+    <?php $this->need('nav-left.php'); ?>
+    <?php if(Utils::haveAside($this,$this->user->hasLogin())):?>
         <?php $this->need('aside.php'); ?>
     <?php endif;?>
 </div>
