@@ -16,7 +16,7 @@ $(document).scroll(function(){
         var after = $(document).scrollTop();
         if (before<after && after>40 ) {
             $(".nav-links").css("transform","translateY(100%)");
-            $("#ctrler").css("transform","translateX(-100%)");
+            $("#ctrler").css("transform","translateX(100%)");
             before = after;
         };
         if (before>after || after<=40) {

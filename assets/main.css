@@ -884,14 +884,21 @@ aside > div a:hover{
 
 #ctrler{
     position: fixed;
-    left: 0;
+    right: 10px;
     bottom: 70px;
     padding: 0.6em;
     background: var(--bg-color);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 6px;
     box-shadow: 0 0 5px rgba(0,0,0,.4);
     transition: 0.3s ease all;
+    z-index: 1000;
+}
+@media screen and (max-width:767px){
+    #ctrler{
+        right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 #ctrler>div{
     margin: 0.5em 0;
