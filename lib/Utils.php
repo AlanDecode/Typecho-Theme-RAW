@@ -21,6 +21,23 @@ function parseTOC_callback($matchs){
 }
 
 class Utils {   
+    /**
+     * 获取第一管理员名称
+     */
+    public static function getAdminScreenName(){
+        $db = Typecho_Db::get();
+        $name = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1))['screenName'];
+        return $name;
+    }
+
+    /**
+     * 获取第一管理员邮箱
+     */
+    public static function getAdminMail(){
+        $db = Typecho_Db::get();
+        $mail = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1))['mail'];
+        return $mail;
+    }
 
     /**
      * 布局

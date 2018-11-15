@@ -25,10 +25,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </div>
         <div class="aside-user__avatar">
-            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="avatar"><img class="avatar author-avatar" src="<?php echo $this->author->mail!='' ?  Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true) :$this->options->defaultavatar;?>"></a>
+            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="avatar"><img class="avatar author-avatar" src="<?php 
+            if ($this->options->defaultavatar) echo $this->options->defaultavatar;
+            else echo Typecho_Common::gravatarUrl(Utils::getAdminMail(), 100, '', '', true);
+            ?>"></a>
         </div>
         <div class="aside-user__name">
-            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="name"><?php echo $this->author->screenName; ?></a>
+            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="name"><?php echo Utils::getAdminScreenName(); ?></a>
         </div>
         <?php Typecho_Widget::widget('Widget_Stat')->to($stat); ?>
         <div class="statics flex">
