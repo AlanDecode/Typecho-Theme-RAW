@@ -25,7 +25,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </div>
         <div class="aside-user__avatar">
-            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="avatar"><img class="avatar author-avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>"></a>
+            <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="avatar"><img class="avatar author-avatar" src="<?php echo $this->options->defaultavatar ?$this->options->defaultavatar: Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>"></a>
         </div>
         <div class="aside-user__name">
             <a href="<?php echo $this->options->left_link?$this->options->left_link:'/' ?>" class="name"><?php echo $this->author->screenName; ?></a>
