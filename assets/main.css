@@ -1298,8 +1298,14 @@ article pre code,.hljs{
 }
 article img{
     max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    max-height: 150vh;
     box-shadow: 0 0 4px rgba(0,0,0,.2);
     -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.2);
+}
+article > img{
+    width: unset;
 }
 article a{
     border-bottom: 1px solid var(--border-color);
@@ -1389,17 +1395,6 @@ article sup{
 }
 article sup:hover{
     background: black;
-}
-article img{
-    max-width: 100%;
-    margin: 1rem auto;
-    display: block;
-    box-shadow:0 0 4px rgba(0,0,0,0.2);
-    -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.2);
-    max-height: 150vh;
-}
-article > img{
-    width: unset;
 }
 article sup a{
     color: white!important;

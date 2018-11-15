@@ -97,6 +97,10 @@ article pre code,.bg-mask,.comment-content{
 .night article h1, .night article h2, .night article h3, .night article h4, .night article h5, .night article h6{
     color:var(--text-color)
 }
+.night article .photos::before,
+.night article hr::after{
+    color: var(--text-color);
+}
 @media screen and (max-width: 768px){
     .night .nav-links{
         background: var(--bg-color);

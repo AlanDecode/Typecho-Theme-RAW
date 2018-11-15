@@ -37,7 +37,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
             <a href="javascript:void(0)" target="_self" class="nav-link" onclick="switchNightMode()"><i class="fa fa-lightbulb-o"></i></a>
             <a data-fancybox data-src="#search" href="javascript:;" class="nav-link"><i class="fa fa-search"></i></a>
-            <a style="display: flex;" data-fancybox data-src="#hidden-login-form" href="javascript:;"><img style="width:35px;height:35px" class="avatar author-avatar" src="<?php echo $this->options->defaultavatar ?$this->options->defaultavatar: Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" /></a>
+            <a style="display: flex;" data-fancybox data-src="#hidden-login-form" href="javascript:;"><img style="width:35px;height:35px" class="avatar author-avatar" src="<?php echo $this->options->defaultavatar ?$this->options->defaultavatar: Typecho_Common::gravatarUrl($this->user->mail, 100, '', '', true)?>" /></a>
         </div>
     </nav>
 </header>
