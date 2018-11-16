@@ -7,13 +7,20 @@ html.night{
     --border-color: var(--highlight-fade-color);
     --bg-color:#2c2a2a;
 }
+.night a{
+    color: #aaa;
+    color: var(--text-color);
+}
 .night::-webkit-scrollbar-track,.night *::-webkit-scrollbar-track {
+    background-color: #2c2a2a;
     background-color: var(--bg-color);
 }
 .night::-webkit-scrollbar {
+    background-color: #aaa;
 	background-color: var(--text-color);
 }
 .night::-webkit-scrollbar-thumb {
+    background: #aaa;
     background:  var(--text-color);
 }
 .night{
@@ -21,13 +28,16 @@ html.night{
 }
 .night article pre code{
     background: #282c34;
+    color: #aaa;
     color: var(--text-color);
 }
 .night .archive-list span{
+    color: #aaa;
     color:var(--text-color);
 }
 .night .bg-mask{
     z-index: -1;
+    background: #2c2a2a;
     background: var(--bg-color);
 }
 .night img,.night .board-thumb{
@@ -42,12 +52,14 @@ html.night{
 .night .cancel-comment-reply,
 .night #TOC
 {
+    background: #333;
     background: var(--dark-color);
 }
 .night .post-item.shuoshuo .post-item-body::before{
     border-color: transparent transparent var(--dark-color) transparent;
 }
 .night .cancel-comment-reply{
+    color: #aaa;
     color: var(--text-color);
 }
 .night header,.night .post-item.shuoshuo{
@@ -63,6 +75,7 @@ header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
     transition: 0.3s ease background;
 }
 .night .comment-info-input input,.night  #textarea{
+    color: #aaa;
     color: var(--text-color);
 }
 .nav-left-panel > ul >li,aside > div >span,.avatar-circle-bg{
@@ -75,6 +88,7 @@ header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
     background: none;
 }
 .night .comment-content{
+    background: #222;
     background: var(--darker-color);
 }
 .night .comment-content::before{
@@ -83,7 +97,10 @@ header,.post-item,aside>div,#nav-left>div,#nav-left>div ul,#comments,
 .night .comment-by-author.comment-item>.comment-body>.comment-content::before{
     border-color: transparent transparent transparent var(--darker-color);
 }
-
+.night article{
+    color: #aaa;
+    color: var(--text-color);
+}
 article pre code,.bg-mask,.comment-content{
     transition: 0.3s ease background;
 }
@@ -95,14 +112,17 @@ article pre code,.bg-mask,.comment-content{
     color: white;
 }
 .night article h1, .night article h2, .night article h3, .night article h4, .night article h5, .night article h6{
+    color: #aaa;
     color:var(--text-color)
 }
 .night article .photos::before,
 .night article hr::after{
+    color: #aaa;
     color: var(--text-color);
 }
 @media screen and (max-width: 768px){
     .night .nav-links{
+        background: #2c2a2a;
         background: var(--bg-color);
     }
 }
@@ -165,5 +185,6 @@ article pre code,.bg-mask,.comment-content{
     background:none!important
 }
 .night .aplayer .aplayer-list ol li:hover {
+    background: #333;
     background: var(--dark-color);
 }

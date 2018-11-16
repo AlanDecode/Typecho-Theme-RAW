@@ -37,7 +37,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.32.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0d.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark0f.css');?>">
 <?php if($this->options->columnorder=='1'):?>
 <style>
 aside{
