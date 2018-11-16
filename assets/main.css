@@ -3,12 +3,14 @@
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
+    background-color: rgb(255,112,121);
 	background-color: var(--highlight-color);
 }
 ::-webkit-scrollbar-track {
     background-color: #EBE9E4;
 }
 ::-webkit-scrollbar-thumb {
+    background: rgb(255,112,121);
     background:  var(--highlight-color);
 }
 
@@ -368,6 +370,7 @@ html{
     --darker-color: #111;
     --highlight-color: rgb(255,112,121);
     --highlight-fade-color: rgba(255,112,121,0.6);
+    --border-color: rgba(255,112,121,0.6);
     --border-color: var(--highlight-fade-color);
     --bg-color:#fff;
 }
@@ -476,12 +479,14 @@ html{
       text-decoration: none;
       border: none;
       outline: none;
+      color: #333;
       color: var(--text-color);
   }
   a:hover{
       text-decoration: none;
       border:none;
       outline: none;
+      color: #333;
       color: var(--text-color);
   }
   
@@ -516,10 +521,12 @@ header{
     width: 100%;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
+    background: #fff;
     background: var(--bg-color);
     z-index: 10;
 }
 header > nav{
+    width: 1262px;
     width: var(--main-width);
     max-width: 100%;
     margin:0 auto;
@@ -543,7 +550,9 @@ header > nav{
     line-height: 50px;
     font-size: 32px;
     display: block;
+    min-width: 210px;
     min-width: var(--nav-left-width);
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
     transition: 0.3s ease all;
     margin-right: 20px;
@@ -555,6 +564,7 @@ header > nav{
     }
 }
 #brand:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .nav-links{font-size:1rem}
@@ -565,6 +575,7 @@ header > nav{
     line-height: 50px;
 }
 .nav-link,.nav-link a{
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
 }
 .nav-link > i{
@@ -572,11 +583,15 @@ header > nav{
     margin-right: 0.2em;
 }
 .nav-link:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
+    border-bottom: 3px solid rgb(255,112,121);
     border-bottom: 3px solid var(--highlight-color);
 }
 .nav-link.current{
+    color: rgb(255,112,121);;
     color: var(--highlight-color);
+    border-bottom: 3px solid rgb(255,112,121);
     border-bottom: 3px solid var(--highlight-color);
 }
 @media screen and (max-width:1024px){
@@ -601,6 +616,7 @@ header > nav{
         width: 100%;
         left: 0;
         justify-content: space-around;
+        background: #fff;
         background: var(--bg-color);
         transition:0.3s ease all;
         box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
@@ -628,13 +644,17 @@ header > nav{
 #search input{
     width: 100%;
     padding: 0.3em;
+    border: 1px solid rgba(255,112,121,0.6);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background: none;
+    color: #333;
     color: var(--text-color);
 }
 #search button:not(.fancybox-button){
+    border-color: rgba(255,112,121,0.6);
     border-color: var(--highlight-fade-color);
+    background-color: rgba(255,112,121,0.6);
     background-color: var(--highlight-fade-color);
     color: #fff;
     border: 1px solid;
@@ -646,12 +666,15 @@ header > nav{
     transition: 0.3s ease all;
 }
 #search button:not(.fancybox-button):hover{
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
+    border-color: rgb(255,112,121);
     border-color: var(--highlight-color);
     color: #fff;
 }
 
 #main{
+    width: 1262px;
     width: var(--main-width);
     max-width: 100%;
     margin: 15px auto 20px auto;
@@ -659,10 +682,12 @@ header > nav{
     padding-bottom: 20px;
 }
 #nav-left{
+    width: 210px;
     width: var(--nav-left-width);
     order: -1;
 }
 aside{
+    width: 210px;
     width: var(--aside-width);
 }
 #nav-left,aside{
@@ -678,6 +703,7 @@ aside{
 #nav-left>div>span{
     display: block;
     padding: 0.5em 1em;
+    color: #333;
     color: var(--text-color);
     font-size: 0.9rem;
     background: rgba(0,0,0,0.05);
@@ -700,6 +726,7 @@ aside{
 
 #author-panel{
     position: relative;
+    background: #fff;
     background: var(--bg-color);
     overflow: hidden;
     margin-bottom: 20px;
@@ -750,13 +777,16 @@ aside{
 .statics{
     justify-content: space-around;
     margin-bottom: 1em;
+    color: #333;
     color: var(--text-color);
     font-size: 0.8em;
 }
 
 .nav-left-panel{
     font-size: 0.9em;
+    color: #333;
     color: var(--text-color);
+    background: #fff;
     background: var(--bg-color);
     margin-bottom: 20px;
 }
@@ -764,6 +794,7 @@ aside{
     padding: 0;
     list-style: none;
     margin-top: 0;
+    background: #fff;
     background: var(--bg-color);
 }
 @media screen and (max-width:767px){
@@ -781,25 +812,31 @@ aside{
     text-align: center;
 }
 .nav-left-panel a:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 aside> div{
     padding: 0.5em 0;
     padding-top: 0;
+    background: #fff;
     background: var(--bg-color);
 }
 .login-form{
+    border: 1px solid rgba(255,112,121,0.6);
     border: 1px solid var(--border-color);
     margin-bottom:20px;
 }
 .login-form input{
     width: 100%;
     padding: 0.3em;
+    border: 1px solid rgba(255,112,121,0.6);
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 .login-form button:not(.fancybox-button){
+    border-color: rgba(255,112,121,0.6);
     border-color: var(--highlight-fade-color);
+    background-color: rgba(255,112,121,0.6);
     background-color: var(--highlight-fade-color);
     color: #fff;
     border: 1px solid;
@@ -811,7 +848,9 @@ aside> div{
     transition: 0.3s ease all;
 }
 .login-form button:not(.fancybox-button):hover{
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
+    border-color: rgb(255,112,121);
     border-color: var(--highlight-color);
     color: #fff;
 }
@@ -827,9 +866,11 @@ aside > div >span{
     font-size: 0.9em;
     line-height: 1.5;
     border-bottom: 1px solid #ebeef2;
+    color: #333;
     color: var(--text-color);
 }
 aside > div>span:first-child{
+    color: #333;
     color: var(--text-color);
     font-size: 0.9rem;
     background: rgba(0,0,0,0.05);
@@ -838,11 +879,13 @@ aside > div>span:last-child{
     border: none
 }
 aside > div a:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 #TOC{
     width: 100%;
     max-width: 100%;
+    background: #fff;
     background: var(--bg-color);
     padding-bottom: 20px;
 }
@@ -856,20 +899,24 @@ aside > div a:hover{
 }
 #TOC > ul >li,#TOC > ul >li a{
     font-size: 1rem;
+    color: #333;
     color: var(--text-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .toc-level-3,.toc-level-4{
+    color: #333;
     color: var(--text-color);
 }
 .toc-level-2{
     padding-left: 10px;
+    border-left: 5px solid rgb(255,112,121);
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-2:hover{
     padding-left: 10px;
+    border-left: 5px solid rgb(255,112,121);
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-3{
@@ -879,6 +926,7 @@ aside > div a:hover{
     padding-left: 40px;
 }
 #TOC > ul >li a:hover{
+    color: rgb(255,112,121)!important;
     color:var(--highlight-color)!important;
 }
 
@@ -887,6 +935,7 @@ aside > div a:hover{
     right: 10px;
     bottom: 70px;
     padding: 0.6em;
+    background: #fff;
     background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 5px rgba(0,0,0,.4);
@@ -906,10 +955,12 @@ aside > div a:hover{
     width: 100%;
 }
 #ctrler>div *{
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
     transition: 0.3s ease color;
 }
 #ctrler>div:hover *{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .post-like.done *,.post-like.done{
@@ -919,12 +970,14 @@ aside > div a:hover{
 .post-item{
     margin: 5px;
     margin-bottom: 20px;
+    background: #fff;
     background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
 }
 .post-item:not(.item-nav):not(.loadmore):not(.shuoshuo){
+    display: block;
     display: var(--post-item-display);
 }
 .post-item-header,.post-item-body,.post-item-footer{
@@ -935,6 +988,7 @@ aside > div a:hover{
     min-width: 100%;
 }
 .post-item-header{
+    color: #333;
     color: var(--text-color);
     position: relative;
 }
@@ -945,6 +999,7 @@ aside > div a:hover{
     height: 48px;
 }
 .post-item-header span:last-child,.post-item-header span:last-child a{
+    color: rgba(255,112,121,0.6);
     color:var(--highlight-fade-color);
 }
 .post-item-banner{
@@ -965,26 +1020,32 @@ aside > div a:hover{
     border: none!important;
 }
 .post-item-footer span,.post-item-footer span a{
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
     transition: 0.3s ease color;
     font-size: 0.9rem;
 }
 .post-item-footer span a:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .like-button{
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
     transition: 0.3s ease color;
     font-weight: 600;
     font-size: 0.9rem;
     margin-right: 1rem;
     padding: 0.3em;
+    border: 1px solid rgba(255,112,121,0.6);
     border: 1px solid var(--highlight-fade-color);
     border-radius: 4px;
     transition: 0.3s ease all;
 }
 .like-button:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
+    border: 1px solid rgb(255,112,121);
     border: 1px solid var(--highlight-color);
 }
 .like-button a:hover i{
@@ -1040,6 +1101,7 @@ aside > div a:hover{
 }
 .post-item.shuoshuo .post-item-body,
 .post-item.shuoshuo .post-item-footer{
+    background: #fff;
     background: var(--bg-color);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -1058,6 +1120,7 @@ aside > div a:hover{
     }
 }
 .post-item.shuoshuo .post-item-footer{
+    background: #fff;
     background: var(--bg-color);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -1072,9 +1135,11 @@ aside > div a:hover{
     left: calc(1em + 24px);
     transform: translateX(-50%);
     top: -23.5px;
+    border-color: transparent transparent #fff transparent;
     border-color: transparent transparent var(--bg-color) transparent;
 }
 .post-item.shuoshuo{
+    display: block;
     display: var(--shuoshuo-display);
 }
 .post-item.item-nav .post-item-body{
@@ -1087,10 +1152,13 @@ aside > div a:hover{
     cursor: pointer;
     padding: 1em;
     border-bottom: 3px solid transparent;
+    color: #333;
     color: var(--text-color);
 }
 .post-item.item-nav .index-filter >div.current,.post-item.item-nav .index-filter >div:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
+    border-bottom: 3px solid rgb(255,112,121);
     border-bottom: 3px solid var(--highlight-color);
 }
 .post-item.item-nav{
@@ -1191,6 +1259,7 @@ aside > div a:hover{
     padding: 1rem;
     text-align: center;
     cursor: pointer;
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
     font-size: 1.3rem;
     transition: 0.3s;
@@ -1199,6 +1268,7 @@ aside > div a:hover{
     margin-right: auto;
 }
 .loadmore:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .idot {
@@ -1213,17 +1283,20 @@ aside > div a:hover{
 }
 .idot:nth-child(1) {
 	-webkit-animation-delay:.1s;
-	animation-delay:.1s;
+    animation-delay:.1s;
+    background: rgba(255,112,121,0.6);
 	background:var(--highlight-fade-color)
 }
 .idot:nth-child(2) {
 	-webkit-animation-delay:.2s;
-	animation-delay:.2s;
+    animation-delay:.2s;
+    background: rgb(255,112,121);
 	background:var(--highlight-color)
 }
 .idot:nth-child(3) {
 	-webkit-animation-delay:.3s;
-	animation-delay:.3s;
+    animation-delay:.3s;
+    background: rgb(255,112,121);
 	background:var(--highlight-color)
 }
 
@@ -1257,6 +1330,7 @@ aside > div a:hover{
 }
 }
 article{
+    color: #333;
     color: var(--text-color);
     line-height: 1.7;
     width: 100%;
@@ -1267,6 +1341,7 @@ article > *{
     max-width: 100%;
 }
 article h1,article h2,article h3,article h4,article h5,article h6,{
+    color: #111;
     color: var(--darker-color);
 }
 article video{
@@ -1308,13 +1383,16 @@ article > img{
     width: unset;
 }
 article a{
+    border-bottom: 1px solid rgba(255,112,121,0.6);
     border-bottom: 1px solid var(--border-color);
 }
 article a.fancybox{
     border:none;
 }
 article a:hover{
+    color: rgb(255,112,121);
     color: var(--highlight-color);
+    border-bottom: 1px solid rgba(255,112,121,0.6);
     border-bottom: 1px solid var(--border-color);
 }
 article .photos{
@@ -1411,6 +1489,7 @@ article blockquote,article blockquote p{
     font-size: 0.927rem;
     word-wrap: break-word;
     line-height: 1.8;
+    color: #333;
     color: var(--text-color);
 }
 article blockquote p:first-child{
@@ -1487,6 +1566,7 @@ article table th,article table td{
     margin: 5px;
     margin-bottom: 50px;
     padding:1em;
+    background: #fff;
     background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
@@ -1540,6 +1620,7 @@ article table th,article table td{
     z-index: 11
 } 
 .OwO .OwO-body .OwO-bar{
+    color: #333;
     color: var(--text-color)
 } 
 .comment-mail-me{
@@ -1574,7 +1655,9 @@ article table th,article table td{
 }
 #comment-submit-button{
     cursor: pointer;
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
+    background: #fff;
     background: var(--bg-color);
     font-size: 1rem;
     height: 40px;
@@ -1587,8 +1670,10 @@ article table th,article table td{
     z-index: 2;
 }
 #comment-submit-button:hover{
+    background: rgb(255,112,121);
     background: var(--highlight-color);
     color: white;
+    border: 2px solid rgb(255,112,121);
     border:2px solid var(--highlight-color);
 }
 
@@ -1632,6 +1717,7 @@ article table th,article table td{
 .comment-body .comment-content{
     margin-right: 7rem;
     word-break: break-word;
+    color: #333;
     color: var(--text-color);
 }
 .comment-by-author.comment-item>.comment-body>.comment-content{
@@ -1643,6 +1729,7 @@ article table th,article table td{
 }
 .comment-meta,.comment-meta a{
     font-size: 0.9em;
+    color: rgba(255,112,121,0.6);
     color: var(--highlight-fade-color);
 }
 .comment-by-author.comment-item .comment-meta{
@@ -1708,6 +1795,7 @@ article table th,article table td{
 }
 .comment-info-input input,#textarea{
     padding: 0.3em;
+    border: 1px solid rgba(255,112,121,0.6);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1em;
@@ -1730,6 +1818,7 @@ article table th,article table td{
     justify-content: center;
 }
 .page-navigator li{
+    background-color: rgba(255,112,121,0.6);
     background-color: var(--highlight-fade-color);
     transition: 0.3s ease all;
     font-size: 1em;
@@ -1740,6 +1829,7 @@ article table th,article table td{
     border-radius: 4px;
 }
 .page-navigator li.current{
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
 }
 .page-navigator li >*{
@@ -1747,6 +1837,7 @@ article table th,article table td{
     color: white;
 }
 .page-navigator li:hover{
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
 }
 .page-navigator .next,.page-navigator .prev{
@@ -1790,6 +1881,7 @@ article table th,article table td{
     text-overflow: ellipsis!important;
     white-space: nowrap !important;
     text-align: center !important;
+    color: #333!important;
     color: var(--text-color) !important;
     font-weight: 700 !important;   
     border:none;
