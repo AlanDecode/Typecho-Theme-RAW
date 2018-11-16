@@ -572,6 +572,7 @@ header > nav{
     padding: 0 0.7em;
     font-size: 16px;
     border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
     line-height: 50px;
 }
 .nav-link,.nav-link a{
@@ -585,6 +586,7 @@ header > nav{
 .nav-link:hover{
     color: rgb(255,112,121);
     color: var(--highlight-color);
+    border-top: 3px solid transparent;
     border-bottom: 3px solid rgb(255,112,121);
     border-bottom: 3px solid var(--highlight-color);
 }
