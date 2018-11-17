@@ -1,4 +1,4 @@
-// BIU
+// RAW
 // Author: 熊猫小A
 // Link: https://imalan.cn
 
@@ -140,15 +140,15 @@ $(document).ready(function(){
     hljs.initHighlightingOnLoad();
 })
 
-function toggleShrink(item){
-    if($(item).parent().parent().prev().hasClass("shrink")){
-        $(item).html(`<i class="fa fa-chevron-circle-up"></i> 收起`);
-        $(item).parent().parent().prev().removeClass("shrink");
-    }else{
-        $(item).html(`<i class="fa fa-chevron-circle-down"></i> 展开`);
-        $(item).parent().parent().prev().addClass("shrink");
-    }
-}
+// function toggleShrink(item){
+//     if($(item).parent().parent().prev().hasClass("shrink")){
+//         $(item).html(`<i class="fa fa-chevron-circle-up"></i> 收起`);
+//         $(item).parent().parent().prev().removeClass("shrink");
+//     }else{
+//         $(item).html(`<i class="fa fa-chevron-circle-down"></i> 展开`);
+//         $(item).parent().parent().prev().addClass("shrink");
+//     }
+// }
 
 function switchNightMode(){
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';

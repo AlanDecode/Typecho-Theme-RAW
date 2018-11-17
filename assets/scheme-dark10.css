@@ -50,7 +50,8 @@ html.night{
 .night #search button:not(.fancybox-button),
 .night .nav-left-panel > ul,
 .night .cancel-comment-reply,
-.night #TOC
+.night #TOC,
+.night .page-navigator li
 {
     background: #333;
     background: var(--dark-color);

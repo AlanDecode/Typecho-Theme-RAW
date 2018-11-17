@@ -23,7 +23,7 @@
             'allowComment'  => $this->allow('comment')
         );
 
-        $this->widget('Widget_Comments_Archive', $parameter)->to($comments);
+        $this->widget('RAW_Widget_Comments_Archive', $parameter)->to($comments);
         ?>
         <?php if ($this->allow('comment')): ?>
         <div id="<?php $this->respondId(); ?>" class="respond">
