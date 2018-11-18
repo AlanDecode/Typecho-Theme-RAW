@@ -1,6 +1,6 @@
 // RAW
 // Author: 熊猫小A
-// Link: https://imalan.cn
+// Link: https://www.imalan.cn
 
 console.log(` %c Theme RAW 0.81 %c https://blog.imalan.cn/archives/163/ `, `color: #fadfa3; background: #23b7e5; padding:5px;`, `background: #1c2b36; padding:5px;`);
 
@@ -154,23 +154,28 @@ function switchNightMode(){
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
     if(night == '0'){
         $("html").addClass("night");
-        document.cookie = "night=1;path=/"
+        document.cookie = "night=1;path=/";
         console.log('夜间模式开启');
     }else{
         $("html").removeClass("night");
-        document.cookie = "night=0;path=/"
+        document.cookie = "night=0;path=/";
         console.log('夜间模式关闭');
     }
 }
 
 function checkNightMode(){
-    if($("html").hasClass("night")) return;
-    if($("html").hasClass("day")){
+    if($("html").hasClass("n-f")){
+        $("html").removeClass("day");
+        $("html").addClass("night");
+        return;
+    }
+    if($("html").hasClass("d-f")){
         $("html").removeClass("night");
+        $("html").addClass("day");
         return;
     }
     if(document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === ''){
-        if(new Date().getHours() >= 21 || new Date().getHours() < 7){
+        if(new Date().getHours() >= 23 || new Date().getHours() < 7){
             $("html").addClass("night");
             document.cookie = "night=1;path=/";
             console.log('夜间模式开启');

@@ -12,9 +12,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <!DOCTYPE HTML>
 <html class="<?php
-if($this->options->colormode=='1') echo 'night';
-elseif ($this->options->colormode=='2') echo 'day';
-else echo($_COOKIE['night'] == '1' ? 'night' : ''); 
+if($this->options->colormode=='1') echo 'night n-f';
+elseif ($this->options->colormode=='2') echo 'day d-f';
+else{
+    echo($_COOKIE['night'] == '1' ? 'night auto' : 'auto');
+}; 
 ?>"> <!--start html-->
 <head> <!--start head-->
 <meta charset="<?php $this->options->charset(); ?>">
