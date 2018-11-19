@@ -1441,9 +1441,12 @@ article .photos img{
 }
 
 
-article code{
-    font-size: .97rem;
-    padding: 0.2rem;
+article code,.comment-content code{
+    background-color: rgba(27,31,35,.1);
+    border-radius: 3px;
+    font-size: 90%;
+    margin: 0;
+    padding: .2em .4em;
     font-family: Consolas,Menlo,Monaco,Courier New,monospace;
 }
 pre{
