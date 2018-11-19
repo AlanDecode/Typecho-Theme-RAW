@@ -1540,8 +1540,21 @@ article .footnotes ol::before{
 }
 article table{
     width: 100%;
-    border: 1px solid rgba(0,0,0,.1);
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
     border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+}
+article table tr{
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 article table thead{
     border-bottom: 1px solid rgba(0,0,0,.1);
@@ -1549,7 +1562,15 @@ article table thead{
 article table th,article table td{
     padding: 0.5em;
     text-align: center;
+    border-left: 1px solid rgba(0,0,0,.1);
 }
+article table td{
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+article table tr>td:first-child,article table tr>th:first-child{
+    border-left: none;
+}
+
 .footnotes hr{
     display:none
 }
