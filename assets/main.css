@@ -1864,10 +1864,12 @@ article table th,article table td{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    border: none;
 }
 .board-item:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+    border: none;
 }
 .board-thumb {
     width: 100%;

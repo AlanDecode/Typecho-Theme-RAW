@@ -332,7 +332,7 @@ class Utils {
      */
     static public function parseBoard($string){
         $reg='/\[(.*?)\]\((.*?)\)\+\((.*?)\)/s';
-        $rp='<div class="board-item link-item"><div class="board-thumb" style="background-image:url(${3})"></div><div class="board-title"><a href="${2}" target="_blank">${1}</a></div></div>';
+        $rp='<a target="_blank" href="${2}" class="board-item link-item"><div class="board-thumb" style="background-image:url(${3})"></div><div class="board-title">${1}</div></a>';
         $new=preg_replace($reg,$rp,$string);
         return $new;
     }
