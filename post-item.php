@@ -55,7 +55,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>
                 <a data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img src="<?php echo $this->fields->banner; ?>"/></a>
                 <?php endif; ?>
-                <?php if(!($this->fields->type=='1')): ?><h1><?php $this->title();?>
+                <?php if(!($this->fields->type=='1')): ?><h1 style="margin-top:1rem"><?php $this->title();?>
                 <?php if($this->user->hasLogin()): ?>
                 <sup><a target="_blank" href="<?php echo $this->options->adminUrl.'write-post.php?cid='.$this->cid;?>" class="footnote-ref"><i class="fa fa-edit"></i></a></sup>
                 <?php endif;?>
@@ -98,7 +98,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>">阅读全文</a></span>
                 <?php else:?>
                 <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
-                <!--span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-up"></i> 收起</a></span-->
+               <!--span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-up"></i> 收起</a></span-->
                 <?php endif; ?>
             <?php endif; ?>
         </div>
