@@ -84,7 +84,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <?php if($this->options->reward_img&&$this->options->reward_img!='') :?>
 <div id="reward" style="display:none">
-<div style="font-size:1.5rem;text-align:center;overflow:hidden;color:var(--text-color);margin-bottom:0.2em">给博主喂食</div>
+<div style="font-size:1.5rem;text-align:center;overflow:hidden;color:var(--text-color);margin-bottom:0.2em">给博主投食</div>
 <img style="max-width:100%" src="<?php echo $this->options->reward_img; ?>" />
 </div>
 </div>
