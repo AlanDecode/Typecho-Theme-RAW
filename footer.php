@@ -29,6 +29,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php $this->footer(); ?>
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
+<?php if($this->options->pjax=='1'): ?>
+<script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/RAW.js'); ?>"></script>
+<script>
+$(document).on('pjax:complete', function() {
+  <?php echo $this->options->pjaxreload; ?>
+})
+</script>
+<?php endif; ?>
 <script src="<?php $this->options->themeUrl('/assets/main.1a.js'); ?>"></script>
 <!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php echo $this->options->customfooter; ?>

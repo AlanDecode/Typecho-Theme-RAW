@@ -57,6 +57,10 @@ function themeConfig($form) {
     $form->addInput($columnorder);
     $showaside=new Typecho_Widget_Helper_Form_Element_Select('showaside',array('0'=>'显示','1'=>'不显示','2'=>'登录显示'),'0','是否显示右侧边栏','设置是否显示右侧边栏。（仅隐藏最近评论与热门日志模块，文章目录仍然会显示）');
     $form->addInput($showaside);
+    $pjax=new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'不启用','1'=>'启用'),'0','启用 PJAX','是否启用 PJAX。如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭此项。');
+    $form->addInput($pjax);
+    $pjaxreload=new Typecho_Widget_Helper_Form_Element_Textarea('pjaxreload', NULL, NULL, _t('PJAX 重载函数'), _t('输入要重载的 JS，如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭 PJAX 并留空此项。'));
+    $form->addInput($pjaxreload);
     $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
     $form->addInput($site_bg);
     $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏则使用文章作者头像，当其不可用时引用本头像。'));
