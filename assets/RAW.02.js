@@ -22,6 +22,7 @@ RAW={
         $("#main").fadeTo(200,1);
         checkNightMode();
         parsedPhotos();
+        parseURL();
         RAW.parseURL();
         // 重载 OWO
         if($(".OwO").length>0){ 
