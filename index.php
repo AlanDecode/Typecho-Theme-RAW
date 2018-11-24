@@ -24,6 +24,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <div class="center flex-1">
        <?php $this->need('post-item.php'); ?>
        <?php $this->pageLink('下一页','next','hidden'); ?>
+        <style>
+        a.next{display:none}
+        </style>
         <?php if($this->have()):?>
             <div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div>
         <?php else:?>
@@ -38,6 +41,3 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php endif;?>
 </div>
 <?php $this->need('footer.php'); ?>
-<style>
-a.next{display:none}
-</style>

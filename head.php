@@ -31,7 +31,7 @@ Utils::exportHeader($this,$banner);
 
 <?php echo $this->options->headinfo; ?>
 
-<?php $this->header('description=&'); ?>
+<?php $this->header('commentReply=&description=&'); ?>
 
 <!--CSS-->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fonts/font-awesome/4.7.0/css/font-awesome.min.css'); ?>" />

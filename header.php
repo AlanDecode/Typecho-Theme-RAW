@@ -54,7 +54,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <div id="hidden-login-form" class="login-form" style="display:none">
     <?php if($this->user->hasLogin()): ?>
-    <p style="margin-top:1.3em">您已经登录，<a href="<?php $this->options->logoutUrl(); ?>">登出</a></p>
+    <p style="margin-top:1.3em">您已经登录，<a no-pjax href="<?php $this->options->logoutUrl(); ?>">登出</a></p>
     <?php else:?>
     <form action="<?php $this->options->loginAction()?>" method="post" name="login" rold="form">
         <p>是要登录吗？</p>

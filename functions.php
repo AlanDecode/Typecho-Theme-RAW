@@ -17,6 +17,7 @@ require_once("lib/Utils.php");
 require_once("lib/Comments.php");
 
 function themeInit($archive){
+    Helper::options()->commentsAntiSpam = false;
     Helper::options()->commentsMaxNestingLevels = 999;
 }
 
