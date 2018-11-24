@@ -5,16 +5,20 @@
 RAW={
     // 初始化单页应用
     init : function(){
+        NProgress.configure({ showSpinner: false });
         RAW.parseURL();
     },
 
     // 触发 PJAX 前的操作
     beforePjax:function(){
-
+        NProgress.start();
+        $("#main").fadeTo(200,0.2);
     },
 
     // PJAX 结束操作
     afterPjax:function(){
+        NProgress.done();
+        $("#main").fadeTo(200,1);
         RAW.parseURL();
         // 重载 OWO
         if($(".OwO").length>0){ 
@@ -49,6 +53,10 @@ RAW={
 
 $(document).ready(function(){
     RAW.init();
+})
+
+$(document).on('pjax:send',function(){
+    RAW.beforePjax();
 })
 
 $(document).on('pjax:complete',function(){
