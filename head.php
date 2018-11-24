@@ -91,7 +91,7 @@ function startSearch(usePjax=false) {
 function enterSearch(){
     var event = window.event || arguments.callee.caller.arguments[0];  
     if (event.keyCode == 13)  {  
-        startSearch();  
+        startSearch(<?php if($this->options->pjax=='1') echo 'true'; ?>);
     }
 }
 </script>
