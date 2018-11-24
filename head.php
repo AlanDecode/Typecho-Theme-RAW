@@ -71,14 +71,21 @@ html {
 <script>var likePath="<?php Helper::options()->index('/action/like?up'); ?>";</script>
 <?php endif; ?>
 <script>
-function startSearch() {
+function startSearch(usePjax=false) {
     var c = $("#search input").val();
     if(!c||c==""){
         $("#search-box input").attr("placeholder","你还没有输入任何信息");
         return;
     }
     var t="/search/"+c;
-    window.open(t,"_self");
+    if(usePjax){
+        $.pjax({url: t, 
+            container: '#main',
+            fragment: '#main',
+            timeout: 8000, })
+    }else{
+        window.open(t,"_self");
+    }
 }
 
 function enterSearch(){
