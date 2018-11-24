@@ -38,7 +38,7 @@
 
 本项目引用了：
 
-[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [scrollTo](http://demos.flesler.com/jquery/scrollTo/)
+[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [scrollTo](http://demos.flesler.com/jquery/scrollTo/) | [OwO](https://github.com/DIYgod/OwO)
 
 感谢以上项目。
 
