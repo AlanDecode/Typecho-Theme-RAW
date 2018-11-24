@@ -53,7 +53,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                             echo '<h2 class="year">'.$year.'</h2><ul class="archive-list">';
                         }
                     ?>
-                    <li><span class="date" style="color:rgba(0,0,0,0.3);margin-right: 1em;"><span class="month"><?php echo $month;?></span> - <span class="day"><?php echo $day;?></span></span><span class="title"><a href="<?php echo $archives->permalink;?>" target="_blank"><?php $archives->title()?></a></span></li>
+                    <li><span class="date" style="color:rgba(0,0,0,0.3);margin-right: 1em;"><span class="month"><?php echo $month;?></span> - <span class="day"><?php echo $day;?></span></span><span class="title"><a href="<?php echo $archives->permalink;?>"><?php $archives->title()?></a></span></li>
                     <?php endwhile;?> 
                     </article>
                 </div>
