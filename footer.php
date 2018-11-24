@@ -33,6 +33,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/RAW.js'); ?>"></script>
 <script>
+$(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
+    container: '#main',
+    fragment: '#main',
+    timeout: 8000,
+});
 $(document).on('pjax:complete', function() {
   <?php echo $this->options->pjaxreload; ?>
 })
