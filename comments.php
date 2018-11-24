@@ -75,18 +75,3 @@
             <?php $comments->pageNav('<i class="fa fa-hand-o-left"></i>', '<i class="fa fa-hand-o-right"></i>',1, '...'); ?>
         <?php endif; ?>
     </div>
-
-<?php if($this->allow('comment')): ?>
-<script src="<?php $this->options->themeUrl('/assets/owo/owo_custom.js'); ?>"></script>
-<script>
-var owo = new OwO({
-    logo: 'OωO表情',
-    container: document.getElementsByClassName('OwO')[0],
-    target: document.getElementsByClassName('input-area')[0],
-    api: '<?php $this->options->themeUrl('/assets/owo/OwO_2.json'); ?>',
-    position: 'down',
-    width: '400px',
-    maxHeight: '250px'
-});
-</script>
-<?php endif; ?>  
