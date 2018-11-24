@@ -5,23 +5,44 @@
 RAW={
     // 初始化单页应用
     init : function(){
-
+        RAW.parseURL();
     },
 
+    // 触发 PJAX 前的操作
     beforePjax:function(){
 
     },
 
+    // PJAX 结束操作
     afterPjax:function(){
+        RAW.parseURL();
         // 重载 OWO
-        var owo = new OwO({
-            logo: 'OωO表情',
-            container: document.getElementsByClassName('OwO')[0],
-            target: document.getElementsByClassName('input-area')[0],
-            api: '/usr/themes/RAW/assets/owo/OwO_2.json',
-            position: 'down',
-            width: '400px',
-            maxHeight: '250px'
+        if($(".OwO").length>0){ 
+            var owo = new OwO({
+                logo: 'OωO表情',
+                container: document.getElementsByClassName('OwO')[0],
+                target: document.getElementsByClassName('input-area')[0],
+                api: '/usr/themes/RAW/assets/owo/OwO_2.json',
+                position: 'down',
+                width: '400px',
+                maxHeight: '250px'
+            });
+        }
+    },
+
+    // 解析要启用 PJAX 的链接
+    parseURL:function(){
+        var domain=document.domain;
+        $.each($('a:not(a[target="_blank"], a[no-pjax])'),function(i,item){
+            if(item.host==domain){
+                $(item).addClass("pjax");
+            }
+        })
+
+        $(document).pjax('a.pjax', {
+            container: '#main',
+            fragment: '#main',
+            timeout: 8000,
         });
     }
 }

@@ -27,8 +27,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     }
 </script>
 <?php $this->footer(); ?>
-<?php if($this->allow('comment')&&($this->is('post')||$this->is('page')) ): ?>
 <script src="<?php $this->options->themeUrl('/assets/owo/owo_custom.js'); ?>"></script>
+<?php if($this->allow('comment')&&($this->is('post')||$this->is('page')) ): ?>
 <script>
 var owo = new OwO({
     logo: 'OωO表情',
@@ -43,22 +43,17 @@ var owo = new OwO({
 <?php endif; ?>  
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/main.1a.js'); ?>"></script>
+<!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php if($this->options->pjax=='1'): ?>
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/RAW.js'); ?>"></script>
 <script>
-$(document).pjax('a[href^="<?php Helper::options()->siteUrl()?>"]:not(a[target="_blank"], a[no-pjax])', {
-    container: '#main',
-    fragment: '#main',
-    timeout: 8000,
-});
 $(document).on('pjax:complete', function() {
   <?php echo $this->options->pjaxreload; ?>
 })
 </script>
 <?php endif; ?>
-<script src="<?php $this->options->themeUrl('/assets/main.1a.js'); ?>"></script>
-<!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php echo $this->options->customfooter; ?>
 <script src='<?php $this->options->themeUrl('/assets/mathjax/2.7.4/MathJax.js'); ?>' async></script>
 <script type="text/x-mathjax-config">
