@@ -77,7 +77,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <p style="color:var(--text-color)">输入要搜索的内容</p>
     <input onkeydown="enterSearch();" type="text" name="search-content" id="search" class="text" required />
     <div style="margin:1em auto" id="search-buttons">
-        <button style="color:var(--text-color)" id="btn-search" onclick="startSearch();">搜索</button>
+        <button style="color:var(--text-color)" id="btn-search" onclick="startSearch(<?php if($this->options->pjax=='1') echo 'true'; ?>);">搜索</button>
     </div>
     <p style="margin: 0.2em auto;line-height:1.5;color:rgba(0,0,0,0.4);max-width:90%;text-align:center;color:var(--text-color)">点击「搜索」或者使用 Enter 键开始搜索</p>
 </div>
