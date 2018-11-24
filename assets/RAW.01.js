@@ -12,6 +12,7 @@ RAW={
     // 触发 PJAX 前的操作
     beforePjax:function(){
         NProgress.start();
+        $("button[data-fancybox-close]").click()
         $("#main").fadeTo(200,0.2);
     },
 
