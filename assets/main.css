@@ -1930,7 +1930,7 @@ body.no-scroll{
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 100000;
+    z-index: 1030;
     display: flex;
     align-items: center;
     justify-content: center;
