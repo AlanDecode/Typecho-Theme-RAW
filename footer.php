@@ -43,7 +43,7 @@ var owo = new OwO({
 <?php endif; ?>  
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/main.1a.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/main.1b.js'); ?>"></script>
 <!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php if($this->options->pjax=='1'): ?>
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>

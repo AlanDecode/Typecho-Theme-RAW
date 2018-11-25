@@ -47,7 +47,9 @@ function loadMorePosts(){
                 }else{
                     $("#index-loadmore-btn").html("加载更多");
                 }
-                
+                if(typeof(RAW)=="object"){
+                    RAW.init();
+                }
             },
             error:function(){
                 alert('加载失败！');
