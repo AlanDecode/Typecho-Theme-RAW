@@ -13,7 +13,7 @@ RAW={
     beforePjax:function(){
         NProgress.start();
         $("button[data-fancybox-close]").click()
-        $("#loading-wrap").fadeIn(120);
+        $("#loading-wrap").show();
         $("body").addClass("no-scroll");
     },
 
@@ -21,7 +21,7 @@ RAW={
     afterPjax:function(){
         NProgress.done();
         $("body").removeClass("no-scroll");
-        $("#loading-wrap").fadeOut(120);
+        $("#loading-wrap").fadeOut(300);
         checkNightMode();
         parsedPhotos();
         parseURL();
