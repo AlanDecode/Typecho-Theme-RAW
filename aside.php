@@ -32,6 +32,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php endif; ?>
     <?php if(Utils::tocPosition($this,$this->user->hasLogin())=='aside'):?>
     <div id="TOC">
+        <style>a[data-src="#TOC"]{display:flex}</style>
         <span style="font-size:0.9em" class="hidden-xs"><i style="font-size:0.9em" class="fa fa-th-list"></i> 文章目录</span>
         <?php echo $GLOBALS['TOC_O']; ?>
     </div>

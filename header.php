@@ -29,9 +29,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php if($this->options->aside_nav): ?>
                 <a data-fancybox data-src="#pages" href="javascript:;" class="show-xs nav-link flex justify-content-center align-items-center"><i class="fa fa-fw fa-th-large"></i>Pages</a>
                 <?php endif; ?>
-                <?php if($this->fields->showTOC=='1' && ($this->is('post') || $this->is('page'))):?>
-                <a data-fancybox data-src="#TOC" href="javascript:;" class="show-md nav-link flex justify-content-center align-items-center"><i class="fa fa-fw fa-th-list"></i>TOC</a>
-                <?php endif; ?>
+                <a data-fancybox data-src="#TOC" href="javascript:;" class="hidden show-md nav-link flex justify-content-center align-items-center"><i class="fa fa-fw fa-th-list"></i>TOC</a>
             </div>
         </div>
         <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;">
