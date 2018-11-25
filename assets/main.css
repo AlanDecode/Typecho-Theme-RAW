@@ -1920,6 +1920,30 @@ article table tr>td:first-child,article table tr>th:first-child{
 .board-title,.board-title a:hover{
     border: none
 }
+body.no-scroll{
+    height: 100vh;
+    overflow: hidden;
+}
+#loading-wrap{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+}
+#loading-anime{
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    animation: loading 0.7s infinite;
+    animation-timing-function: step-end;
+}
+
 @media screen and (max-width:767px){
     .board-item{
         width: 30%;
@@ -2015,4 +2039,21 @@ aside > div,#nav-left > div,#nav-left > div >ul,#comments{
         filter: brightness(110%);
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff5722, 0 0 35px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 75px #ff5722;
   }
+}
+@keyframes loading {
+	0% {
+	background-position: 0 0;
+}
+25%{
+    background-position: 0 -80px;
+}
+50%{
+    background-position: 0 -160px;
+}
+75% {
+	background-position: 0 -240px;
+}
+100% {
+	background-position: 0 0;
+}
 }
