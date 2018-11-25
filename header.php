@@ -52,7 +52,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php endif;?>
 <div class="bg bg-mask"></div>
 <?php if($this->options->pjax=='1'): ?>
-<div id="loading-wrap" ontouchmove="event.preventDefault()" onscroll="event.preventDefault()">
+<div id="loading-wrap" style="display:none" ontouchmove="event.preventDefault()" onscroll="event.preventDefault()">
     <div id="loading-anime" style="background-image:url(<?php $this->options->themeUrl('/assets/loading.png');?>)"></div>
 </div>
 <?php endif;?>

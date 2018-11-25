@@ -13,13 +13,15 @@ RAW={
     beforePjax:function(){
         NProgress.start();
         $("button[data-fancybox-close]").click()
-        $("#main").fadeTo(200,0.2);
+        $("#loading-wrap").fadeIn(120);
+        $("body").addClass("no-scroll");
     },
 
     // PJAX 结束操作
     afterPjax:function(){
         NProgress.done();
-        $("#main").fadeTo(200,1);
+        $("body").removeClass("no-scroll");
+        $("#loading-wrap").fadeOut(120);
         checkNightMode();
         parsedPhotos();
         parseURL();
