@@ -51,7 +51,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div class="bg" style="background:#EBE9E4"></div>
 <?php endif;?>
 <div class="bg bg-mask"></div>
-
+<?php if($this->options->pjax=='1'):?>
+<div id="loading-wrap">
+    <div id="loading-anime"></div>
+</div>
+<?php endif;?>
 <div id="hidden-login-form" class="login-form" style="display:none">
     <?php if($this->user->hasLogin()): ?>
     <p style="margin-top:1.3em">您已经登录，<a href="<?php $this->options->logoutUrl(); ?>">登出</a></p>
