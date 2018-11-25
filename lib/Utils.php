@@ -16,7 +16,7 @@ global $toc;
 global $curid;
 function parseTOC_callback($matchs){
     $GLOBALS['curid']=$GLOBALS['curid']+1;
-    $GLOBALS['toc'].='<li><a href="#TOC-'.(string)$GLOBALS['curid'].'" onclick="$.scrollTo(`#TOC-'.(string)$GLOBALS['curid'].'`,300)" class="toc-item toc-level-'.$matchs[1].'">'.$matchs[2].'</a></li>';
+    $GLOBALS['toc'].='<li><a href="#TOC-'.(string)$GLOBALS['curid'].'" onclick="$.scrollTo(`#TOC-'.(string)$GLOBALS['curid'].'`,300);$(`button[data-fancybox-close]`).click()" class="toc-item toc-level-'.$matchs[1].'">'.$matchs[2].'</a></li>';
     return '<h'.$matchs[1].' id="TOC-'.(string)$GLOBALS['curid'].'">'.$matchs[2].'</h'.$matchs[1].'>';
 }
 
