@@ -189,3 +189,6 @@ article pre code,.bg-mask,.comment-content{
     background: #333;
     background: var(--dark-color);
 }
+.night #loading-wrap{
+    background: rgba(0,0,0,0.9);
+}
