@@ -51,7 +51,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div class="bg bg-mask"></div>
 <?php if($this->options->pjax=='1'): ?>
 <div id="loading-wrap" style="display:none" ontouchmove="event.preventDefault()" onscroll="event.preventDefault()">
-    <div id="loading-anime" style="background-image:url(<?php $this->options->themeUrl('/assets/loading.png');?>)"></div>
+    <div id="loading-anime" style="background-image:url(<?php $this->options->themeUrl('/assets/loading1.png');?>)"></div>
 </div>
 <?php endif;?>
 <div id="hidden-login-form" class="login-form" style="display:none">
