@@ -26,6 +26,10 @@ RAW={
         parsedPhotos();
         parseURL();
         RAW.parseURL();
+        $.each($(".nav-link"),function(i,item){
+            if($(item).attr("href")==window.location.pathname) $(item).addClass("current");
+            else $(item).removeClass("current");
+        })
         // 重载 OWO
         if($(".OwO").length>0){ 
             var owo = new OwO({
