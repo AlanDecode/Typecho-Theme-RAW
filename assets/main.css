@@ -977,6 +977,10 @@ aside > div a:hover{
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
+    animation: fade-in 0.5s; 
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-15px);
 }
 .post-item:not(.item-nav):not(.loadmore):not(.shuoshuo){
     display: block;
@@ -1993,6 +1997,12 @@ body.no-scroll{
 .fixed{
     position: fixed!important;
 }
+aside > div,#nav-left>div,#comments{
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: fade-in 0.5s;
+    animation-fill-mode: forwards;
+}
 aside > div,#nav-left > div,#nav-left > div >ul,#comments{
     border-radius: 6px;
 }
@@ -2056,4 +2066,14 @@ aside > div,#nav-left > div,#nav-left > div >ul,#comments{
 100% {
 	background-position: 0 0;
 }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

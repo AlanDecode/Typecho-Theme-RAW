@@ -14,13 +14,11 @@ RAW={
         NProgress.start();
         $("button[data-fancybox-close]").click()
         $("#loading-wrap").show();
-        $("body").addClass("no-scroll");
     },
 
     // PJAX 结束操作
     afterPjax:function(){
         NProgress.done();
-        $("body").removeClass("no-scroll");
         $("#loading-wrap").fadeOut(300);
         checkNightMode();
         parsedPhotos();

@@ -13,7 +13,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 
-<div id="comments">
+<div id="comments" style="animation-delay:0.4s">
         <?php
         $parameter = array(
             'parentId'      => $this->hidden ? 0 : $this->cid,

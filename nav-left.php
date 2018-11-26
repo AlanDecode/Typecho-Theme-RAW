@@ -51,7 +51,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </div>
     <?php 
         if($this->options->aside_nav &&$this->options->aside_nav!=''){
-            echo '<div id="pages" class="nav-left-panel">
+            echo '<div id="pages" class="nav-left-panel" style="animation-delay:0.2s">
             <span class="hidden-xs"><i class="fa fa-compass"></i> 页面导航</span>
                 <ul id="pages-ul">';
             $navs=explode(PHP_EOL,$this->options->aside_nav);
@@ -65,7 +65,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
     <?php 
         if($this->options->aside_link &&$this->options->aside_link!=''){
-            echo '<div id="links" class="nav-left-panel">
+            echo '<div id="links" class="nav-left-panel" style="animation-delay:0.4s">
             <span><i class="fa fa-link"></i> 友情链接</span>
                 <ul>';
             $navs=explode(PHP_EOL,$this->options->aside_link);
@@ -78,7 +78,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         }
     ?>
     <?php if(Utils::tocPosition($this,$this->user->hasLogin())=='nav-left'):?>
-    <div id="TOC">
+    <div id="TOC" style="animation-delay:0.6s">
         <style>a[data-src="#TOC"]{display:flex}</style>
         <span style="font-size:0.9em" class="hidden-xs"><i style="font-size:0.9em" class="fa fa-th-list"></i> 文章目录</span>
         <?php echo $GLOBALS['TOC_O']; ?>

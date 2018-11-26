@@ -15,7 +15,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div id="main" class="flex flex-1">
     <div class="center flex-1">
         <?php $this->need('post-item.php'); ?>
-        <div class="post-item">
+        <div class="post-item" style="animation-delay:0.2s">
             <div class="post-pager">
             <?php Utils::thePrev($this);?>
             <?php if($this->options->reward_img&&$this->options->reward_img!=''):?>
