@@ -199,13 +199,13 @@ function checkNightMode(){
 function filterItems(item,type){
     $(".post-item.item-nav .index-filter >div").removeClass("current");
     $(item).addClass("current");
+    document.documentElement.style.setProperty('--shuoshuo-display', 'none');
+    document.documentElement.style.setProperty('--post-item-display', 'none');
     switch (type) {
         case 1:
             document.documentElement.style.setProperty('--post-item-display', 'block');
-            document.documentElement.style.setProperty('--shuoshuo-display', 'none');
             break;
         case 2:
-            document.documentElement.style.setProperty('--post-item-display', 'none');
             document.documentElement.style.setProperty('--shuoshuo-display', 'block');
             break;
         case 0:

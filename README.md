@@ -18,6 +18,7 @@
 * 侧边栏目录使用 scrollTo.js 代替锚点
 * 添加了一些加载动画
 * 修改归档页面文章在本窗口打开
+* 平滑滚动（感谢 [Ryongyon](https://www.ryongyon.com/)）
 * bug fix
 
 ## 使用
