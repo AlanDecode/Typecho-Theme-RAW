@@ -43,13 +43,13 @@ var owo = new OwO({
 <?php endif; ?>  
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/main.1d.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/main.20.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script>
 <?php if($this->options->pjax=='1'): ?>
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/pjax/np.css');?>">
 <script src="<?php $this->options->themeUrl('/assets/pjax/np.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/RAW.06.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/RAW.07.js'); ?>"></script>
 <script>
 $(document).on('pjax:complete', function() {
   <?php echo $this->options->pjaxreload; ?>
