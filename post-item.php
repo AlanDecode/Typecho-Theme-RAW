@@ -40,10 +40,17 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
     </div>
     <?php endif;?>
-    <?php $index=0; ?>
+    <?php $index=0; $index_s=0; ?>
     <?php while($this->next()): ?>
-    <?php $index=$index+1; ?>
-    <div style="animation-delay:<?php echo 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1' && ($this->is('index') || $this->is('archive'))) echo 'shuoshuo';?>">
+    <?php 
+        if($this->fields->type=='1'){
+            $index_s++;
+        }
+        else{
+            $index++;
+        }
+    ?>
+    <div style="animation-delay:<?php echo $this->fields->type=='1'? 0.2*$index_s : 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1' && ($this->is('index') || $this->is('archive'))) echo 'shuoshuo';?>">
         <div class="post-item-header flex align-items-center">
             <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
             <div style="font-size: 0.9rem; line-height: 1.5;" class="post-meta flex flex-direction-column">
