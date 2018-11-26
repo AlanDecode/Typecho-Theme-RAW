@@ -12,14 +12,12 @@
 
 ## 日志
 
-2018-11-19 Ver 0.9（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+2018-11-26 Ver 0.91（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
 
-* 尝试修正新评论在前时嵌套顺序错误
-* 修正导航链接对齐的问题
-* 调整了夜间模式切换的逻辑
-* 友链点击范围扩大至整个项目（而不只是名称）
-* 优化某些 Markdown 元素样式
-* 后台添加博主头像设置，解决 404 页面无头像的问题，以及多作者时的头像显示逻辑
+* PJAX 支持（评论暂不支持），可选择开启
+* 侧边栏目录使用 scrollTo.js 代替锚点
+* 添加了一些加载动画
+* 修改归档页面文章在本窗口打开
 * bug fix
 
 ## 使用
@@ -38,7 +36,7 @@
 
 本项目引用了：
 
-[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [scrollTo](http://demos.flesler.com/jquery/scrollTo/) | [OwO](https://github.com/DIYgod/OwO)
+[JQuery](https://github.com/jquery/jquery) | [highlight.js](https://highlightjs.org/) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [scrollTo](http://demos.flesler.com/jquery/scrollTo/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [font-awesome](http://fontawesome.dashgame.com/)
 
 感谢以上项目。
 
