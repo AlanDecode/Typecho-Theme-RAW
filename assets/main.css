@@ -1887,6 +1887,12 @@ article table tr>td:first-child,article table tr>th:first-child{
     max-width: 100%;
     padding-top: 1em;
 }
+.board-list>a{
+    animation: fade-in 0.5s; 
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-15px);
+}
 .board-item {
     position: relative;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
