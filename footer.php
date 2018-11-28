@@ -133,9 +133,9 @@ $.each($(".post-like"),function(i,item){
   </g>
 </svg>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<script src="<?php $this->options->themeUrl('/assets/DrawSVGPlugin.min.js'); ?>"></script>
-<script src='<?php $this->options->themeUrl('/assets/panda.js'); ?>'></script>
+<script src="<?php $this->options->themeUrl('/assets/panda/TweenMax.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/panda/DrawSVGPlugin.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/panda/panda.js'); ?>"></script>
 <?php endif; ?>
 </body>
 </html>
