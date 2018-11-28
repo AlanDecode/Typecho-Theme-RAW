@@ -939,7 +939,7 @@ aside > div a:hover{
     padding: 0.6em;
     background: #fff;
     background: var(--bg-color);
-    border-radius: 6px;
+    border-radius: 3px;
     box-shadow: 0 0 5px rgba(0,0,0,.4);
     transition: 0.3s ease all;
     z-index: 1000;
@@ -974,8 +974,8 @@ aside > div a:hover{
     margin-bottom: 20px;
     background: #fff;
     background: var(--bg-color);
-    border-radius: 6px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(5, 5, 5, 0.2);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
     animation: fade-in 0.5s; 
     animation-fill-mode: forwards;
@@ -1341,6 +1341,7 @@ article{
     line-height: 1.7;
     width: 100%;
     max-width: 100%;
+    text-align: justify;
     word-break: break-word;
 }
 article > *{
@@ -1349,6 +1350,7 @@ article > *{
 article h1,article h2,article h3,article h4,article h5,article h6,{
     color: #111;
     color: var(--darker-color);
+    text-align: left;
 }
 article video{
     max-width: 100%;
@@ -2004,13 +2006,14 @@ aside > div,#nav-left>div,#comments{
     animation-fill-mode: forwards;
 }
 aside > div,#nav-left > div,#nav-left > div >ul,#comments{
-    border-radius: 6px;
+    border-radius: 3px;
 }
 .heart{
     color: red;
     animation: pong 1.5s infinite;
     display: inline-block;
 }
+.aplayer .aplayer-list ol {-webkit-overflow-scrolling: touch;}
 
 @-webkit-keyframes pong {
 	0% {

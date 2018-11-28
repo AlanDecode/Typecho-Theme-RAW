@@ -38,10 +38,11 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 }
 
 function themeConfig($form) {
-    //基本设置
     echo '<div id="raw-check-update" style="padding:0.1rem 1rem;background:#eeeeee;border-radius:5px;"></div>';
     echo '<script>var RAW_VER='.$GLOBALS['RAW_VER'].'</script>';
     echo '<script src="/usr/themes/RAW/assets/check_update.js"></script>';
+
+    // 基本设置
     $sitelogo=new Typecho_Widget_Helper_Form_Element_Text('sitelogo', NULL, NULL, _t('左上角站点文字'), _t('左上角站点标题，不填写默认为系统站点标题。'));
     $form->addInput($sitelogo);
     $left_link=new Typecho_Widget_Helper_Form_Element_Text('left_link', NULL, NULL, _t('侧边栏头像打开链接'), _t('输入点击侧边栏头像要打开的位置，默认为站点首页。'));
@@ -52,22 +53,28 @@ function themeConfig($form) {
     $form->addInput($aside_nav);
     $aside_link=new Typecho_Widget_Helper_Form_Element_Textarea('aside_link', NULL, NULL, _t('全站友链'), _t('全站侧边栏友情链接，请直接以 a 标签书写。一行一个。'));
     $form->addInput($aside_link);
+    $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
+    $form->addInput($site_bg);
+
+    // 外观设置
     $colormode=new Typecho_Widget_Helper_Form_Element_Select('colormode',array('0'=>'自动切换','1'=>'夜间模式','2'=>'日间模式'),'0','博客颜色模式','设置主题默认模式。不论如何设置，都可以通过右上角按钮切换。');
     $form->addInput($colormode);
     $columnorder=new Typecho_Widget_Helper_Form_Element_Select('columnorder',array('0'=>'正序','1'=>'逆序'),'0','设置三栏的显示顺序','设置导航栏，文章栏，热门统计栏的显示顺序。');
     $form->addInput($columnorder);
     $showaside=new Typecho_Widget_Helper_Form_Element_Select('showaside',array('0'=>'显示','1'=>'不显示','2'=>'登录显示'),'0','是否显示右侧边栏','设置是否显示右侧边栏。（仅隐藏最近评论与热门日志模块，文章目录仍然会显示）');
     $form->addInput($showaside);
-    $pjax=new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'不启用','1'=>'启用'),'0','启用 PJAX (BETA)','是否启用 PJAX。如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭此项。');
-    $form->addInput($pjax);
-    $pjaxreload=new Typecho_Widget_Helper_Form_Element_Textarea('pjaxreload', NULL, NULL, _t('PJAX 重载函数'), _t('输入要重载的 JS，如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭 PJAX 并留空此项。'));
-    $form->addInput($pjaxreload);
-    $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
-    $form->addInput($site_bg);
+
+    // 常用功能设置
     $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏则使用文章作者头像，当其不可用时引用本头像。'));
     $form->addInput($defaultavatar);
     $reward_img=new Typecho_Widget_Helper_Form_Element_Text('reward_img', NULL, NULL, _t('打赏二维码图片地址'), _t('填写图片链接，若不需要打赏则留空。只支持一张图，若需要多种支付方式请自行合成二维码图片。'));
     $form->addInput($reward_img);
+
+    // 高级功能设置
+    $pjax=new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'不启用','1'=>'启用'),'0','启用 PJAX (BETA)','是否启用 PJAX。如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭此项。');
+    $form->addInput($pjax);
+    $pjaxreload=new Typecho_Widget_Helper_Form_Element_Textarea('pjaxreload', NULL, NULL, _t('PJAX 重载函数'), _t('输入要重载的 JS，如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭 PJAX 并留空此项。'));
+    $form->addInput($pjaxreload);
     $footerinfo=new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('页面底部输出内容'), _t('你可以输入需要在页面底部输出的内容，包括备案号等。请使用标准的 HTML 语法书写。'));
     $form->addInput($footerinfo);
     $headinfo=new Typecho_Widget_Helper_Form_Element_Textarea('headinfo', NULL, NULL, _t('head 标签内输出信息'), _t('这里的内容会输出在 head 标签靠前的位置，不建议在这里加入 CSS，你可以输入一些 meta 标签等。'));
