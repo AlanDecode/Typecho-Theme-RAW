@@ -14,10 +14,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 global $toc;
 global $curid;
+global $nboard;
 function parseTOC_callback($matchs){
     $GLOBALS['curid']=$GLOBALS['curid']+1;
     $GLOBALS['toc'].='<li><a href="#TOC-'.(string)$GLOBALS['curid'].'" onclick="$.scrollTo(`#TOC-'.(string)$GLOBALS['curid'].'`,300);$(`button[data-fancybox-close]`).click()" class="toc-item toc-level-'.$matchs[1].'">'.$matchs[2].'</a></li>';
     return '<h'.$matchs[1].' id="TOC-'.(string)$GLOBALS['curid'].'">'.$matchs[2].'</h'.$matchs[1].'>';
+}
+function parseBoard_callback($matchs){
+    $GLOBALS['nboard']++;
+    return '<a target="_blank" href="'.$matchs[2].'" style="animation-delay:'.strval($GLOBALS['nboard']*0.15).'s" class="board-item link-item"><div class="board-thumb" style="background-image:url('.$matchs[3].')"></div><div class="board-title">'.$matchs[1].'</div></a>';
 }
 
 class Utils {   
@@ -331,11 +336,17 @@ class Utils {
      * @return string
      */
     static public function parseBoard($string){
+        global $nboard;
+        $GLOBALS['nboard']=0;
         $reg='/\[(.*?)\]\((.*?)\)\+\((.*?)\)/s';
-        $rp='<a target="_blank" href="${2}" class="board-item link-item"><div class="board-thumb" style="background-image:url(${3})"></div><div class="board-title">${1}</div></a>';
-        $new=preg_replace($reg,$rp,$string);
+        $new=preg_replace_callback($reg, 'parseBoard_callback', $string);
+
+       // $rp='<a target="_blank" href="${2}" class="board-item link-item"><div class="board-thumb" style="background-image:url(${3})"></div><div class="board-title">${1}</div></a>';
+       // $new=preg_replace($reg,$rp,$string);
         return $new;
     }
+
+
 
     /**
      * 解析 ruby
