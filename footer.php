@@ -44,7 +44,7 @@ var owo = new OwO({
 <script src="<?php $this->options->themeUrl('/assets/hljs/highlight.pack.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('/assets/main.20.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script>
+<!--script src="<?php $this->options->themeUrl('/assets/smothscroll/smothscroll.js'); ?>"></script-->
 <?php if($this->options->pjax=='1'): ?>
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/pjax/np.css');?>">
