@@ -73,7 +73,7 @@ $.each($(".post-like"),function(i,item){
 </script>
 <?php endif;?>
 <?php if(!Utils::isMobile()): ?>
-<div id="panda" style="opacity:0;display:flex;align-items:center;justify-content:center;position:fixed;bottom:30px;z-index:-1">
+<div id="panda" style="opacity:0;display:flex;align-items:center;justify-content:center;position:fixed;bottom:-15px;z-index:-1">
 <svg style="width: 300px;visibility: visible;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 250 200 115" xml:space="preserve">
   <filter id="shadowBlur" x="0%" y="0%" width="275%" height="150%">
     <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
