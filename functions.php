@@ -75,6 +75,8 @@ function themeConfig($form) {
     $form->addInput($indexloadmore);
     $pjax=new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'不启用','1'=>'启用'),'0','启用 PJAX (BETA)','是否启用 PJAX。如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭此项。');
     $form->addInput($pjax);
+    $loadinganime=new Typecho_Widget_Helper_Form_Element_Select('loadinganime',array('0'=>'圆点','1'=>'小电视'),'0','PJAX 加载动画','选择 PJAX 加载动画，仅当启用 PJAX 时有效。');
+    $form->addInput($loadinganime);
     $pjaxreload=new Typecho_Widget_Helper_Form_Element_Textarea('pjaxreload', NULL, NULL, _t('PJAX 重载函数'), _t('输入要重载的 JS，如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭 PJAX 并留空此项。'));
     $form->addInput($pjaxreload);
     $footerinfo=new Typecho_Widget_Helper_Form_Element_Textarea('footerinfo', NULL, NULL, _t('页面底部输出内容'), _t('你可以输入需要在页面底部输出的内容，包括备案号等。请使用标准的 HTML 语法书写。'));
