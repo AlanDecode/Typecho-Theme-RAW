@@ -521,6 +521,7 @@ header > nav{
     max-width: 100%;
     margin:0 auto;
     padding: 0 20px;
+    height: 44px;
 }
 .bg{
     width: 100%;
@@ -537,8 +538,8 @@ header > nav{
     background: rgba(0,0,0,0);
 }
 #brand{
-    line-height: 50px;
-    font-size: 32px;
+    line-height: 38px;
+    font-size: 28px;
     display: block;
     min-width: 210px;
     min-width: var(--nav-left-width);
@@ -549,6 +550,7 @@ header > nav{
     transition: 0.3s ease all;
     margin-right: 20px;
     letter-spacing: 0.1em;
+    letter-spacing: 0.05rem;
 }
 @media screen and (max-width:767px){
     #brand{
@@ -559,13 +561,12 @@ header > nav{
     color: rgb(255,112,121);
     color: var(--highlight-color);
 }
-.nav-links{font-size:1rem}
 .nav-link{
     padding: 0 0.7em;
     font-size: 16px;
     border-bottom: 3px solid transparent;
     border-top: 3px solid transparent;
-    line-height: 50px;
+    line-height: 38px;
 }
 .nav-link,.nav-link a{
     color: rgba(255,112,121,0.6);
@@ -1406,7 +1407,7 @@ article h1,article h2,article h3,article h4,article h5,article h6,{
 article h1.post-title{
     margin-top:0.7rem;
     margin-bottom:0.7rem;
-    font-size:2.4rem
+    font-size:2.2rem
 }
 @media screen and (max-width:768px){
     article h1.post-title{
