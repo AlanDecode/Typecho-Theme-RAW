@@ -1560,6 +1560,7 @@ article blockquote{
     border-left: 3px solid rgba(0,0,0,.1);
     margin: 0;
     padding:0.5em 1em;
+    margin: 1rem 0;
 }
 article blockquote,article blockquote p{
     font-size: 0.927rem;
