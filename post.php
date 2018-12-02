@@ -17,11 +17,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <!--post-item start-->
         <div id="post-list">
         <?php if(!$this->have()):?>
-            <div class="post-item full">
+            <div class="post-item">
             <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px;color:var(--text-color)">糟糕，是 404 的感觉</h1></div>
             </div>
         <?php else:?>
-            <div style="animation-delay:0.2s" class="post-item">
+            <div style="animation-delay:0.2s" class="post-item full">
                 <?php if($this->fields->type=='1' || !($this->fields->banner && $this->fields->banner!='')): ?>
                     <div class="post-item-header flex align-items-center" style="padding-bottom:0">
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />

@@ -20,11 +20,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <div class="center flex-1">
         <div id="post-list">
         <?php if(!$this->have()):?>
-            <div class="post-item full">
+            <div class="post-item">
                 <div class="post-item-body"><h1 style="text-align:center;margin-top:40px">糟糕，是 404 的感觉</h1></div>
             </div>
         <?php else:?>
-            <div class="post-item">
+            <div class="post-item full">
                 <div class="post-item-header flex align-items-center">
                     <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
                     <div style="font-size: 0.9rem; line-height: 1.5;" class="post-meta flex flex-direction-column">
