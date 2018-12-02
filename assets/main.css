@@ -1646,13 +1646,36 @@ article table tr>td:first-child,article table tr>th:first-child{
 }
 .archive-list{
     list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
 }
 .archive-list li {
     white-space: nowrap;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 0.6rem;
+    margin: 0.3rem 0.7rem;
     text-indent: 0;
+    width: calc(50% - 1.4rem);
+    background: rgba(253, 246, 243, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(5, 5, 5, 0.2);
+    -webkit-box-shadow: 0 0 3px rgba(5, 5, 5, 0.2);
+}
+@media screen and (max-width:768px){
+    .archive-list li{
+        width: 100%;
+    }
+}
+.archive-list li span,.archive-list li a{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
 }
 
 

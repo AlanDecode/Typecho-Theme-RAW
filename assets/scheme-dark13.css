@@ -51,7 +51,8 @@ html.night{
 .night .nav-left-panel > ul,
 .night .cancel-comment-reply,
 .night #TOC,
-.night .page-navigator li
+.night .page-navigator li,
+.night .archive-list li
 {
     background: #333;
     background: var(--dark-color);
