@@ -985,7 +985,6 @@ aside > div a:hover{
 
 .post-item{
     margin: 5px;
-    overflow: hidden;
     margin-bottom: 20px;
     background: #fff;
     background: var(--bg-color);
@@ -1000,6 +999,9 @@ aside > div a:hover{
     -webkit-transform: translateY(-15px);
         -ms-transform: translateY(-15px);
             transform: translateY(-15px);
+}
+.post-item.full{
+    overflow: hidden;
 }
 .post-item:not(.item-nav):not(.loadmore):not(.shuoshuo){
     display: block;
