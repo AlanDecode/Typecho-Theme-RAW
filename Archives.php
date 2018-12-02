@@ -60,7 +60,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                 <div class="post-item-footer">
                     <?php if(Utils::isPluginAvailable('Like')):?>
                         <span class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
-                            <i class="fa fa-heart"></i> ENJOY <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
+                            <i class="fa fa-heart"></i> Like <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
                         </a></span>
                     <?php endif; ?>
                     <span class="comments-num"><a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('Comments <span>%d</span>'); ?></a></span>

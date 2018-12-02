@@ -216,7 +216,7 @@ class Utils {
         } else if (preg_match('/Opera[\s|\/]([^\s]+)/i', $agent, $regs)) {
             $outputer = '<i class="fa fa-opera"></i>';
         } else {
-            $outputer = '<i class="fa fa-question-o"></i>';
+            $outputer = '<i class="fa fa-question"></i>';
         }
 
         return $outputer;
