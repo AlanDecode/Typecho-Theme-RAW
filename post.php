@@ -31,7 +31,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         </div>
                     </div>
                 <?php elseif($this->fields->banner && $this->fields->banner!='') :?>
-                    <a data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img style="max-width:100%" src="<?php echo $this->fields->banner; ?>"/></a>
+                    <a data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img style="max-width:100%;width:100%" src="<?php echo $this->fields->banner; ?>"/></a>
                 <?php endif; ?>
                 <div class="post-item-body full-content <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
                     <article>
