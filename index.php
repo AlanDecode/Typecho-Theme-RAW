@@ -99,12 +99,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php endif; ?>
         </div>
         <!--post-item end-->
-        <!--style>
-        a.next{display:none}
-        </style-->
         <?php if($this->have()):?>
-            <!--div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div-->
-            <?php $this->pageNav('<i class="fa fa-hand-o-left"></i>', '<i class="fa fa-hand-o-right"></i>',1, '...'); ?>
+            <?php if($this->options->indexloadmore!='1'): ?>
+                <?php $this->pageLink('下一页','next','hidden'); ?>
+                <div id="index-loadmore-btn" class="loadmore post-item" onclick="loadMorePosts();">加载更多</div>
+                <style>a.next{display:none}</style>  
+            <?php else:?>
+                <?php $this->pageNav('<i class="fa fa-hand-o-left"></i>', '<i class="fa fa-hand-o-right"></i>',1, '...'); ?>
+            <?php endif;?>
         <?php else:?>
             <div class="post-item">
                 <div class="post-item-body" style="padding-top:1em;text-align:center"><b><a href="/">返回首页</a></b></div>

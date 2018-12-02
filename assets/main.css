@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+line-height: 1.15; /* 1 */
+-webkit-text-size-adjust: 100%; /* 2 */
+}
+
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -12,21 +27,6 @@
 ::-webkit-scrollbar-thumb {
     background: rgb(255,112,121);
     background:  var(--highlight-color);
-}
-
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-line-height: 1.15; /* 1 */
--webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections

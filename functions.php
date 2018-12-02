@@ -71,6 +71,8 @@ function themeConfig($form) {
     $form->addInput($reward_img);
 
     // 高级功能设置
+    $indexloadmore=new Typecho_Widget_Helper_Form_Element_Select('indexloadmore',array('0'=>'加载更多','1'=>'分页'),'0','首页分页样式','设置首页的分页样式，加载更多或者分页。');
+    $form->addInput($indexloadmore);
     $pjax=new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'不启用','1'=>'启用'),'0','启用 PJAX (BETA)','是否启用 PJAX。如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭此项。');
     $form->addInput($pjax);
     $pjaxreload=new Typecho_Widget_Helper_Form_Element_Textarea('pjaxreload', NULL, NULL, _t('PJAX 重载函数'), _t('输入要重载的 JS，如果你发现站点有点不对劲，又不知道这个选项是啥意思，请关闭 PJAX 并留空此项。'));
