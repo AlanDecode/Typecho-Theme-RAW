@@ -18,15 +18,13 @@ line-height: 1.15; /* 1 */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    background-color: rgb(255,112,121);
-	background-color: var(--highlight-color);
+    background-color: rgba(0,0,0,.15);
 }
 ::-webkit-scrollbar-track {
     background-color: #EBE9E4;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(255,112,121);
-    background:  var(--highlight-color);
+    background: rgba(0,0,0,.15);
 }
 
 /* Sections
@@ -372,9 +370,9 @@ html{
     --text-color: #333;
     --dark-color: #222;
     --darker-color: #111;
-    --highlight-color: rgb(255,112,121);
-    --highlight-fade-color: rgba(255,112,121,0.6);
-    --border-color: rgba(255,112,121,0.6);
+    --highlight-color: #58b5ff;
+    --highlight-fade-color: rgba(0,0,0,0.25);
+    --border-color: rgba(0,0,0,0.25);
     --border-color: var(--highlight-fade-color);
     --bg-color:#fff;
 }
@@ -507,6 +505,8 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #ebeef2;
+    -webkit-font-smoothing: antialiased;
+    text-rendering:optimizeLegibility;
 }
 
 
@@ -546,8 +546,7 @@ header > nav{
     display: block;
     min-width: 210px;
     min-width: var(--nav-left-width);
-    color: rgba(255,112,121,0.6);
-    color: var(--highlight-fade-color);
+    color: #333;
     -webkit-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
     transition: 0.3s ease all;
@@ -561,7 +560,7 @@ header > nav{
     }
 }
 #brand:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 .nav-link{
@@ -572,7 +571,7 @@ header > nav{
     line-height: 38px;
 }
 .nav-link,.nav-link a{
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
 }
 .nav-link > i{
@@ -580,17 +579,12 @@ header > nav{
     margin-right: 0.2em;
 }
 .nav-link:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid rgb(255,112,121);
-    border-bottom: 3px solid var(--highlight-color);
 }
 .nav-link.current{
-    color: rgb(255,112,121);;
+    color: #58b5ff;
     color: var(--highlight-color);
-    border-bottom: 3px solid rgb(255,112,121);
-    border-bottom: 3px solid var(--highlight-color);
 }
 @media screen and (max-width:1024px){
     .nav-link.current{
@@ -648,7 +642,7 @@ header > nav{
 #search input{
     width: 100%;
     padding: 0.3em;
-    border: 1px solid rgba(255,112,121,0.6);
+    border: 1px solid rgba(0,0,0,0.25);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background: none;
@@ -656,9 +650,9 @@ header > nav{
     color: var(--text-color);
 }
 #search button:not(.fancybox-button){
-    border-color: rgba(255,112,121,0.6);
+    border-color: rgba(0,0,0,0.25);
     border-color: var(--highlight-fade-color);
-    background-color: rgba(255,112,121,0.6);
+    background-color: rgba(0,0,0,0.25);
     background-color: var(--highlight-fade-color);
     color: #fff;
     border: 1px solid;
@@ -672,9 +666,9 @@ header > nav{
     transition: 0.3s ease all;
 }
 #search button:not(.fancybox-button):hover{
-    background-color: rgb(255,112,121);
+    background-color: #58b5ff;
     background-color: var(--highlight-color);
-    border-color: rgb(255,112,121);
+    border-color: #58b5ff;
     border-color: var(--highlight-color);
     color: #fff;
 }
@@ -824,7 +818,7 @@ aside{
     text-align: center;
 }
 .nav-left-panel a:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 aside> div{
@@ -834,21 +828,21 @@ aside> div{
     background: var(--bg-color);
 }
 .login-form{
-    border: 1px solid rgba(255,112,121,0.6);
+    border: 1px solid rgba(0,0,0,0.25);
     border: 1px solid var(--border-color);
     margin-bottom:20px;
 }
 .login-form input{
     width: 100%;
     padding: 0.3em;
-    border: 1px solid rgba(255,112,121,0.6);
+    border: 1px solid rgba(0,0,0,0.25);
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 .login-form button:not(.fancybox-button){
-    border-color: rgba(255,112,121,0.6);
+    border-color: rgba(0,0,0,0.25);
     border-color: var(--highlight-fade-color);
-    background-color: rgba(255,112,121,0.6);
+    background-color: rgba(0,0,0,0.25);
     background-color: var(--highlight-fade-color);
     color: #fff;
     border: 1px solid;
@@ -862,9 +856,9 @@ aside> div{
     transition: 0.3s ease all;
 }
 .login-form button:not(.fancybox-button):hover{
-    background-color: rgb(255,112,121);
+    background-color: #58b5ff;
     background-color: var(--highlight-color);
-    border-color: rgb(255,112,121);
+    border-color: #58b5ff;
     border-color: var(--highlight-color);
     color: #fff;
 }
@@ -893,7 +887,7 @@ aside > div>span:last-child{
     border: none
 }
 aside > div a:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 #TOC{
@@ -926,12 +920,12 @@ aside > div a:hover{
 }
 .toc-level-2{
     padding-left: 10px;
-    border-left: 5px solid rgb(255,112,121);
+    border-left: 5px solid #58b5ff;
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-2:hover{
     padding-left: 10px;
-    border-left: 5px solid rgb(255,112,121);
+    border-left: 5px solid #58b5ff;
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-3{
@@ -941,7 +935,7 @@ aside > div a:hover{
     padding-left: 40px;
 }
 #TOC > ul >li a:hover{
-    color: rgb(255,112,121)!important;
+    color: #58b5ff!important;
     color:var(--highlight-color)!important;
 }
 
@@ -973,14 +967,14 @@ aside > div a:hover{
     width: 100%;
 }
 #ctrler>div *{
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
     -webkit-transition: 0.3s ease color;
     -o-transition: 0.3s ease color;
     transition: 0.3s ease color;
 }
 #ctrler>div:hover *{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 .post-like.done *,.post-like.done{
@@ -1030,7 +1024,7 @@ aside > div a:hover{
     height: 48px;
 }
 .post-item-header span:last-child,.post-item-header span:last-child a{
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color:var(--highlight-fade-color);
 }
 .post-item-banner{
@@ -1054,7 +1048,7 @@ aside > div a:hover{
     border: none!important;
 }
 .post-item-footer span,.post-item-footer span a{
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
     -webkit-transition: 0.3s ease color;
     -o-transition: 0.3s ease color;
@@ -1062,11 +1056,11 @@ aside > div a:hover{
     font-size: 0.9rem;
 }
 .post-item-footer span a:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 .like-button{
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
     -webkit-transition: 0.3s ease color;
     -o-transition: 0.3s ease color;
@@ -1075,7 +1069,7 @@ aside > div a:hover{
     font-size: 0.9rem;
     margin-right: 1rem;
     padding: 0.3em;
-    border: 1px solid rgba(255,112,121,0.6);
+    border: 1px solid rgba(0,0,0,0.25);
     border: 1px solid var(--highlight-fade-color);
     border-radius: 4px;
     -webkit-transition: 0.3s ease all;
@@ -1083,9 +1077,9 @@ aside > div a:hover{
     transition: 0.3s ease all;
 }
 .like-button:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
-    border: 1px solid rgb(255,112,121);
+    border: 1px solid #58b5ff;
     border: 1px solid var(--highlight-color);
 }
 .like-button a:hover i{
@@ -1198,9 +1192,9 @@ aside > div a:hover{
     color: var(--text-color);
 }
 .post-item.item-nav .index-filter >div.current,.post-item.item-nav .index-filter >div:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
-    border-bottom: 3px solid rgb(255,112,121);
+    border-bottom: 3px solid #58b5ff;
     border-bottom: 3px solid var(--highlight-color);
 }
 .post-item.item-nav{
@@ -1318,7 +1312,7 @@ aside > div a:hover{
     padding: 1rem;
     text-align: center;
     cursor: pointer;
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
     font-size: 1.3rem;
     -webkit-transition: 0.3s;
@@ -1329,7 +1323,7 @@ aside > div a:hover{
     margin-right: auto;
 }
 .loadmore:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
 }
 .idot {
@@ -1345,19 +1339,19 @@ aside > div a:hover{
 .idot:nth-child(1) {
 	-webkit-animation-delay:.1s;
     animation-delay:.1s;
-    background: rgba(255,112,121,0.6);
+    background: rgba(0,0,0,0.25);
 	background:var(--highlight-fade-color)
 }
 .idot:nth-child(2) {
 	-webkit-animation-delay:.2s;
     animation-delay:.2s;
-    background: rgb(255,112,121);
+    background: #58b5ff;
 	background:var(--highlight-color)
 }
 .idot:nth-child(3) {
 	-webkit-animation-delay:.3s;
     animation-delay:.3s;
-    background: rgb(255,112,121);
+    background: #58b5ff;
 	background:var(--highlight-color)
 }
 
@@ -1436,6 +1430,13 @@ article h1{
 article h2{
     font-size: 1.5em;
 }
+article h2.archive-title{
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+    padding: 0.3rem;
+    display: block;
+}
 article h3,article h4{
     font-size: 1.3em;
 }
@@ -1464,16 +1465,16 @@ article > img{
     width: unset;
 }
 article a{
-    border-bottom: 1px solid rgba(255,112,121,0.6);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
     border-bottom: 1px solid var(--border-color);
 }
 article a.fancybox{
     border:none;
 }
 article a:hover{
-    color: rgb(255,112,121);
+    color: #58b5ff;
     color: var(--highlight-color);
-    border-bottom: 1px solid rgba(255,112,121,0.6);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
     border-bottom: 1px solid var(--border-color);
 }
 article .photos{
@@ -1685,6 +1686,25 @@ article table tr>td:first-child,article table tr>th:first-child{
     overflow: hidden;
     border: none;
 }
+.tag-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+.tag-list li{
+    font-size: 15px;
+    margin: 0.2rem;
+    position: relative;
+    padding: 0.2rem 0.5rem;
+    background: rgba(253, 246, 243, 0.8);
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(5, 5, 5, 0.2);
+}
+.tag-list li a{
+    border: none;
+}
 
 
 /* comment section */
@@ -1802,7 +1822,7 @@ article table tr>td:first-child,article table tr>th:first-child{
 }
 #comment-submit-button{
     cursor: pointer;
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
     background: #fff;
     background: var(--bg-color);
@@ -1819,10 +1839,10 @@ article table tr>td:first-child,article table tr>th:first-child{
     z-index: 2;
 }
 #comment-submit-button:hover{
-    background: rgb(255,112,121);
+    background: #58b5ff;
     background: var(--highlight-color);
     color: white;
-    border: 2px solid rgb(255,112,121);
+    border: 2px solid #58b5ff;
     border:2px solid var(--highlight-color);
 }
 
@@ -1893,7 +1913,7 @@ article table tr>td:first-child,article table tr>th:first-child{
 }
 .comment-meta,.comment-meta a{
     font-size: 0.9em;
-    color: rgba(255,112,121,0.6);
+    color: rgba(0,0,0,0.25);
     color: var(--highlight-fade-color);
 }
 .comment-by-author.comment-item .comment-meta{
@@ -1961,7 +1981,7 @@ article table tr>td:first-child,article table tr>th:first-child{
 }
 .comment-info-input input,#textarea{
     padding: 0.3em;
-    border: 1px solid rgba(255,112,121,0.6);
+    border: 1px solid rgba(0,0,0,0.25);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1em;
@@ -1988,7 +2008,7 @@ article table tr>td:first-child,article table tr>th:first-child{
             justify-content: center;
 }
 .page-navigator li{
-    background-color: rgba(255,112,121,0.6);
+    background-color: rgba(0,0,0,0.25);
     background-color: var(--highlight-fade-color);
     -webkit-transition: 0.3s ease all;
     -o-transition: 0.3s ease all;
@@ -2001,7 +2021,7 @@ article table tr>td:first-child,article table tr>th:first-child{
     border-radius: 4px;
 }
 .page-navigator li.current{
-    background-color: rgb(255,112,121);
+    background-color: #58b5ff;
     background-color: var(--highlight-color);
 }
 .page-navigator li >*{
@@ -2009,7 +2029,7 @@ article table tr>td:first-child,article table tr>th:first-child{
     color: white;
 }
 .page-navigator li:hover{
-    background-color: rgb(255,112,121);
+    background-color: #58b5ff;
     background-color: var(--highlight-color);
 }
 .page-navigator .next,.page-navigator .prev{

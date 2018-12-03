@@ -29,7 +29,18 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                 <?php endif; ?>
                 <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
                     <article>
-                    <h1 class="post-title">文章归档</h1>
+                    <h2 class="archive-title">标签云</h2>
+                    <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=1&limit=30')->to($tags); ?>
+                    <?php if($tags->have()): ?>
+                        <ul class="tag-list">
+                        <?php while ($tags->next()): ?>
+                            <li><a href="<?php $tags->permalink(); ?>" rel="tag" class="size-<?php $tags->split(5, 10, 20, 30); ?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a></li>
+                        <?php endwhile; ?>
+                        <?php else: ?>
+                            <li><?php _e('还没有标签哦～'); ?></li>
+                        <?php endif; ?>
+                        </ul>
+                    <h2 class="archive-title">文章归档</h2>
                     <!--start archive list-->
                         <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);?>
                         <?php $yearlog=-1; $isfirst=true; ?>
