@@ -753,7 +753,7 @@ aside{
     top: -52px;
 }
 .avatar-circle-bg {
-    border: 1px solid rgba(255,112,121);
+    border: 1px solid #58b5ff;
     border-radius: 50%;
     position: relative;
     width: calc(100% - 10px);
