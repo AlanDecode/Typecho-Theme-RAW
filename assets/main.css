@@ -1433,7 +1433,6 @@ article h2{
 article h2.archive-title{
     text-align: center;
     position: relative;
-    font-weight: 300;
     padding: 0.3rem;
     display: block;
 }
