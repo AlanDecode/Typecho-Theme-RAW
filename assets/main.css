@@ -497,8 +497,11 @@ html{
 
 
 html{
-    font-size: 16px;
+    font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
+}
+html.win{
+    font-size: 16px;
 }
 body{
     width: 100%;
@@ -1599,9 +1602,6 @@ article > ol,article > ul{
     list-style-position: inside;
     padding: 0 1em;
     font-size: 0.97rem;
-}
-article > ul >li{
-    list-style-type: square;
 }
 article > ul > li,article > ol > li{
     line-height: 1.8;
