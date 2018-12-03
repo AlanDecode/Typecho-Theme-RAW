@@ -160,7 +160,7 @@ class Utils {
     public static function antiSpam(){
         $num1=rand(1,49);
         $num2=rand(1,49);
-        echo '<input type="text" name="sum" value="" placeholder="'.$num1.' + '.$num2. '= ?" />';
+        echo '<input type="text" name="sum" value="" placeholder="'.$num1.' + '.$num2. ' = ?" />';
         echo '<input type="hidden" name="num1" value="'.$num1.'" />';
         echo '<input type="hidden" name="num2" value="'.$num2.'" />';
     }
