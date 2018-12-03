@@ -16,7 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 require_once("lib/Utils.php");
 require_once("lib/Comments.php");
 
-function themeInit($archive){
+function themeInit($comment){
     Helper::options()->commentsAntiSpam = false;
     Helper::options()->commentsMaxNestingLevels = 999;
 }
@@ -25,6 +25,7 @@ $GLOBALS['RAW_VER']=0.91;
 
 Typecho_Plugin::factory('admin/write-post.php')->bottom = array('Utils', 'addButton');
 Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addButton');
+Typecho_Plugin::factory('Widget_Feedback')->comment = array('Utils', 'filterComments');
 
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $thumb = new Typecho_Widget_Helper_Form_Element_Textarea('banner', NULL, NULL, '文章主图', '输入图片URL，该图片会用于主页文章列表的显示');

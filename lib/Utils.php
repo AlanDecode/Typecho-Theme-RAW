@@ -155,6 +155,34 @@ class Utils {
     }
 
     /**
+     * 输出算术验证码
+     */
+    public static function antiSpam(){
+        $num1=rand(1,49);
+        $num2=rand(1,49);
+        echo '<input type="text" name="sum" value="" placeholder="'.$num1.' + '.$num2. '= ?" />';
+        echo '<input type="hidden" name="num1" value="'.$num1.'" />';
+        echo '<input type="hidden" name="num2" value="'.$num2.'" />';
+    }
+
+    /**
+     * 算术验证码检查
+     */
+    public static function filterComments($comment, $post){
+        $sum=$_POST['sum'];
+        switch($sum){
+            case $_POST['num1']+$_POST['num2']:
+            break;
+            case null:
+            throw new Typecho_Widget_Exception(_t('是不是忘记输入验证码了？<a href="javascript:history.back(-1)">返回上一页</a>。','评论失败'));
+            break;
+            default:
+            throw new Typecho_Widget_Exception(_t('算错了哦~ <a href="javascript:history.back(-1)">再来一次</a>吧，你可以的！','评论失败'));
+        }
+        return $comment;
+    }
+
+    /**
      * 随机文章
      */
     function getRandomPosts($limit = 10){    
