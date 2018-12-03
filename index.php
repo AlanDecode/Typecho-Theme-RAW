@@ -63,9 +63,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <div style="animation-delay:<?php echo $this->fields->type=='1'? 0.2*$index_s : 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1') echo 'shuoshuo';?>">
                     <div class="post-item-header flex align-items-center">
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
-                        <div style="font-size: 0.9rem; line-height: 1.5;" class="post-meta flex flex-direction-column">
+                        <div style="font-size: 0.9rem; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
                             <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '说说'; else echo '日志'; ?></span>
-                            <span><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
+                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
                         </div>
                     </div>
                     <div class="post-item-body <?php if($this->fields->banner) echo 'pull-left'; if($this->fields->indextype=='1') echo ' featured';?> flex">
