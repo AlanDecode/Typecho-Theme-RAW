@@ -23,11 +23,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px;color:var(--text-color)">糟糕，是 404 的感觉</h1></div>
             </div>
         <?php else:?>
-            <div style="animation-delay:0.2s" class="post-item full">
+            <div style="animation-delay:0.2s" class="post-item">
                 <?php if($this->fields->banner && $this->fields->banner!='') :?>
                     <a data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img style="max-width:100%;width:100%" src="<?php echo $this->fields->banner; ?>"/></a>
                 <?php endif; ?>
-                <div class="post-item-body full-content <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
+                <div class="post-item-body <?php if($this->fields->banner && $this->is('index')) echo 'pull-left'; if($this->is('index')&&($this->fields->indextype=='1')) echo ' featured';?> flex">
                     <article>
                     <h1 class="post-title">文章归档</h1>
                     <!--start archive list-->

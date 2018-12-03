@@ -1396,6 +1396,14 @@ article{
     text-align: justify;
     word-break: break-word;
 }
+.post-item.full article{
+    padding: 0 calc(45px - 1rem);
+}
+@media screen and (max-width:768px){
+    .post-item.full article{
+        padding: 0;
+    }
+}
 article > *{
     max-width: 100%;
 }
@@ -1685,12 +1693,17 @@ article table tr>td:first-child,article table tr>th:first-child{
     padding: 1rem;
     margin: 5px;
     margin-bottom: 50px;
-    padding:1em;
+    padding:1em 45px;
     background: #fff;
     background: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
     -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
+}
+@media screen and (max-width:768px){
+    #comments{
+        padding: 1em;
+    }
 }
 #coments form,#coments p{
     width: 100%;
