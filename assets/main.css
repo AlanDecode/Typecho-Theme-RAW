@@ -370,7 +370,7 @@ html{
     --text-color: #333;
     --dark-color: #222;
     --darker-color: #111;
-    --highlight-color: rgba(255,112,121);
+    --highlight-color: rgb(255,112,121);
     --highlight-fade-color: rgba(255,112,121,0.6);
     --border-color: rgba(255,112,121,0.6);
     --border-color: var(--highlight-fade-color);
@@ -561,7 +561,7 @@ header > nav{
     }
 }
 #brand:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .nav-link{
@@ -580,11 +580,11 @@ header > nav{
     margin-right: 0.2em;
 }
 .nav-link:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .nav-link.current{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 @media screen and (max-width:1024px){
@@ -667,9 +667,9 @@ header > nav{
     transition: 0.3s ease all;
 }
 #search button:not(.fancybox-button):hover{
-    background-color: rgba(255,112,121);
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
-    border-color: rgba(255,112,121);
+    border-color: rgb(255,112,121);
     border-color: var(--highlight-color);
     color: #fff;
 }
@@ -819,7 +819,7 @@ aside{
     text-align: center;
 }
 .nav-left-panel a:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 aside> div{
@@ -857,9 +857,9 @@ aside> div{
     transition: 0.3s ease all;
 }
 .login-form button:not(.fancybox-button):hover{
-    background-color: rgba(255,112,121);
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
-    border-color: rgba(255,112,121);
+    border-color: rgb(255,112,121);
     border-color: var(--highlight-color);
     color: #fff;
 }
@@ -888,7 +888,7 @@ aside > div>span:last-child{
     border: none
 }
 aside > div a:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 #TOC{
@@ -921,12 +921,12 @@ aside > div a:hover{
 }
 .toc-level-2{
     padding-left: 10px;
-    border-left: 5px solid rgba(255,112,121);
+    border-left: 5px solid rgb(255,112,121);
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-2:hover{
     padding-left: 10px;
-    border-left: 5px solid rgba(255,112,121);
+    border-left: 5px solid rgb(255,112,121);
     border-left: 5px solid var(--highlight-color);
 }
 .toc-level-3{
@@ -936,7 +936,7 @@ aside > div a:hover{
     padding-left: 40px;
 }
 #TOC > ul >li a:hover{
-    color: rgba(255,112,121)!important;
+    color: rgb(255,112,121)!important;
     color:var(--highlight-color)!important;
 }
 
@@ -975,7 +975,7 @@ aside > div a:hover{
     transition: 0.3s ease color;
 }
 #ctrler>div:hover *{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .post-like.done *,.post-like.done{
@@ -1057,7 +1057,7 @@ aside > div a:hover{
     font-size: 0.9rem;
 }
 .post-item-footer span a:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .like-button{
@@ -1078,9 +1078,9 @@ aside > div a:hover{
     transition: 0.3s ease all;
 }
 .like-button:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
-    border: 1px solid rgba(255,112,121);
+    border: 1px solid rgb(255,112,121);
     border: 1px solid var(--highlight-color);
 }
 .like-button a:hover i{
@@ -1193,9 +1193,9 @@ aside > div a:hover{
     color: var(--text-color);
 }
 .post-item.item-nav .index-filter >div.current,.post-item.item-nav .index-filter >div:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
-    border-bottom: 3px solid rgba(255,112,121);
+    border-bottom: 3px solid rgb(255,112,121);
     border-bottom: 3px solid var(--highlight-color);
 }
 .post-item.item-nav{
@@ -1324,7 +1324,7 @@ aside > div a:hover{
     margin-right: auto;
 }
 .loadmore:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
 }
 .idot {
@@ -1346,13 +1346,13 @@ aside > div a:hover{
 .idot:nth-child(2) {
 	-webkit-animation-delay:.2s;
     animation-delay:.2s;
-    background: rgba(255,112,121);
+    background: rgb(255,112,121);
 	background:var(--highlight-color)
 }
 .idot:nth-child(3) {
 	-webkit-animation-delay:.3s;
     animation-delay:.3s;
-    background: rgba(255,112,121);
+    background: rgb(255,112,121);
 	background:var(--highlight-color)
 }
 
@@ -1472,7 +1472,7 @@ article a.fancybox{
     border:none;
 }
 article a:hover{
-    color: rgba(255,112,121);
+    color: rgb(255,112,121);
     color: var(--highlight-color);
     border-bottom: 1px solid rgba(255,112,121,0.6);
     border-bottom: 1px solid var(--border-color);
@@ -1845,10 +1845,10 @@ article table tr>td:first-child,article table tr>th:first-child{
     z-index: 2;
 }
 #comment-submit-button:hover{
-    background: rgba(255,112,121);
+    background: rgb(255,112,121);
     background: var(--highlight-color);
     color: white;
-    border: 2px solid rgba(255,112,121);
+    border: 2px solid rgb(255,112,121);
     border:2px solid var(--highlight-color);
 }
 
@@ -2027,7 +2027,7 @@ article table tr>td:first-child,article table tr>th:first-child{
     border-radius: 4px;
 }
 .page-navigator li.current{
-    background-color: rgba(255,112,121);
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
 }
 .page-navigator li >*{
@@ -2035,7 +2035,7 @@ article table tr>td:first-child,article table tr>th:first-child{
     color: white;
 }
 .page-navigator li:hover{
-    background-color: rgba(255,112,121);
+    background-color: rgb(255,112,121);
     background-color: var(--highlight-color);
 }
 .page-navigator .next,.page-navigator .prev{
