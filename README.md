@@ -12,13 +12,14 @@
 
 ## 日志
 
-2018-11-26 Ver 0.91（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+2018-12-03 Ver 0.92（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
 
-* PJAX 支持（评论暂不支持），可选择开启
-* 侧边栏目录使用 scrollTo.js 代替锚点
-* 添加了一些加载动画
-* 修改归档页面文章在本窗口打开
-* 平滑滚动（感谢 [Ryongyon](https://www.ryongyon.com/)）
+* 重构部分代码
+* 调整部分页面样式
+* 重写归档页面
+* 后台增加 PJAX 动画选项
+* 后台可设置首页分页样式
+* 增加评论算术验证，解决开启 PJAX 后的垃圾评论问题（感谢[枂下](https://black1ce.com/)）
 * bug fix
 
 ## 使用

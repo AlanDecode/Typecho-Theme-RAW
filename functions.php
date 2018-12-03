@@ -21,7 +21,7 @@ function themeInit($comment){
     Helper::options()->commentsMaxNestingLevels = 999;
 }
 
-$GLOBALS['RAW_VER']=0.91;
+$GLOBALS['RAW_VER']=0.92;
 
 Typecho_Plugin::factory('admin/write-post.php')->bottom = array('Utils', 'addButton');
 Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addButton');
