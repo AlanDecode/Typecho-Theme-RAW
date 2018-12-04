@@ -69,12 +69,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         </div>
                     </div>
                     <div class="post-item-body <?php if($this->fields->banner) echo 'pull-left'; if($this->fields->indextype=='1') echo ' featured';?> flex">
-                        <article>
+                        <article class="yue">
                         <?php if($this->fields->type=='1'): ?>
                             <?php echo Utils::parseAll($this->content); ?>
                         <?php else:?>
                             <h1><a onclick="$(this).html($(this).html()+`(载入中...)`);" href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
-                            <p><?php $this->excerpt(80); ?></p>
+                            <p style="margin-top:0"><?php $this->excerpt(80); ?></p>
                         <?php endif; ?>
                         </article>
                         <?php if($this->fields->banner && $this->fields->banner!='' && !($this->fields->type=='1')) :?>

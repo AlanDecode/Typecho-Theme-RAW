@@ -45,7 +45,7 @@ margin: 0;
 
 h1 {
 font-size: 2em;
-margin: 0.67em 0;
+margin: 0.6rem 0;
 }
 
 /* Grouping content
@@ -480,23 +480,15 @@ html{
   
   /* fonts */
   @font-face{
-      font-family:"Makinas";
-      src:url("./fonts/Makinas-Scrap-5.ttf");
-  }
-  @font-face{
       font-family:"Consolas";
       src:url("./fonts/consolas.ttf");
   }
-  @font-face{
-	font-family:"Lobster";
-	src:url("./fonts/Lobster.ttf");
-}
 
 
 
 html{
     font-size: 16.7px;
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Droid Sans Fallback,Microsoft YaHei,sans-serif;
+    font-family: "Ubuntu","ubuntu",-apple-system, BlinkMacSystemFont,"Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
 }
 html.win{
     font-size: 16px;
@@ -554,6 +546,7 @@ header > nav{
     margin-right: 20px;
     letter-spacing: 0.1em;
     letter-spacing: 0.05rem;
+    font-weight: bold;
 }
 @media screen and (max-width:767px){
     #brand{
@@ -1425,7 +1418,6 @@ article video{
 }
 article h1{
     font-size: 1.7em;
-    font-weight: 600;
     margin-top: 0;   
 }
 article h2{
@@ -1578,9 +1570,7 @@ article blockquote{
     margin: 1rem 0;
 }
 article blockquote,article blockquote p{
-    font-size: 0.927rem;
     word-wrap: break-word;
-    line-height: 1.8;
     color: #333;
     color: var(--text-color);
 }
@@ -1648,6 +1638,13 @@ article table td{
 }
 article table tr>td:first-child,article table tr>th:first-child{
     border-left: none;
+}
+article.yue {
+    font-size: 18px;
+    line-height: 1.62;
+}
+article.yue.win {
+    font-size: 16px;
 }
 
 .footnotes hr{
