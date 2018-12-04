@@ -34,7 +34,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                     <?php if($tags->have()): ?>
                         <ul class="tag-list">
                         <?php while ($tags->next()): ?>
-                            <li><a href="<?php $tags->permalink(); ?>" rel="tag" class="size-<?php $tags->split(5, 10, 20, 30); ?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a></li>
+                            <li style="text-indent:unset"><a href="<?php $tags->permalink(); ?>" rel="tag" class="size-<?php $tags->split(5, 10, 20, 30); ?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a></li>
                         <?php endwhile; ?>
                         <?php else: ?>
                             <li><?php _e('还没有标签哦～'); ?></li>
