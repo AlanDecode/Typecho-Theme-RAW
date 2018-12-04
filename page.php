@@ -25,7 +25,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php if($this->fields->type=='1' || !($this->fields->banner && $this->fields->banner!='')): ?>
                     <div class="post-item-header flex align-items-center" style="padding-bottom:0">
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
-                        <div style="font-size: 0.85rem; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
+                        <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
                             <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '说说'; else echo '日志'; ?></span>
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
                         </div>
@@ -43,7 +43,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         </h1>
                     <?php endif; ?>
                     <?php if(!$this->fields->type=='1' && ($this->fields->banner && $this->fields->banner!='')): ?>
-                        <div class="post-item-header flex align-items-center" style="padding: 0;font-size:0.85em;overflow:hidden">
+                        <div class="post-item-header flex align-items-center" style="padding: 0;font-size:14px;overflow:hidden">
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><b><i class="fa fa-pencil"></i> <?php echo $this->author->screenName; ?></b> • <?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
                         </div>
                     <?php endif; ?>
