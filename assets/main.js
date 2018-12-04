@@ -49,6 +49,18 @@ function loadMorePosts(){
                 }
                 if(typeof(RAW)=="object"){
                     RAW.init();
+                    // 已点赞按钮高亮
+                    var cookies = $.macaroon('_syan_like') || "";
+                    $.each($(".post-like"),function(i,item){
+                        var id = $(item).attr('data-pid');
+                        if (-1 !== cookies.indexOf("," + id + ","))  $(item).addClass("done");
+                    })
+                    // 重载代码高亮
+                    $("pre code").each(function(i, block) {hljs.highlightBlock(block);});   
+                    // 重载 MathJax
+                    if (typeof MathJax !== 'undefined'){
+                        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+                    } 
                 }
             },
             error:function(){
