@@ -1012,7 +1012,7 @@ aside > div a:hover{
     display: var(--post-item-display);
 }
 .post-item-header,.post-item-body,.post-item-footer{
-    padding: 1em;
+    padding: 1rem;
 }
 .post-item-body{
     padding-top: 0;
@@ -1410,15 +1410,12 @@ article{
 article > *{
     max-width: 100%;
 }
-article h1,article h2,article h3,article h4,article h5,article h6,{
+article h1,article h2,article h3,article h4,article h5,article h6{
     color: #111;
     color: var(--darker-color);
     text-align: left;
-}
-article h1.post-title{
-    margin-top:0.7rem;
-    margin-bottom:0.7rem;
-    font-size:2.2rem
+    line-height: 1;
+    margin: 1.7rem 0;
 }
 @media screen and (max-width:768px){
     article h1.post-title{
@@ -1431,9 +1428,20 @@ article video{
 article h1{
     font-size: 1.7em;
     margin-top: 0;   
+    line-height: 1.35;
+}
+article h1.post-title{
+    margin-top:0.7rem;
+    margin-bottom:0.7rem;
+    font-size:2rem;
 }
 article h2{
     font-size: 1.5em;
+    margin-left: -1rem;
+    padding-left: calc(1rem - 5px);
+    border-left: 5px solid rgb(255,112,121);
+    border-left: 5px solid var(--highlight-color);
+    width: calc(100% + 2rem);
 }
 article h2.archive-title{
     text-align: center;
@@ -1441,8 +1449,11 @@ article h2.archive-title{
     padding: 0.3rem;
     display: block;
 }
-article h3,article h4{
+article h3{
     font-size: 1.3em;
+}
+article h4{
+    font-size: 1.2em;
 }
 article h5,article h6{
     font-size: 1.1em;
@@ -1458,14 +1469,15 @@ article pre code,.hljs{
     -webkit-overflow-scrolling: touch;
 }
 article img{
-    max-width: 100%;
+    max-width: calc(100% + 2rem);
+    width: calc(100% + 2rem);
     margin: 0 auto;
+    margin-left: -1rem;
     display: block;
-    max-height: 150vh;
     box-shadow: 0 0 4px rgba(0,0,0,.2);
     -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.2);
 }
-article > img{
+article > img,img.biaoqing{
     width: unset;
 }
 article a{
@@ -1487,16 +1499,17 @@ article .photos{
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    padding-top: 1.8rem!important;
+    padding-top: 10px!important;
 }
 article .photos::before {
-    content: " • 图集 • " attr(data-des);
+    content: attr(data-des);
     position: absolute;
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 1;
     font-weight: 600;
     color: rgba(255,112,121,0.6);
     left: 2.5px;
-    top: 0;
+    top: -8px;
 }
 article .photos a{
     display: block;
@@ -1576,10 +1589,18 @@ article sup a{
 article blockquote{
     position: relative;
     background-color: rgba(102,128,153,0.05);
-    border-left: 3px solid rgba(0,0,0,.1);
-    margin: 0;
-    padding:0.5em 1em;
+    border-left: 3px solid rgba(255,112,121,0.6);
+    border-left: 3px solid var(--highlight-fade-color);
+    padding:0.5rem 1rem;
     margin: 1rem 0;
+}
+article > blockquote{
+    margin-left: -1rem;
+    max-width: calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    padding-left: 1rem;
+    border-left: 3px solid rgb(255,112,121);
+    border-left: 3px solid var(--highlight-color);
 }
 article blockquote,article blockquote p{
     word-wrap: break-word;
@@ -1588,6 +1609,9 @@ article blockquote,article blockquote p{
 }
 article blockquote p:first-child{
     margin-top: 0;
+}
+article blockquote p:last-child{
+    margin-bottom: 0;
 }
 article hr{
     display: block;
@@ -1604,11 +1628,12 @@ article hr::after{
 article > ol,article > ul{
     list-style-position: inside;
     padding: 0 1em;
-    font-size: 0.97rem;
 }
 article > ul > li,article > ol > li{
     line-height: 1.8;
     margin: 0.5rem 0;
+    padding-left: 1rem;
+    text-indent: -1.25rem;
 }
 article .footnotes ol{
     margin-top: 0;
