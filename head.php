@@ -38,7 +38,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.4a.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.4b.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark14.css');?>">
 <?php if($this->options->columnorder=='1'):?>
 <style>
@@ -101,5 +101,4 @@ function enterSearch(){
 }
 </script>
 <?php echo $this->options->customhead; ?>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
 </head> <!--end head-->
