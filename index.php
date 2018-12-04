@@ -73,7 +73,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         <?php if($this->fields->type=='1'): ?>
                             <?php echo Utils::parseAll($this->content); ?>
                         <?php else:?>
-                            <h1 style="margin-bottom:0.7rem"><a onclick="$(this).html($(this).html()+`(载入中...)`);" href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
+                            <h1 style="margin-bottom:0.5rem"><a onclick="$(this).html($(this).html()+`(载入中...)`);" href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
                             <p style="margin-top:0"><?php $this->excerpt(80); ?></p>
                         <?php endif; ?>
                         </article>
