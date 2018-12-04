@@ -38,7 +38,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.49.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.4a.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark14.css');?>">
 <?php if($this->options->columnorder=='1'):?>
 <style>
@@ -68,7 +68,6 @@ html {
 <script>
 if(/windows/i.test(navigator.userAgent)){
   document.getElementsByTagName('html')[0].className += ' win';
-  document.getElementsByTagName('article')[0].className += ' win';
 }
 </script>
 <script src="<?php $this->options->themeUrl('/assets/jquery/jquery.min.js'); ?>"></script>

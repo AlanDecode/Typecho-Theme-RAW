@@ -487,7 +487,7 @@ html{
 
 
 html{
-    font-size: 16.7px;
+    font-size: 17px;
     font-family: "Ubuntu","ubuntu",-apple-system, BlinkMacSystemFont,"Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
 }
 html.win{
@@ -1638,13 +1638,6 @@ article table td{
 }
 article table tr>td:first-child,article table tr>th:first-child{
     border-left: none;
-}
-article.yue {
-    font-size: 18px;
-    line-height: 1.62;
-}
-article.yue.win {
-    font-size: 16px;
 }
 
 .footnotes hr{
