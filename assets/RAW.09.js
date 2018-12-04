@@ -25,6 +25,7 @@ RAW={
         parsedPhotos();
         parseURL();
         RAW.parseURL();
+        nextUrl="";
         $(`#hidden-login-form button[type="submit"]`).html("刷新后才能登陆~");
         $.each($(".nav-link"),function(i,item){
             if($(item).attr("href")==window.location.pathname) $(item).addClass("current");
