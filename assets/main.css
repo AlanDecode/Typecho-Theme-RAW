@@ -1399,6 +1399,9 @@ article{
     text-align: justify;
     word-break: break-word;
 }
+.shuoshuo article{
+    text-align: unset;
+}
 .post-item.full article{
     padding: 0 calc(45px - 1rem);
 }
@@ -1521,6 +1524,9 @@ article .photos::before {
     left: 2.5px;
     top: -8px;
 }
+article .photos br{
+    display: none!important;
+}
 article .photos a{
     display: block;
     -webkit-box-flex: 1;
@@ -1530,15 +1536,11 @@ article .photos a{
     text-decoration: none;
     margin: 0 5px;
 }
-article > ul li p,
-article > ol li p{
-    display: inline;
-}
 article .photos a:first-of-type{
-    margin-left: 0!important;
+    margin-left: 0;
 }
 article .photos a:last-of-type{
-    margin-right: 0!important;
+    margin-right: 0;
 }
 article .photos a:hover{
     border:none;
@@ -1551,7 +1553,15 @@ article .photos img{
        object-fit: cover;
     margin: 0;
 }
-
+@media screen and (max-width: 767px){
+    article .photos{
+        flex-direction: column;
+    }
+    article .photos a{
+        margin: 5px 0;
+        margin-left: -1rem;
+    }
+}
 
 article code,.comment-content code{
     background-color: rgba(27,31,35,.1);
@@ -1634,6 +1644,10 @@ article hr::after{
     display: block;
     content: "* * *";
     text-align: center;
+}
+article > ul li p,
+article > ol li p{
+    display: inline;
 }
 article > ol,article > ul{
     list-style-position: inside;
