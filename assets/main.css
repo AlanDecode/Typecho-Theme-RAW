@@ -1396,13 +1396,11 @@ article{
     line-height: 1.7;
     width: 100%;
     max-width: 100%;
-    text-align: justify;
+    text-align: unset;
     word-break: break-word;
 }
-.shuoshuo article{
-    text-align: unset;
-}
 .post-item.full article{
+    text-align: justify;
     padding: 0 calc(45px - 1rem);
 }
 @media screen and (max-width:768px){
