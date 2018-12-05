@@ -1505,7 +1505,9 @@ article a[data-fancybox="gallery"]:hover{
     border: none;
 }
 article .photos{
-    width: 100%;
+    width: calc(100% + 90px);
+    max-width: calc(100% + 90px);
+    margin-left: -45px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1521,6 +1523,17 @@ article .photos::before {
     color: rgba(255,112,121,0.6);
     left: 2.5px;
     top: -8px;
+    padding-left: 45px;
+}
+@media screen and (max-width:768px){
+    article .photos{
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    article .photos::before{
+        padding-left: 0;
+    }
 }
 article .photos br{
     display: none!important;
