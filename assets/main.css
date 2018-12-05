@@ -1558,8 +1558,8 @@ article .photos img{
         flex-direction: column;
     }
     article .photos a{
-        margin: 5px 0;
-        margin-left: -1rem;
+        margin: 5px 0!important;
+        margin-left: -1rem!important;
     }
 }
 
