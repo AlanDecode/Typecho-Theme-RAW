@@ -823,7 +823,7 @@ aside{
     color: rgb(255,112,121);
     color: var(--highlight-color);
 }
-aside> div{
+aside> div:not(#TOC){
     padding: 0.5em 0;
     padding-top: 0;
     background: #fff;
@@ -890,17 +890,20 @@ aside > div a:hover{
     color: rgb(255,112,121);
     color: var(--highlight-color);
 }
+
 #TOC{
-    width: 100%;
-    max-width: 100%;
-    background: #fff;
-    background: var(--bg-color);
+    width:var(--nav-left-width);
     padding-bottom: 20px;
+}
+#TOC.fancybox-content{
+    padding: 16px;
+    width: 250px;
+    max-width:250px;
+    background: var(--bg-color)!important;
 }
 #TOC>ul{
     list-style: none;
     padding-left: 1em;
-    max-height: calc(100vh - 180px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     line-height: 1.5;

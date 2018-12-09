@@ -26,17 +26,7 @@
         }
     });
 
-    // 缓存 cdn
-    self.toolbox.router.get('/(.*)', self.toolbox. cacheFirst, {
-        origin: /cdn\.imalan\.cn/,
-            cache: {
-              name: dynamicVendorCacheName,
-              maxEntries: maxEntries
-            }
-    });
-
 	// 缓存 Gravatar 头像
-	
     self.toolbox.router.get('/avatar/(.*)', self.toolbox.cacheFirst, {
         origin: /(secure\.gravatar\.com)/,
         cache: {
