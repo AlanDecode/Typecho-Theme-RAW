@@ -43,14 +43,13 @@ html.night{
 .night img,.night .board-thumb{
     filter: brightness(0.65);
 }
-.night header,.night .post-item,.night aside>div,.night #nav-left>div,.night #nav-left>div ul,.night #comments,
+.night header,.night .post-item,.night aside>div,.night #nav-left>div:not(#TOC),.night #nav-left>div:not(#TOC) ul,.night #comments,
 .night .OwO .OwO-logo,.night .comment-info-input input,.night  #textarea,.night #comment-submit-button,.night .fancybox-content,
 .night .OwO .OwO-body,.night .OwO .OwO-body .OwO-bar,.night .OwO .OwO-body .OwO-items-image .OwO-item,
 .night .post-item.shuoshuo .post-item-body, .night .post-item.shuoshuo .post-item-footer,
 .night #search button:not(.fancybox-button),
 .night .nav-left-panel > ul,
 .night .cancel-comment-reply,
-.night #TOC,
 .night .page-navigator li,
 .night .archive-list li,
 .night .tag-list li
