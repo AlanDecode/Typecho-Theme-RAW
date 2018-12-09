@@ -126,11 +126,11 @@ function registerFixedTOC(){
             return;
         }
         var top=$("#TOC").offset().top-$(document).scrollTop();
-        if(top<=61 && $("#TOC").offset().top>=toc_offset){
-            fixItem("#TOC",true,60);
+        if(top<=21 && $("#TOC").offset().top>=toc_offset){
+            fixItem("#TOC",true,20);
         }
         else{
-            fixItem("#TOC",false,60);
+            fixItem("#TOC",false,20);
             toc_offset=$("#TOC").offset().top;
         } 
     })

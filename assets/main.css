@@ -867,8 +867,6 @@ aside> div{
 aside > div{
     margin-bottom: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);   
-    -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
 }
 aside > div >span{
     display: block;
