@@ -705,8 +705,6 @@ aside{
 }
 #nav-left > div,aside > div{
     border-radius: 6px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.2);    
-    -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.2);
     overflow: hidden;
 }
 #nav-left>div>span{
@@ -740,8 +738,6 @@ aside{
     overflow: hidden;
     margin-bottom: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
-    -webkit-box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
 }
 .avatar-circle{
     background-color: #2e9fff;
@@ -993,8 +989,6 @@ aside > div a:hover{
     background: #fff;
     background: var(--bg-color);
     border-radius: 3px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.2);
-    -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.2);
     -webkit-animation: fade-in 0.5s;
             animation: fade-in 0.5s; 
     -webkit-animation-fill-mode: forwards; 
@@ -1779,8 +1773,6 @@ article table tr>td:first-child,article table tr>th:first-child{
     background: #fff;
     background: var(--bg-color);
     border-radius: 6px;
-    box-shadow: 0 0 4px rgba(5, 5, 5, 0.3);
-    -webkit-box-shadow:0 0 4px rgba(5, 5, 5, 0.3);
 }
 @media screen and (max-width:768px){
     #comments{

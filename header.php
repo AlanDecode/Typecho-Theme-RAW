@@ -46,7 +46,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php if($this->options->site_bg && $this->options->site_bg!=''):?>
 <div class="bg" style="background-image:url(<?php echo $this->options->site_bg; ?>)"></div>
 <?php else:?>
-<div class="bg" style="background:rgba(253,246,243,0.8)"></div>
+<div class="bg" style="background:#f0f0f0"></div>
 <?php endif;?>
 <div class="bg bg-mask"></div>
 <?php if($this->options->pjax=='1'): ?>
