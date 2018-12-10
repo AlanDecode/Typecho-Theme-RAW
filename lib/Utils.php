@@ -169,14 +169,9 @@ class Utils {
      * 算术验证码检查
      */
     public static function filterComments($comment, $post){
-        if(!array_key_exists('dalabengba',$_POST) || !array_key_exists('benborba',$_POST) || !array_key_exists('baborben',$_POST)){
-            throw new Typecho_Widget_Exception(_t('你该不是个机器人吧！？','评论失败'));
-        }
-
         if($_POST['dalabengba']!=$_POST['benborba']+$_POST['baborben']){
             throw new Typecho_Widget_Exception(_t('好像验证码算错了哦…… <a href="javascript:history.back(-1)">再来一次</a>吧！','评论失败'));
         }
-
         return $comment;
     }
 
