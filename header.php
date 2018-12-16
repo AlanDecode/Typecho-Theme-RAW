@@ -45,6 +45,27 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 </header>
 <?php if($this->options->site_bg && $this->options->site_bg!=''):?>
 <div class="bg" style="background-image:url(<?php echo $this->options->site_bg; ?>)"></div>
+<style>
+.comment-content code,article pre code,.hljs{
+    color: #abb2bf;
+    background: #282c34;
+}
+html:not(.night){
+	--bg-color:rgba(255,255,255,0.9)
+}
+.post-item.shuoshuo .post-item-header>div *,#footer-info *{
+	color:#fafafa
+}
+html:not(.night) .nav-left-panel > ul{
+	background:transparent
+}
+html:not(.night) #TOC{
+	background: var(--bg-color)
+}
+.post-item,#comments,#nav-left>div{
+    box-shadow:none
+}
+</style>
 <?php else:?>
 <div class="bg" style="background:#f0f0f0"></div>
 <?php endif;?>
