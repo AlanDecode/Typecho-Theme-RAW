@@ -49,7 +49,7 @@ var owo = new OwO({
 <script src="<?php $this->options->themeUrl('/assets/pjax/jquery.pjax.js'); ?>"></script>
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/pjax/np.css');?>">
 <script src="<?php $this->options->themeUrl('/assets/pjax/np.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('/assets/RAW.09.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('/assets/RAW.0a.js'); ?>"></script>
 <script>
 $(document).on('pjax:complete', function() {
   <?php echo $this->options->pjaxreload; ?>
