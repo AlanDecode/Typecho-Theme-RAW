@@ -9,7 +9,7 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
-<script>
+<!--script>
     var serviceWorkerUri = '/SWCacheRule.js';
 
     if ('serviceWorker' in navigator) {  
@@ -25,7 +25,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     } else {
         console.log('Service workers are not supported in the current browser.');
     }
-</script>
+</script-->
 <?php $this->footer(); ?>
 <script src="<?php $this->options->themeUrl('/assets/owo/owo_custom.js'); ?>"></script>
 <?php if($this->allow('comment')&&($this->is('post')||$this->is('page')) ): ?>
