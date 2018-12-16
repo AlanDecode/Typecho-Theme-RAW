@@ -46,10 +46,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php if($this->options->site_bg && $this->options->site_bg!=''):?>
 <div class="bg" style="background-image:url(<?php echo $this->options->site_bg; ?>)"></div>
 <style>
-.comment-content code,article pre code,.hljs{
-    color: #abb2bf;
-    background: #282c34;
-}
 html:not(.night){
 	--bg-color:rgba(255,255,255,0.9)
 }
