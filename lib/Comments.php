@@ -140,9 +140,13 @@ class RAW_Widget_Comments_Archive extends Widget_Abstract_Comments
         
     private function getParent(){
         $db = Typecho_Db::get();
-        $parentID = $db->fetchRow($db->select()->from('table.comments')->where('coid = ?', $this->coid))['parent'];
+        $parentID = $db->fetchRow($db->select()->from('table.comments')->where('coid = ?', $this->coid));
+        $parentID=$parentID['parent'];
         if($parentID=='0') return '';
-        else return '<b style="font-size:0.85rem;margin-right: 0.3em">@'.$db->fetchRow($db->select()->from('table.comments')->where('coid = ?', $parentID))['author'].'</b> ';
+        else {
+            $author=$db->fetchRow($db->select()->from('table.comments')->where('coid = ?', $parentID));
+            return '<b style="font-size:0.85rem;margin-right: 0.3em">@'.$author['author'].'</b> ';
+        }
     }  
     
     /**

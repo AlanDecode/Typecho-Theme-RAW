@@ -29,7 +29,9 @@ class Utils {
      */
     public static function getAdminScreenName(){
         $db = Typecho_Db::get();
-        $name = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1))['screenName'];
+        //$name = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1))['screenName'];
+        $name = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1));
+        $name = $name['screenName'];
         return $name;
     }
 
@@ -38,7 +40,8 @@ class Utils {
      */
     public static function getAdminMail(){
         $db = Typecho_Db::get();
-        $mail = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1))['mail'];
+        $mail = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1));
+        $mail = $mail['mail'];
         return $mail;
     }
 
