@@ -60,13 +60,11 @@ function themeConfig($form) {
     // 外观设置
     $colormode=new Typecho_Widget_Helper_Form_Element_Select('colormode',array('0'=>'自动切换','1'=>'夜间模式','2'=>'日间模式'),'0','博客颜色模式','设置主题默认模式。不论如何设置，都可以通过右上角按钮切换。');
     $form->addInput($colormode);
-    $columnorder=new Typecho_Widget_Helper_Form_Element_Select('columnorder',array('0'=>'正序','1'=>'逆序'),'0','设置三栏的显示顺序','设置导航栏，文章栏，热门统计栏的显示顺序。');
-    $form->addInput($columnorder);
-    $showaside=new Typecho_Widget_Helper_Form_Element_Select('showaside',array('0'=>'显示','1'=>'不显示','2'=>'登录显示'),'0','是否显示右侧边栏','设置是否显示右侧边栏。（仅隐藏最近评论与热门日志模块，文章目录仍然会显示）');
-    $form->addInput($showaside);
+    $bloglayout= new Typecho_Widget_Helper_Form_Element_Select('bloglayout',array('0'=>'三栏：博主栏 - 文章栏 - 统计栏','1'=>'双栏：文章栏 - 博主栏'),'0','博客版式','');
+    $form->addInput($bloglayout);
 
     // 常用功能设置
-    $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏则使用文章作者头像，当其不可用时引用本头像。'));
+    $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏优先使用本头像。'));
     $form->addInput($defaultavatar);
     $reward_img=new Typecho_Widget_Helper_Form_Element_Text('reward_img', NULL, NULL, _t('打赏二维码图片地址'), _t('填写图片链接，若不需要打赏则留空。只支持一张图，若需要多种支付方式请自行合成二维码图片。'));
     $form->addInput($reward_img);

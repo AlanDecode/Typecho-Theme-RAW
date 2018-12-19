@@ -30,7 +30,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
         <?php endif; ?>
     <?php endif; ?>
-    <?php if(Utils::tocPosition($this,$this->user->hasLogin())=='aside'):?>
+    <?php if($this->options->bloglayout!='1' && $this->fields->showTOC=='1'):?>
     <div id="TOC" style="animation-delay:0.4s">
         <style>a[data-src="#TOC"]{display:flex}</style>
         <?php echo $GLOBALS['TOC_O']; ?>

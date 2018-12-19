@@ -77,7 +77,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>';
         }
     ?>
-    <?php if(Utils::tocPosition($this,$this->user->hasLogin())=='nav-left'):?>
+    <?php if($this->options->bloglayout=='1' && $this->fields->showTOC=='1'):?>
     <div id="TOC" style="animation-delay:0.6s">
         <style>a[data-src="#TOC"]{display:flex}</style>
         <?php echo $GLOBALS['TOC_O']; ?>

@@ -46,21 +46,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <?php if($this->options->site_bg && $this->options->site_bg!=''):?>
 <div class="bg" style="background-image:url(<?php echo $this->options->site_bg; ?>)"></div>
 <style>
-html:not(.night){
-	--bg-color:rgba(255,255,255,0.9)
-}
-.post-item.shuoshuo .post-item-header>div *,#footer-info *{
-	color:#fafafa
-}
-html:not(.night) .nav-left-panel > ul{
-	background:transparent
-}
-html:not(.night) #TOC{
-	background: var(--bg-color)
-}
-.post-item,#comments,#nav-left>div{
-    box-shadow:none
-}
+html:not(.night){--bg-color:rgba(255,255,255,0.9)}
+.post-item.shuoshuo .post-item-header>div *,#footer-info *{color:#fafafa}
+html:not(.night) .nav-left-panel > ul{background:transparent}
+html:not(.night) #TOC{background: var(--bg-color)}
+.post-item,#comments,#nav-left>div{box-shadow:none}
+.comment-info-input input, #textarea{background:none}
+.comment-content{background: rgba(0,0,0,0.08);}
+.comment-content::before{left:-14px;border-color: transparent rgba(0,0,0,0.08) transparent transparent;}
+.comment-by-author.comment-item>.comment-body>.comment-content::before{right:-14px;border-color: transparent transparent transparent rgba(0,0,0,0.08);}
 </style>
 <?php else:?>
 <div class="bg" style="background:#f0f0f0"></div>

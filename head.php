@@ -38,30 +38,14 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.54.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark15.css');?>">
-<?php if($this->options->columnorder=='1'):?>
+<?php if($this->options->bloglayout=='1'):?>
 <style>
-aside{
-    order:-1;
-}
-#nav-left{
-    order:1;
-}
-</style>
-<?php endif;?>
-<?php if(!Utils::haveAside($this,$this->user->hasLogin())):?>
-<style>
-html {
-    --main-width: 1012px;
-}
-.center{
-    <?php if($this->options->columnorder=='1'):?>
-    margin-left:0;
-    <?php else: ?>
-    margin-right:0;
-    <?php endif;?>
-}
+html {--main-width: 1012px;}
+.center{margin-left:0;}
+#nav-left{order:1;}
+#brand{min-width:unset}
 </style>
 <?php endif;?>
 <!--JS-->
@@ -77,12 +61,13 @@ if(/windows/i.test(navigator.userAgent)){
 <?php endif; ?>
 <script>
 function startSearch(usePjax=false) {
+    var searchBase=<?php Helper::options()->index('/search/'); ?>;
     var c = $("#search input").val();
     if(!c||c==""){
         $("#search-box input").attr("placeholder","你还没有输入任何信息");
         return;
     }
-    var t="/search/"+c;
+    var t=searchBase+c;
     if(usePjax){
         $.pjax({url: t, 
             container: '#main',
