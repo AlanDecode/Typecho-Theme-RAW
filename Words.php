@@ -53,7 +53,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
                         <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
                             <span><b><?php echo $this->author->screenName; ?></b> 发表新的说说</span>
-                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php echo '<i class="fa fa-calendar"></i>&nbsp;'.Utils::formatDate($this->created,'NATURAL'); ?></span>
+                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><i class="fa fa-calendar"></i>&nbsp;现在</span>
                         </div>
                     </div>
                     <div class="post-item-body flex s" style="border-radius:8px;padding-bottom:0;margin-left: 56px;min-width: unset;">
@@ -94,7 +94,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
                         <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
                             <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇说说</span>
-                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php echo '<i class="fa fa-calendar"></i>&nbsp;'.Utils::formatDate($this->created,'NATURAL'); ?></span>
+                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php echo '<i class="fa fa-calendar"></i>&nbsp;'.Utils::formatDate($comments->created,'Y-m-d H:i'); ?></span>
                         </div>
                     </div>
                     <div class="post-item-body flex s" style="border-radius:8px;padding-bottom:0;margin-left: 56px;min-width: unset;">
