@@ -28,7 +28,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <?php else:?>
             <div class="post-item item-nav">
                 <div class="post-item-body flex justify-content-justify align-items-center" style="padding:0">
-                <b style="color:var(--text-color);display:block;padding:1em"><a href="/">首页</a></b>
+                <b style="color:var(--text-color);display:block;padding:1em">说说</b>
                 <div class="index-filter flex justify-content-justify align-items-center">
                     <div onclick="filterItems(this,`<?php Helper::options()->index("/"); ?>`);">日志</div>
                     <div class="current" onclick="filterItems(this,`<?php 

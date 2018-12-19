@@ -32,7 +32,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <div class="post-item-body flex justify-content-justify align-items-center" style="padding:0">
                 <b style="color:var(--text-color);display:block;padding:1em">
                     <?php if ($this->is('index')): ?><!-- 页面为首页时 -->
-                        <a href="/">首页</a>
+                        最近文章
+                        <?php if($this->options->indexloadmore=='1'): ?>
+                        • 第&nbsp;<?php echo $this->_currentPage; ?>&nbsp;页
+                        <?php endif;?>
                     <?php else: ?><!-- 页面为其他页时 -->
                     <?php $this->archiveTitle(array(
                         'category'  =>  _t('分类 "%s" 下的文章'),
