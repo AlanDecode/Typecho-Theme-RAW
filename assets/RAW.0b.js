@@ -20,7 +20,6 @@ RAW={
     afterPjax:function(){
         NProgress.done();
         $("#loading-wrap").fadeOut(300);
-        filterItems($(".index-filter>div")[0],0);
         checkNightMode();
         parsedPhotos();
         parseURL();

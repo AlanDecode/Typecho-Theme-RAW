@@ -23,7 +23,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php $this->need('nav-left.php'); ?>
     <div class="center flex-1">
         <!--post-item start-->
-        <div id="post-list">
         <?php if(!$this->have()):?>
             <div class="post-item">
             <div class="post-item-body" style="padding-top:0.001em"><h1 style="text-align:center;margin-top:40px;color:var(--text-color)">糟糕，是 404 的感觉</h1></div>
@@ -44,27 +43,30 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <?php endif; ?>
                 </b>
                 <div class="index-filter flex justify-content-justify align-items-center">
-                    <div class="current" onclick="filterItems(this,0);">全部</div>
-                    <div onclick="filterItems(this,1);">日志</div>
-                    <div onclick="filterItems(this,2);">说说</div>
+                    <div class="current" onclick="filterItems(this,`<?php Helper::options()->index("/"); ?>`);">日志</div>
+                    <div onclick="filterItems(this,`<?php 
+                    // find the first page that uses Words template
+                    $db = Typecho_Db::get();
+                    $row = $db->fetchRow($db->select()->from('table.contents')->where('template = ?', 'Words.php'));
+                    if(count($row)){
+                        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->push($row);
+                        echo $val['permalink'];
+                    }else{
+                        Helper::options()->index("/");
+                    }
+                    ?>`);">说说</div>
                 </div>
                 </div>
             </div>
-            <?php $index=0; $index_s=0; ?>
+            <div id="post-list">
+            <?php $index=0;  ?>
             <?php while($this->next()): ?>
-                <?php 
-                    if($this->fields->type=='1'){
-                        $index_s++;
-                    }
-                    else{
-                        $index++;
-                    }
-                ?>
-                <div style="animation-delay:<?php echo $this->fields->type=='1'? 0.2*$index_s : 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1') echo 'shuoshuo';?>">
+                <?php $index++;?>
+                <div style="animation-delay:<?php echo 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1') echo 'shuoshuo';?>">
                     <div class="post-item-header flex align-items-center">
                         <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
                         <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
-                            <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '说说'; else echo '日志'; ?></span>
+                            <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '短文'; else echo '日志'; ?></span>
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
                         </div>
                     </div>
@@ -73,7 +75,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                         <?php if($this->fields->type=='1'): ?>
                             <?php echo Utils::parseAll($this->content); ?>
                         <?php else:?>
-                            <h1 style="margin-bottom:0.5rem"><a onclick="$(this).html($(this).html()+`(载入中...)`);" href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
+                            <h1 style="margin-bottom:0.5rem"><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
                             <p style="margin-top:0"><?php $this->excerpt(120); ?></p>
                         <?php endif; ?>
                         </article>
@@ -96,8 +98,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     </div>
                 </div>
             <?php endwhile; ?>
+            </div>
         <?php endif; ?>
-        </div>
+        
         <!--post-item end-->
         <?php if($this->have()):?>
             <?php if($this->options->indexloadmore!='1'): ?>

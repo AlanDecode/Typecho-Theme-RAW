@@ -34,7 +34,7 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $layout->addItem($indextype);
     $showTOC=new Typecho_Widget_Helper_Form_Element_Select('showTOC',array('0'=>'不显示目录','1'=>'显示目录'),'0','文章目录','是否显示文章目录');
     $layout->addItem($showTOC);
-    $type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说'),'0','文章类型');
+    $type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'短文'),'0','文章类型');
     $layout->addItem($type);
 }
 

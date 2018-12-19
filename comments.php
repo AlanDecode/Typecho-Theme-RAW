@@ -54,9 +54,6 @@
                     </span>
                     <button id="comment-submit-button" type="submit" class="submit"><?php _e('提交评论'); ?></button>
                 </p>
-                <?php if(Utils::isPluginAvailable('Captcha')):?>
-                <p><?php Captcha_Plugin::output(); ?></p>
-                <?php endif;?>
             </form>
         </div>
         <?php else: ?>

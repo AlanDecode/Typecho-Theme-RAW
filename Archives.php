@@ -88,7 +88,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <?php $this->need('footer-info.php'); ?>
     </div>
     <?php $this->need('nav-left.php'); ?>
-    <?php if(Utils::haveAside($this,$this->user->hasLogin())):?>
+    <?php if($this->options->bloglayout!='1'):?>
         <?php $this->need('aside.php'); ?>
     <?php endif;?>
 </div>

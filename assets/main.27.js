@@ -177,16 +177,6 @@ $(document).ready(function(){
     hljs.initHighlightingOnLoad();
 })
 
-// function toggleShrink(item){
-//     if($(item).parent().parent().prev().hasClass("shrink")){
-//         $(item).html(`<i class="fa fa-chevron-circle-up"></i> 收起`);
-//         $(item).parent().parent().prev().removeClass("shrink");
-//     }else{
-//         $(item).html(`<i class="fa fa-chevron-circle-down"></i> 展开`);
-//         $(item).parent().parent().prev().addClass("shrink");
-//     }
-// }
-
 function switchNightMode(){
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
     if(night == '0'){
@@ -231,21 +221,21 @@ function checkNightMode(){
     }
 }
 
-function filterItems(item,type){
+function filterItems(item,url){
     $(".post-item.item-nav .index-filter >div").removeClass("current");
     $(item).addClass("current");
-    document.documentElement.style.setProperty('--shuoshuo-display', 'none');
-    document.documentElement.style.setProperty('--post-item-display', 'none');  
-    switch (type) {
-        case 1:
-            document.documentElement.style.setProperty('--post-item-display', 'block');
-            break;
-        case 2:
-            document.documentElement.style.setProperty('--shuoshuo-display', 'block');
-            break;
-        case 0:
-            document.documentElement.style.setProperty('--post-item-display', 'block');
-            document.documentElement.style.setProperty('--shuoshuo-display', 'block');
-            break;
-   }
+    $(item).html(`<i class="fa fa-refresh fa-spin"></i>`);
+    $.ajax({
+        url: url,
+        success: function (data) {
+            $(".center").html($(data).find(".center").html());
+            window.history.pushState(null,'',url);
+            if(typeof(RAW)=="object"){
+                RAW.afterPjax();
+            }
+        },
+        error:function(){
+            $(item).html(`<i class="fa fa-times-circle"></i>`);
+        }
+    });
 }
