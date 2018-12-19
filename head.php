@@ -61,7 +61,7 @@ if(/windows/i.test(navigator.userAgent)){
 <?php endif; ?>
 <script>
 function startSearch(usePjax=false) {
-    var searchBase=<?php Helper::options()->index('/search/'); ?>;
+    var searchBase="<?php Helper::options()->index('/search/'); ?>";
     var c = $("#search input").val();
     if(!c||c==""){
         $("#search-box input").attr("placeholder","你还没有输入任何信息");
