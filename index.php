@@ -79,7 +79,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             <?php echo Utils::parseAll($this->content); ?>
                         <?php else:?>
                             <h1 style="margin-bottom:0.5rem"><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
-                            <p style="margin-top:0"><?php $this->excerpt(90); ?></p>
+                            <p style="margin-top:0"><?php $this->excerpt(75); ?></p>
                         <?php endif; ?>
                         </article>
                         <?php if($this->fields->banner && $this->fields->banner!='' && !($this->fields->type=='1')) :?>

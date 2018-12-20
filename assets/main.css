@@ -1029,10 +1029,10 @@ aside > div a:hover{
     color:var(--highlight-fade-color);
 }
 .post-item-banner{
-    height: 150px;
-    width: 180px;
-    min-width: 180px;
-    max-width: 180px;
+    height: auto;
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
     -o-object-fit: cover;
        object-fit: cover;
 }
@@ -1094,7 +1094,6 @@ aside > div a:hover{
     }
     .post-item-banner{
         width: 100%;
-        height: 200px;
         margin-bottom: 1rem;
         max-width: 100%;
     }
@@ -1114,7 +1113,7 @@ aside > div a:hover{
 }
 .post-item-body.featured .post-item-banner{
     width: 100%;
-    height: 320px;
+    height: auto;
     margin-bottom: 1rem;
     max-width: 100%;
 }
@@ -1289,12 +1288,6 @@ aside > div a:hover{
 .post-pager-item:nth-child(2){
     border-left: 1px solid rgba(0,0,0,.1);
     border-right: 1px solid rgba(0,0,0,.1);
-}
-
-@media screen and (max-width:1024px){
-    .post-item-body.featured .post-item-banner{
-        height: 200px;
-    }
 }
 @media screen and (max-width:767px){
     .center{
