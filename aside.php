@@ -28,7 +28,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php TePostViews_Plugin::outputHotPosts(); ?>
     </div>
     <?php endif; ?>
-    <?php if($this->options->bloglayout!='1' && $this->fields->showTOC=='1'):?>
+    <?php if($this->options->bloglayout!='1' && $this->fields->showTOC=='1' && ($this->is('post')||$this->is('page'))):?>
     <div id="TOC" style="animation-delay:0.4s">
         <style>a[data-src="#TOC"]{display:flex}</style>
         <?php echo $GLOBALS['TOC_O']; ?>

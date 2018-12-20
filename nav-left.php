@@ -77,7 +77,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>';
         }
     ?>
-    <?php if($this->options->bloglayout=='1' && $this->fields->showTOC=='1'):?>
+    <?php if($this->options->bloglayout=='1' && $this->fields->showTOC=='1' && ($this->is('post')||$this->is('page'))):?>
     <div id="TOC" style="animation-delay:0.6s">
         <style>a[data-src="#TOC"]{display:flex}</style>
         <?php echo $GLOBALS['TOC_O']; ?>
