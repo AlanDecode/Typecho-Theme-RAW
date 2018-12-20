@@ -1964,13 +1964,11 @@ article table tr>td:first-child,article table tr>th:first-child{
     max-width: calc(100% - 56px);
 }
 .comment-body .comment-content{
-    margin-right: 7rem;
     word-break: break-word;
     color: #333;
     color: var(--text-color);
 }
 .comment-by-author.comment-item>.comment-body>.comment-content{
-    margin-left: 7rem;
     margin-right: 0;
 }
 .comment-content p:first-of-type{
@@ -1988,14 +1986,6 @@ article table tr>td:first-child,article table tr>th:first-child{
 }
 .comment-by-author.comment-item .comment-meta{
     text-align: right;
-}
-@media screen and (max-width:1024px){
-    .comment-body .comment-content{
-        margin-right: 1.5rem;
-    }
-    .comment-by-author.comment-item>.comment-body>.comment-content{
-        margin-left: 1.5rem;
-    }
 }
 .respond{
     position: relative;
