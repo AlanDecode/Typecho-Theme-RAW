@@ -15,7 +15,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 if($this->options->colormode=='1') echo 'night n-f';
 elseif ($this->options->colormode=='2') echo 'day d-f';
 else{
-    echo($_COOKIE['night'] == '1' ? 'night auto' : 'auto');
+    if(array_key_exists('night',$_COOKIE)){
+        echo($_COOKIE['night'] == '1' ? 'night auto' : 'auto');
+    }
 }; 
 ?>"> <!--start html-->
 <head> <!--start head-->
