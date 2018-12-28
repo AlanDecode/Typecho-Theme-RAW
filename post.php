@@ -47,6 +47,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><b><i class="fa fa-pencil"></i> <?php echo $this->author->screenName; ?></b> • <?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
                         </div>
                     <?php endif; ?>
+                    <?php $diff= round((time()- $this->modified) / 3600 / 24); if($diff>=100): ?>
+                    <blockquote>本文最后修改于 <?php echo $diff; ?> 天前，部分内容可能已经过时！</blockquote>
+                    <?php endif; ?>
                     <?php if($this->fields->showTOC=='1'):?>
                         <?php 
                             $parsed=Utils::parseTOC(Utils::parseAll($this->content));
