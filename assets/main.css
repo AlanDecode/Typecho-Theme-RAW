@@ -1506,6 +1506,11 @@ article .photos{
     position: relative;
     padding-top: 10px!important;
 }
+.shuoshuo article .photos{
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+}
 article .photos::before {
     content: attr(data-des);
     position: absolute;
