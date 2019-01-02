@@ -40,7 +40,7 @@ Utils::exportHeader($this,$banner);
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/owo/owo.min.css'); ?>" />
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/hljs/styles/atom-one-light.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/fancybox/jquery.fancybox.min.css');?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.5a.css');?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/main.5b.css');?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/assets/scheme-dark15.css');?>">
 <?php if($this->options->bloglayout=='1'):?>
 <style>

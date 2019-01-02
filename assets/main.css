@@ -1015,6 +1015,15 @@ aside > div a:hover{
 .post-item-body{
     padding-top: 0;
     min-width: 100%;
+    position:relative;
+}
+.post-item-body.s::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background: rgba(255,255,255,0.5);
+    left: -34px;
 }
 .post-item-header{
     color: #333;

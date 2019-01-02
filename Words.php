@@ -105,18 +105,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                 </div>
             <?php endwhile; ?>
             <?php $comments->pageNav('<i class="fa fa-hand-o-left"></i>', '<i class="fa fa-hand-o-right"></i>',1, '...'); ?>
-
-            <style>
-            .post-item-body{position:relative;}
-            .post-item-body.s::after{
-                content: "";
-                position: absolute;
-                width: 2px;
-                height: calc(100% + 1rem);
-                background: rgba(255,255,255,0.5);
-                left: -34px;
-            }
-            </style>
         </div>
         <?php endif; ?>
         <!--post-item end-->
