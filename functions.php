@@ -54,14 +54,16 @@ function themeConfig($form) {
     $form->addInput($aside_nav);
     $aside_link=new Typecho_Widget_Helper_Form_Element_Textarea('aside_link', NULL, NULL, _t('全站友链'), _t('全站侧边栏友情链接，请直接以 a 标签书写。一行一个。'));
     $form->addInput($aside_link);
-    $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
-    $form->addInput($site_bg);
 
     // 外观设置
     $colormode=new Typecho_Widget_Helper_Form_Element_Select('colormode',array('0'=>'自动切换','1'=>'夜间模式','2'=>'日间模式'),'0','博客颜色模式','设置主题默认模式。不论如何设置，都可以通过右上角按钮切换。');
     $form->addInput($colormode);
     $bloglayout= new Typecho_Widget_Helper_Form_Element_Select('bloglayout',array('0'=>'三栏：博主栏 - 文章栏 - 统计栏','1'=>'双栏：文章栏 - 博主栏'),'0','博客版式','');
     $form->addInput($bloglayout);
+    $site_bg=new Typecho_Widget_Helper_Form_Element_Text('site_bg', NULL, NULL, _t('站点背景图'), _t('填写图像链接。'));
+    $form->addInput($site_bg);
+    $transparent= new Typecho_Widget_Helper_Form_Element_Select('transparent',array('0'=>'不启用','1'=>'启用'),'0','开启背景半透明','仅当填写了背景图时有效');
+    $form->addInput($transparent);
 
     // 常用功能设置
     $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏优先使用本头像。'));

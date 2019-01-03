@@ -910,6 +910,7 @@ aside > div a:hover{
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     line-height: 1.5;
+    max-height: calc(100vh - 40px - 2rem);
 }
 #TOC > ul >li,#TOC > ul >li a{
     font-size: 1rem;
