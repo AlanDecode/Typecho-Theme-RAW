@@ -1476,8 +1476,8 @@ article img{
     max-height: 150vh;
     margin: 0 auto;
     display: block;
-    box-shadow: 0 0 4px rgba(0,0,0,.2);
-    -webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    background: #eee;
 }
 article > img,img.biaoqing{
     width: unset;

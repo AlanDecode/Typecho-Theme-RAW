@@ -65,41 +65,31 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <?php $index=0;  ?>
             <?php while($this->next()): ?>
                 <?php $index++;?>
-                <div style="animation-delay:<?php echo 0.2*$index; ?>s" class="post-item <?php if($this->fields->type=='1') echo 'shuoshuo';?>">
-                    <div class="post-item-header flex align-items-center">
-                        <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
-                        <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
-                            <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇<?php if($this->fields->type=='1') echo '短文'; else echo '日志'; ?></span>
-                            <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
+                <?php if($this->fields->type=='1'): ?> <!--说说-->
+                    <div style="animation-delay:<?php echo 0.2*$index; ?>s" class="post-item shuoshuo">
+                        <div class="post-item-header flex align-items-center">
+                            <img class="avatar" src="<?php echo Typecho_Common::gravatarUrl($this->author->mail, 100, '', '', true)?>" />
+                            <div style="font-size: 14px; line-height: 1.5;overflow:hidden" class="post-meta flex flex-direction-column">
+                                <span><b><?php echo $this->author->screenName; ?></b> 发表了一篇短文</span>
+                                <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php Utils::exportPostMeta($this,$this->fields->type); ?></span>
+                            </div>
+                        </div>
+                        <div class="post-item-body flex">
+                            <article class="yue">
+                                <?php echo Utils::parseAll($this->content); ?>
+                            </article>
+                        </div>
+                        <div class="post-item-footer">
+                            <?php if(Utils::isPluginAvailable('Like')):?>
+                                <span class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
+                                    <i class="fa fa-heart"></i> LIKE <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
+                                </a></span>
+                            <?php endif; ?>
+                            <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
                         </div>
                     </div>
-                    <div class="post-item-body <?php if($this->fields->banner) echo 'pull-left'; if($this->fields->indextype=='1') echo ' featured';?> flex">
-                        <article class="yue">
-                        <?php if($this->fields->type=='1'): ?>
-                            <?php echo Utils::parseAll($this->content); ?>
-                        <?php else:?>
-                            <h1 style="margin-bottom:0.5rem"><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
-                            <p style="margin-top:0;color:#777"><?php $this->excerpt(75); ?></p>
-                        <?php endif; ?>
-                        </article>
-                        <?php if($this->fields->banner && $this->fields->banner!='' && !($this->fields->type=='1')) :?>
-                        <a class="index-item-banner-wrap"  data-fancybox="gallery" href="<?php echo $this->fields->banner; ?>"><img class="post-item-banner flex-1" src="<?php echo $this->fields->banner; ?>"/></a>
-                        <?php endif; ?>
-                    </div>
-                    <div class="post-item-footer">
-                        <?php if(Utils::isPluginAvailable('Like')):?>
-                            <span class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
-                                <i class="fa fa-heart"></i> LIKE <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
-                            </a></span>
-                        <?php endif; ?>
-                        <?php if(!$this->fields->type=='1'): ?>
-                        <span style="margin-right:1em;"><a style="color:var(--highlight-color)" href="<?php $this->permalink() ?>">阅读全文</a></span>
-                        <?php else:?>
-                        <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
-                    <!--span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="javascript:void(0)" onclick="toggleShrink(this);"><i class="fa fa-chevron-circle-up"></i> 收起</a></span-->
-                        <?php endif; ?>
-                    </div>
-                </div>
+                <?php else: ?>
+                <?php endif;?>
             <?php endwhile; ?>
             </div>
         <?php endif; ?>
