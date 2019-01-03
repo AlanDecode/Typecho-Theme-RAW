@@ -64,8 +64,8 @@ function themeConfig($form) {
     $form->addInput($site_bg);
     $transparent= new Typecho_Widget_Helper_Form_Element_Select('transparent',array('0'=>'不启用','1'=>'启用'),'0','开启背景半透明','仅当填写了背景图时有效');
     $form->addInput($transparent);
-    $randomindexbanner= new Typecho_Widget_Helper_Form_Element_Select('randomindexbanner',array('0'=>'不启用','1'=>'启用'),'1','首页随机图','无头图时在首页使用随机图');
-    $form->addInput($randomindexbanner);
+    $indexbanner=new Typecho_Widget_Helper_Form_Element_Textarea('indexbanner', NULL, '', _t('首页默认头图'), _t('填写首页默认的头图，一行一个随机显示。若不填写则不显示默认头图。你可以填写随机图片API。最后不要留空行。'));
+    $form->addInput($indexbanner);
 
     // 常用功能设置
     $defaultavatar=new Typecho_Widget_Helper_Form_Element_Text('defaultavatar', NULL, NULL, _t('博主头像'), _t('设置后博客右上角会引用本头像，否则引用当前用户头像。侧边栏优先使用本头像。'));

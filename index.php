@@ -91,9 +91,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     </div>
                 <?php else: ?>
                     <div class="post-item full" style="animation-delay:<?php echo 0.2*$index; ?>s;padding:1rem;">
-                        <div class="post-item-content-wrap<?php if($this->fields->banner || $this->options->randomindexbanner=='1') echo ' has-banner';?>">
+                        <div class="post-item-content-wrap<?php if($this->fields->banner || $this->options->indexbanner!='') echo ' has-banner';?>">
                             <?php if($this->fields->banner): ?>
                             <img class="post-item-banner" src="<?php echo $this->fields->banner;?>"/>
+                            <?php elseif($this->options->indexbanner!=''): ?>
+                            <?php 
+                                $imgs=explode(PHP_EOL,$this->options->indexbanner);
+                                echo '<img class="post-item-banner" src="'.$imgs[array_rand($imgs,1)].'?'.rand().'"/>';
+                            ?>
                             <?php endif;?>
                             <div class="post-item-content">
                                 <h1><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
