@@ -1087,12 +1087,13 @@ aside > div a:hover{
 .like-button:hover,.like-button:hover *{
     color: red!important;
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     .post-item .post-item-content-wrap .post-item-banner{
         margin-right: 0;
         width: 100%;
         max-width: 100%;
         min-width: unset;
+        height: 225px;
         padding: 0;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;

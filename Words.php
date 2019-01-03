@@ -56,7 +56,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><i class="fa fa-calendar"></i>&nbsp;现在</span>
                         </div>
                     </div>
-                    <div class="post-item-body flex s" style="border-radius:8px;padding-bottom:0;margin-left: 56px;min-width: unset;">
+                    <div class="post-item-body flex s" style="border-radius:3px;padding-bottom:0;margin-left: 56px;min-width: unset;">
                         <div id="comments" style="background: none;padding: 0;margin: 0;width: 100%;">
                             <?php $this->header('commentReply=1&description=0&keywords=0&generator=0&template=0&pingback=0&xmlrpc=0&wlw=0&rss2=0&rss1=0&antiSpam=0&atom'); ?>
                             <div id="<?php $this->respondId(); ?>" class="respond">
@@ -97,7 +97,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                             <span style="white-space:nowrap;text-overflow:ellipsis;overflow:hidden"><?php echo '<i class="fa fa-calendar"></i>&nbsp;'.Utils::formatDate($comments->created,'Y-m-d H:i'); ?></span>
                         </div>
                     </div>
-                    <div class="post-item-body flex s" style="border-radius:8px;padding-bottom:0;margin-left: 56px;min-width: unset;">
+                    <div class="post-item-body flex s" style="border-radius:3px;padding-bottom:0;margin-left: 56px;min-width: unset;">
                         <article class="yue">
                             <?php echo Utils::parseAll($comments->content); ?>
                         </article>
