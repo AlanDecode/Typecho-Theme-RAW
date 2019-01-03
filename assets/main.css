@@ -1079,6 +1079,14 @@ aside > div a:hover{
 .post-item .post-item-footer span,.post-item .post-item-footer span *{
     color: #777
 }
+.post-item .post-item-meta span.like-button,.post-item .post-item-meta span.like-button *,
+.post-item .post-item-footer span.like-button,.post-item .post-item-footer span.like-button *{
+    color: var(--highlight-fade-color);
+    transition: 0.3s ease color;
+}
+.like-button:hover,.like-button:hover *{
+    color: red!important;
+}
 @media screen and (max-width:767px){
     .post-item .post-item-content-wrap .post-item-banner{
         margin-right: 0;
