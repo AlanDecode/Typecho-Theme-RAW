@@ -437,7 +437,7 @@ class Utils {
      * @return string
      */
     static public function exportPostMeta(Widget_Archive $archive,$type){
-        echo '<i class="fa fa-calendar"></i>&nbsp;'.self::formatDate($archive->created,'NATURAL');
+        echo '<i class="fa fa-calendar"></i>&nbsp;'.self::formatDate($archive->created,'Y年m月d日');
         if(!$type=='1'){
             echo ' • <i class="fa fa-th-large"></i>&nbsp;';
             $archive->category(' ');

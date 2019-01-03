@@ -1010,11 +1010,102 @@ aside > div a:hover{
     display: block;
     display: var(--post-item-display);
 }
+.post-item .post-item-content-wrap{
+    display: flex;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.8px solid rgba(0,0,0,.08)
+}
+.post-item .post-item-content-wrap.has-banner{
+    height: 180px;
+}
+.post-item .post-item-content-wrap .post-item-banner{
+    padding: 5px;
+    background: #eee;
+    margin-right: 1rem;
+    height: 100%;
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.post-item-content{
+    overflow: hidden;
+}
+.post-item-content h1{
+    font-size: 1.7em;
+    line-height: 1.4;
+    margin-top: 0;
+    color: #111;
+    color: var(--darker-color);
+}
+.post-item-content a{
+    transition: 0.3s ease color;
+}
+.post-item-content a:hover {
+    color: rgb(255,112,121);
+    color: var(--highlight-color);
+}
+.post-item-content p{
+    margin-top:0;
+    color:#777;
+    line-height:1.67;
+    margin-bottom: 0;
+}
+.post-item .post-item-meta{
+    padding: 1rem 0 0 0;
+    display: flex;
+}
+.post-item .post-item-footer{
+    display: flex;
+}
+.post-item .post-item-meta>span,.post-item .post-item-footer>span{
+    margin: 0 0.5rem;
+    font-size: 14px;
+}
+.post-item .post-item-meta>span:first-child,.post-item .post-item-footer>span:first-child{
+    margin-left: 0;
+}
+.post-item .post-item-meta>span:last-child,.post-item .post-item-footer>span:last-child{
+    margin-right: 0;
+    flex: 1;
+    text-align: right;
+}
+.post-item .post-item-meta>span.like-button,.post-item .post-item-footer>span.like-button{
+    padding: 0;
+    border: none;
+}
+.post-item .post-item-meta span,.post-item .post-item-meta span *,
+.post-item .post-item-footer span,.post-item .post-item-footer span *{
+    color: #777
+}
+@media screen and (max-width:767px){
+    .post-item .post-item-content-wrap .post-item-banner{
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+        padding: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        width: calc(100% + 2rem + 2px);
+        max-width: calc(100% + 2rem + 2px);
+        transform: translate(calc(-1rem - 1px),calc(-1rem - 1px));
+    }
+    .post-item .post-item-content-wrap{
+        flex-direction: column;
+        height: unset!important;
+    }
+    .post-item-content p{
+        max-height: calc(1em * 1.67 * 5);
+    }
+}
 .post-item-header,.post-item-body,.post-item-footer{
     padding: 1rem;
 }
 .post-item-body{
     padding-top: 0;
+    padding-bottom:0;
     min-width: 100%;
     position:relative;
 }
@@ -1041,16 +1132,8 @@ aside > div a:hover{
     color: rgba(255,112,121,0.6);
     color:var(--highlight-fade-color);
 }
-.post-item-banner{
-    height: auto;
-    width: 250px;
-    min-width: 250px;
-    max-width: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-}
 .post-item-footer{
-    padding-top: 0
+    border-top: 0.8px solid rgba(0,0,0,.08)
 }
 .post-item-body.pull-left h1,.post-item-body.pull-left p{
     padding-right: 1rem;
@@ -1105,19 +1188,6 @@ aside > div a:hover{
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    .post-item-banner{
-        width: 100%;
-        margin-bottom: 1rem;
-        max-width: 100%;
-    }
-    .index-item-banner-wrap {
-        -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -1;
-        order: -1;
-    }
-    .post-item-body.pull-left h1,.post-item-body.pull-left p{
-        padding-right: 0;
-    }
 }
 .post-item-body.featured{
     -webkit-box-orient: vertical;
@@ -1147,8 +1217,8 @@ aside > div a:hover{
 .post-item.shuoshuo .post-item-footer{
     background: #fff;
     background: var(--bg-color);
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
     position: relative;
 }
 .post-item.shuoshuo .post-item-body article{
@@ -1168,8 +1238,8 @@ aside > div a:hover{
     background: var(--bg-color);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .post-item.shuoshuo .post-item-body::before{
     position: absolute;
@@ -1476,6 +1546,8 @@ article img{
     max-height: 150vh;
     margin: 0 auto;
     display: block;
+}
+.post-item.full article img:not(.biaoqing){
     padding: 0.5rem;
     background: #eee;
 }

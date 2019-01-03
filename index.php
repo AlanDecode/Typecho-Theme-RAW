@@ -80,15 +80,39 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                             </article>
                         </div>
                         <div class="post-item-footer">
+                            <span><i class="fa fa-calendar"></i> <?php echo Utils::formatDate($this->created,'Y-m-d')?></span>
+                            <span><a target="_self" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> <?php echo $this->commentsNum; ?><span class="hidden-xs">条评论</span></a></span>
                             <?php if(Utils::isPluginAvailable('Like')):?>
-                                <span class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
+                                <span style="float:right" class="like-button"><a href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
                                     <i class="fa fa-heart"></i> LIKE <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
                                 </a></span>
                             <?php endif; ?>
-                            <span style="margin-right:1em;"><a target="_self" style="color:var(--highlight-color)" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> 评论</a></span>
                         </div>
                     </div>
                 <?php else: ?>
+                    <div class="post-item full" style="animation-delay:<?php echo 0.2*$index; ?>s;padding:1rem;">
+                        <div class="post-item-content-wrap<?php if($this->fields->banner || $this->options->randomindexbanner=='1') echo ' has-banner';?>">
+                            <?php if($this->fields->banner): ?>
+                            <img class="post-item-banner" src="<?php echo $this->fields->banner;?>"/>
+                            <?php endif;?>
+                            <div class="post-item-content">
+                                <h1><a href="<?php $this->permalink(); ?>"><?php if(Utils::isPluginAvailable('Sticky')) $this->sticky(); $this->title();?></a></h1>
+                                <p><?php $this->excerpt(80); ?></p>
+                            </div>
+                        </div>
+                        <div class="post-item-meta">
+                            <span><i class="fa fa-calendar"></i> <?php echo Utils::formatDate($this->created,'Y-m-d')?></span>
+                            <span><a target="_self" href="<?php $this->permalink() ?>#comments"><i class="fa fa-commenting-o"></i> <?php echo $this->commentsNum; ?><span class="hidden-xs">条评论</span></a></span>
+                            <?php if(Utils::isPluginAvailable('TePostViews')):?> 
+                            <span><i class="fa fa-eye"></i> <?php $this->viewsNum();?><span class="hidden-xs">次阅读</span></span>
+                            <?php endif;?>
+                            <?php if(Utils::isPluginAvailable('Like')):?>
+                            <span class="like-button" style="float:right"><a style="color:var(--highlight-fade-color)" href="javascript:;" class="post-like" data-pid="<?php echo $this->cid;?>">
+                                <i class="fa fa-heart"></i> LIKE <span class="like-num"><?php Like_Plugin::theLike($link = false,$this);?></span>
+                            </a></span>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 <?php endif;?>
             <?php endwhile; ?>
             </div>
