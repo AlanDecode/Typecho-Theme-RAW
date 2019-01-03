@@ -12,16 +12,14 @@
 
 ## 日志
 
-2018-12-19 Ver 0.93（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
+2019-01-03 Ver 0.94（升级方式请看：[如何升级](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E5%8D%87%E7%BA%A7)）
 
-* 新的独立页面模板：Words，说明见：[添加说说页面](https://github.com/AlanDecode/Typecho-Theme-RAW/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E6%B7%BB%E5%8A%A0%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2)
-* 调整了归档页面样式
-* 调整了博客版式设置，目前提供三栏与双栏两种
-* 当设置了全站背景图时，博客切换为半透明显示
-* 调整了部分元素样式，例如照片集
-* 修正了未启用伪静态时某些链接 404 的问题
-* 调整了垃圾评论过滤，绝望了 :(
-* minor bug fix
+* 调整字体加载顺序，减少首页白屏时间
+* 最近修改日期超过 100 天添加提示
+* 设置背景图时可选是否启用半透明背景
+* 新的主页文章列表样式
+* 添加主页默认头图设置，支持随机图片API
+* bug fix
 
 ## 使用
 
